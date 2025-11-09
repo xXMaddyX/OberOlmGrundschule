@@ -5,9 +5,9 @@ export default class HeaderComponent extends HTMLElement{
         super();
         /**@type {ShadowRoot} */
         this.shadow = this.attachShadow({mode: "open"});
-
         /**@type {HTMLDivElement} */
         this.ImageContainer = null;
+        this.isActive = false;
     };
 
     async connectedCallback() {
@@ -16,6 +16,20 @@ export default class HeaderComponent extends HTMLElement{
         this.shadow.innerHTML = HTML
         this.initElementRefs();
         this.addImageToHeader();
+
+        /**@type {HTMLButtonElement} */
+        this.ToggleButton = this.shadow.querySelector(".mobile-menu-toggle");
+        this.ToggleButton.addEventListener("blur", () => {
+            this.ToggleButton.classList.remove("active")
+            this.NavListElement.classList.remove("isActive");
+            this.isActive = false;
+        })
+        this.ToggleButton.addEventListener("click", () => {
+            this.isActive = !this.isActive
+            this.toggleMobileMenue();
+        });
+        /**@type {HTMLUListElement} */
+        this.NavListElement = this.shadow.querySelector("#nav-list");
     };
 
     initElementRefs() {
@@ -27,5 +41,13 @@ export default class HeaderComponent extends HTMLElement{
         OwlImageElement.id = "owl-img"
         OwlImageElement.src = OwlImage;
         this.ImageContainer.append(OwlImageElement)
+    };
+
+    toggleMobileMenue() {
+        if (this.isActive) {
+            this.NavListElement.classList.add("isActive");
+        } else {
+            this.NavListElement.classList.remove("isActive");
+        }
     };
 };

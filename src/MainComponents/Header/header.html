@@ -145,6 +145,7 @@
         background-color: rgb(255, 196, 0);
         display: none;
         position: absolute;
+        z-index: 2000;
         border-radius: 20px;
         width: 50px;
         height: 50px;
@@ -190,17 +191,40 @@
         #nav-container {
             background-image: none;
         }
-        .nav-items {
-            display: none;
-        }
+        
         .mobile-menu-toggle {
             display: flex;
             left: 85%;
+            box-shadow: 0px 0px 0px inset rgb(0, 0, 0);
             align-self: flex-end;
             justify-self: flex-end;
+            transition: all 0.1s;
+        }
+        .mobile-menu-toggle:active {
+            box-shadow: 0px 0px 5px inset rgb(0, 0, 0);
+        }
+        .nav-items {
+            width: 200px;
+        }
+        #nav-list {
+            top: 0px;
+            opacity: 0;
+            left: 100%;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            background-color: rgba(0, 0, 255, 0.39);
+            box-shadow: 2px 2px 5px gray;
+            padding: 10px;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            transition: all 1s;
         }
 
-
+        #nav-list.isActive {
+            left: 0%;
+            opacity: 1;
+        }
     }
-    
 </style>
