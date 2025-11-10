@@ -1,0 +1,234 @@
+const HeaderComponentHtml = `
+<div id="header-container">
+    <div id="header-wrapper">
+        <div id="image-container">
+
+        </div>
+        <div id="heading-container">
+            <h1 style="font-family: var(--main-font);">Grundschule Ober-Olm</h1>
+            <h3>Lernen in guter Atmosphäre</h3>
+        </div>
+        <div id="nav-container">
+            <div id="nav-wrapper">
+                <nav>
+                    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul id="nav-list">
+                        <li name="#home" class="nav-items nav-active">
+                            <p>Home</p>
+                        </li>
+                        <li name="#kult" class="nav-items">
+                            <p>Kulturschule</p>
+                        </li>
+                        <li name="#demo" class="nav-items">
+                            <p>Demokratieerziehung</p>
+                        </li>
+                        <li name="#new" class="nav-items">
+                            <p>Neues</p>
+                        </li>
+                        <li name="#team" class="nav-items">
+                            <p>Unser Team</p>
+                        </li>
+                        <li name="#living" class="nav-items">
+                            <p>Schulleben</p>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+        font-family: var(--main-font);
+    }
+
+    #owl-img {
+        filter: drop-shadow(2px 2px 3px black);
+    }
+
+    #header-container {
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    #header-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #heading-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        color: orange;
+        text-shadow: 
+        1px 1px 2px rgb(0, 0, 0), 
+        -1px -1px 2px rgb(0, 0, 0), 
+        1px -1px 2px rgb(0, 0, 0),
+        -1px 1px 2px rgb(0, 0, 0);
+    }
+
+    #heading-container h1 {
+        font-size: 4.0rem;
+        text-align: center;
+    }
+
+    #heading-container h3 {
+        font-size: 2.0rem;
+    }
+
+    #nav-container {
+        display: block;
+        width: 100%;
+        background-image: url(Wood.png);
+        background-size: contain;
+        text-align: center;
+    }
+
+    #nav-wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 80px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #nav-list {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+        font-size: 1.0rem;
+        text-shadow: 
+        1px 1px 2px rgb(255, 255, 255), 
+        -1px -1px 2px rgb(255, 255, 255), 
+        1px -1px 2px rgb(255, 255, 255),
+        -1px 1px 2px rgb(255, 255, 255);
+    }
+
+    .nav-items {
+        cursor: pointer;
+        display: flex;
+        background-image: url("Schilder/PfeilRechts.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 250px;
+        height: 170px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        text-justify: center;
+        filter: drop-shadow(2px 2px 5px black);
+        transition: all 0.5s ease-in-out;
+        font-size: 1.5rem;
+    }
+
+    .nav-items:hover {
+        transform: rotate(-20deg);
+    }
+
+    .mobile-menu-toggle {
+        background-color: rgb(255, 196, 0);
+        display: none;
+        position: absolute;
+        z-index: 2000;
+        border-radius: 20px;
+        width: 50px;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mobile-menu-toggle span {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 10px;
+        height: 2px;
+        background-color: black;
+    }
+
+    @media (width < 1650px) {
+        #nav-list {
+            gap: 10px;
+        }
+        .nav-items {
+            width: 180px;
+            height: 100px;
+            font-size: 1.0rem;
+        }
+    }
+
+    @media (width < 1150px) {
+        #nav-list {
+            gap: 0px;
+        }
+        .nav-items {
+            width: 130px;
+            height: 80px;
+            font-size: 1.0rem;
+        }
+    }
+
+    @media (width < 800px) {
+        #header-wrapper {
+            flex-direction: column-reverse;
+        }
+        #nav-container {
+            background-image: none;
+        }
+        
+        .mobile-menu-toggle {
+            display: flex;
+            left: 85%;
+            box-shadow: 0px 0px 0px inset rgb(0, 0, 0);
+            align-self: flex-end;
+            justify-self: flex-end;
+            transition: all 0.1s;
+        }
+        .mobile-menu-toggle:active {
+            box-shadow: 0px 0px 5px inset rgb(0, 0, 0);
+        }
+        .nav-items {
+            width: 200px;
+        }
+        #nav-list {
+            top: 0px;
+            opacity: 0;
+            left: 100%;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            background-color: rgba(0, 0, 255, 0.39);
+            box-shadow: 2px 2px 5px gray;
+            padding: 10px;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            transition: all 1s;
+        }
+
+        #nav-list.isActive {
+            left: 0%;
+            opacity: 1;
+        }
+    }
+</style>
+`
+
+export default HeaderComponentHtml

@@ -1,5 +1,6 @@
 import { OwlImage } from "../../Assets/AssetLoader";
 import GlobalData from "../../Singeltones/GlobalData.js";
+import HeaderComponentHtml from "./HeaderComponentHTML.js";
 
 const routes = {
     "#home": "home-site",
@@ -86,7 +87,6 @@ export default class HeaderComponent extends HTMLElement{
         if (elementToRender === "not-found") {
             const Err = document.createElement("h1");
             Err.textContent = "404 Not Found";
-            Err.style.marginTop = "100px"
             this.App.append(Err);
         } else {
             let item = document.createElement(elementToRender);

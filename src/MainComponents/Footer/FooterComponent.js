@@ -1,3 +1,5 @@
+import FooterHTML from "./FooterComponentHTML.js";
+
 export default class FooterComponent extends HTMLElement{
     constructor() {
         super();
@@ -8,6 +10,6 @@ export default class FooterComponent extends HTMLElement{
         const rawHTML = await fetch("src/MainComponents/Footer/footer.html");
         const HTML = await rawHTML.text();
 
-        this.shadow.innerHTML = HTML;
+        this.shadow.innerHTML = FooterHTML;
     };
 };

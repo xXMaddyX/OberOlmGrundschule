@@ -4,6 +4,7 @@ export default class GlobalData{
         this.ComponentKeys = {
             HeaderComponent: "header-component",
             FooterComponent: "footer-component",
+            Leaves: "leaves-component",
             HomeSite: "home-site",
         };
 

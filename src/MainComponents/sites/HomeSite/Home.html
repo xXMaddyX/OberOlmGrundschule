@@ -1,11 +1,112 @@
-<div>
-    <h1>Das ist die Home Page</h1>
+<div id="main-container">
+    <div id="hero-wrapper">
+        <div class="hero-items" id="hero-text-box">
+            <h1>Herzlich willkommen!</h1>
+            <p>Wir sind eine zwei- bis dreizügige Grundschule mit musisch-ästhetischem Schwerpunkt in Rheinhessen vor den Toren von Mainz. Die Schule gehört zur Verbandsgemeinde Nieder-Olm im rheinland-pfälzischen Landkreis Mainz-Bingen. Unsere Schule wird von den etwa 180 Kindern besucht, welche fast ausschließlich unserer Ortsgemeinde angehören!</p>
+        </div>
+        <div class="hero-items" id="hero-image-box">
+            <img id="owl-img" src="owl-hero.jpg" alt="">
+        </div>
+    </div>
 </div>
 <style>
     *{
         padding: 0px;
         margin: 0px;
         box-sizing: border-box;
-        padding-top: 20px;
+        font-family: var(--main-font);
+    }
+
+    #owl-img {
+        border-radius: 20px;
+    }
+
+    #main-container {
+        display: block;
+    }
+
+    #hero-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        justify-self: center;
+        font-size: 1.5rem;
+        gap: 40px;
+        width: 80%;
+        padding: 20px;
+        padding-bottom: 100px;
+        perspective: 800px;
+    }
+
+    .hero-items {
+        padding: 20px;
+        box-shadow: 2px 2px 10px black;
+        border: 1px solid gray;
+        border-radius: 20px;
+        max-width: 50%;
+        background-color: rgba(94, 255, 0, 0.158);
+    }
+
+    #hero-image-box {
+        transform: rotateY(-20deg);
+        transform-style: preserve-3d;
+    }
+    
+    #hero-text-box {
+        display: flex;
+        flex-direction: column;
+        transform: rotateY(20deg);
+        transform-style: preserve-3d;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 50px;
+    }
+
+    #hero-text-box p {
+        max-width: 80%;
+    }
+
+    #hero-image-box img {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    @media (width < 1650px) {
+        #hero-wrapper {
+            font-size: 1.2rem;
+        }
+    }
+
+    @media (width < 1150px) {
+        #hero-wrapper {
+            flex-direction: column;
+        }
+        .hero-items {
+            max-width: 90%;
+        }
+            #hero-image-box {
+            transform: rotateY(0deg);
+        }
+        #hero-text-box {
+            transform: rotateY(0deg);
+        }
+    }
+
+    @media (width < 800px) {
+        #hero-wrapper {
+            flex-direction: column;
+        }
+        .hero-items {
+            max-width: 100%;
+        }
+        #hero-image-box {
+            transform: rotateY(0deg);
+            transform-style: preserve-3d;
+        }
+        #hero-text-box {
+            transform: rotateY(0deg);
+        }
     }
 </style>

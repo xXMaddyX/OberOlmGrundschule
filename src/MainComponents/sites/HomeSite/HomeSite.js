@@ -1,3 +1,5 @@
+import HomeHTML from "./HomeSite.HTML.js";
+
 export default class HomeSite extends HTMLElement{
     static get observedAttributes() {
         return []
