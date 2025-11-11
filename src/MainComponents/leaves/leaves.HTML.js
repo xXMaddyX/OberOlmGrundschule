@@ -2,28 +2,28 @@ const leavesHTML = `
 <div class="leaves-body">
     <section>
         <div class="set set1">
-            <div><img src="images/leavesImages/1.png" alt=""></div>
-            <div><img src="images/leavesImages/2.png" alt=""></div>
-            <div><img src="images/leavesImages/3.png" alt=""></div>
-            <div><img src="images/leavesImages/4.png" alt=""></div>
-            <div><img src="images/leavesImages/5.png" alt=""></div>
-            <div><img src="images/leavesImages/6.png" alt=""></div>
+            <div><img src="images/leavesImages/1.webp" alt="" loading="lazy"></div>
+            <div><img src="images/leavesImages/2.webp" alt="" loading="lazy"></div>
+            <div><img src="images/leavesImages/3.webp" alt="" loading="lazy"></div>
+            <div><img src="images/leavesImages/4.webp" alt="" loading="lazy"></div>
+            <div><img src="images/leavesImages/5.webp" alt="" loading="lazy"></div>
+            <div><img src="images/leavesImages/6.webp" alt="" loading="lazy"></div>
         </div>
         <div class="set set2">
-            <div><img src="images/leavesImages/1.png" alt=""></div>
-            <div><img src="images/leavesImages/2.png" alt=""></div>
-            <div><img src="images/leavesImages/3.png" alt=""></div>
-            <div><img src="images/leavesImages/4.png" alt=""></div>
-            <div><img src="images/leavesImages/5.png" alt=""></div>
-            <div><img src="images/leavesImages/6.png" alt=""></div>
+            <div><img src="images/leavesImages/1.webp" alt="" loading="lazy"></div>
+            <div><img src="images/leavesImages/2.webp" alt="" loading="lazy"></div>
+            <div><img src="images/leavesImages/3.webp" alt="" loading="lazy"></div>
+            <div><img src="images/leavesImages/4.webp" alt="" loading="lazy"></div>
+            <div><img src="images/leavesImages/5.webp" alt="" loading="lazy"></div>
+            <div><img src="images/leavesImages/6.webp" alt="" loading="lazy"></div>
         </div>
         <div class="set set3">
-            <div><img src="images/leavesImages/1.png" alt=""></div>
-            <div><img src="images/leavesImages/2.png" alt=""></div>
-            <div><img src="images/leavesImages/3.png" alt=""></div>
-            <div><img src="images/leavesImages/4.png" alt=""></div>
-            <div><img src="images/leavesImages/5.png" alt=""></div>
-            <div><img src="images/leavesImages/6.png" alt=""></div>
+            <div><img src="images/leavesImages/1.webp" alt="" loading="lazy"></div>
+            <div><img src="images/leavesImages/2.webp" alt="" loading="lazy"></div>
+            <div><img src="images/leavesImages/3.webp" alt="" loading="lazy"></div>
+            <div><img src="images/leavesImages/4.webp" alt="" loading="lazy"></div>
+            <div><img src="images/leavesImages/5.webp" alt="" loading="lazy"></div>
+            <div><img src="images/leavesImages/6.webp" alt="" loading="lazy"></div>
         </div>
     </section>
 </div>

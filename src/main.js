@@ -2,12 +2,10 @@ import './style.css'
 import "./Assets/AssetLoader.js"
 import GlobalData from './Singeltones/GlobalData.js';
 import HeaderComponent from './MainComponents/Header/HeaderComponent.js';
-import FooterComponent from './MainComponents/Footer/FooterComponent.js';
 import HomeSite from './MainComponents/sites/HomeSite/HomeSite.js';
 import Leaves from './MainComponents/leaves/leaves.js';
 
 customElements.define(GlobalData.Instance.ComponentKeys.HeaderComponent, HeaderComponent);
-customElements.define(GlobalData.Instance.ComponentKeys.FooterComponent, FooterComponent);
 customElements.define(GlobalData.Instance.ComponentKeys.Leaves, Leaves);
 customElements.define("home-site", HomeSite);
 
@@ -40,5 +38,4 @@ const LoadHomeSiteOnLoad = () => {
   let homeSite = document.createElement(GlobalData.Instance.ComponentKeys.HomeSite);
   GlobalData.Instance.AppRef.append(homeSite)
 }
-
 initApp();

@@ -1,4 +1,4 @@
-import OwlImage from "./AssetImages/LogoImage.png";
+import OwlImage from "./AssetImages/LogoImage.webp";
 
 export {
     OwlImage,

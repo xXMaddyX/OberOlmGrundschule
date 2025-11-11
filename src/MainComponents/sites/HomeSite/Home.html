@@ -5,7 +5,7 @@
             <p>Wir sind eine zwei- bis dreizügige Grundschule mit musisch-ästhetischem Schwerpunkt in Rheinhessen vor den Toren von Mainz. Die Schule gehört zur Verbandsgemeinde Nieder-Olm im rheinland-pfälzischen Landkreis Mainz-Bingen. Unsere Schule wird von den etwa 180 Kindern besucht, welche fast ausschließlich unserer Ortsgemeinde angehören!</p>
         </div>
         <div class="hero-items" id="hero-image-box">
-            <img id="owl-img" src="owl-hero.jpg" alt="">
+            <img id="owl-img" src="owl-hero.webp" alt="" loading="lazy">
         </div>
     </div>
     <div id="contact">
@@ -16,6 +16,18 @@
             <p>Telefon: 06136-89127</p>
             <p>Telefax: 06136-997849</p>
             <p>e-Mail: mail@gs-ober-olm.de</p>
+        </div>
+
+        <div id="sponsor-wrapper">
+            <h1>Sponsoren</h1>
+            <div id="sponsor-grid">
+                <img src="SponsorImages/digitalpakt.webp" alt="" loading="lazy">
+                <img src="SponsorImages/DigitaleSpinDoor.webp" alt="" loading="lazy">
+                <img src="SponsorImages/justmainz.webp" alt="" loading="lazy">
+                <img src="SponsorImages/kulturforscher.webp" alt="" loading="lazy">
+                <img src="SponsorImages/shoolfuture.webp" alt="" loading="lazy">
+                <img src="SponsorImages/Shoolprice.webp" alt="" loading="lazy">
+            </div>
         </div>
     </div>
 </div>
@@ -106,6 +118,37 @@
         background-color: rgba(94, 255, 0, 0.158);
         border-radius: 20px;
         transition: all 0.5s;
+    }
+
+    #sponsor-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+        padding: 20px;
+        width: 50%;
+        gap: 20px;
+        margin-bottom: 50px;
+        border: 2px solid black;
+        box-shadow: 2px 2px 5px gray;
+        background-color: rgba(94, 255, 0, 0.158);
+        border-radius: 20px;
+        transition: all 0.5s;
+    }
+
+    #sponsor-grid {
+        justify-self: center;
+        align-items: center;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #sponsor-grid img {
+        width: 200px;
     }
 
     @media (width < 1650px) {

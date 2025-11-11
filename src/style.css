@@ -13,6 +13,7 @@
   background-color: rgba(0, 140, 255, 0);
   user-select: none;
   font-family: var(--main-font);
+  font-display: swap;
 }
 
 #background-wrapper {

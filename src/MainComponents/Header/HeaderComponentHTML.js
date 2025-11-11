@@ -93,7 +93,7 @@ const HeaderComponentHtml = `
     #nav-container {
         display: block;
         width: 100%;
-        background-image: url(Wood.png);
+        background-image: url(Wood.webp);
         background-size: contain;
         text-align: center;
     }
