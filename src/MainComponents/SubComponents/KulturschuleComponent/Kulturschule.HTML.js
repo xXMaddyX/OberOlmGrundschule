@@ -96,7 +96,7 @@ const KulturschuleHTMLComponent = `
         border: 1px solid gray;
         border-radius: 50px;
         margin-bottom: 100px;
-        background-image: url("/images/videoBack.jpg");
+        background-image: url("https://www.piepssoft.de/ober-olmer-grundschule/images/videoBack.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         width: 50%;
