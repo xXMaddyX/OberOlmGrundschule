@@ -4,7 +4,7 @@ import HeaderComponentHtml from "./HeaderComponentHTML.js";
 
 const routes = {
     "#home": "home-site",
-    "#kult": "",
+    "#kult": "kulturschule-site",
     "#demo": "",
     "#new": "",
     "#team": "",
@@ -25,9 +25,10 @@ export default class HeaderComponent extends HTMLElement{
     };
 
     async connectedCallback() {
-        const rawHTML = await fetch("src/MainComponents/Header/header.html")
-        const HTML = await rawHTML.text();
-        this.shadow.innerHTML = HTML
+        //SET UNCOMENTED FOR DEVELOPMENT
+        //const rawHTML = await fetch("src/MainComponents/Header/header.html")
+        //const HTML = await rawHTML.text();
+        this.shadow.innerHTML = HeaderComponentHtml;
         this.initElementRefs();
         this.addImageToHeader();
         this.addListener();

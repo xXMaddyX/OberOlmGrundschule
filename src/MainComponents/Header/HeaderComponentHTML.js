@@ -92,8 +92,7 @@ const HeaderComponentHtml = `
 
     #nav-container {
         display: block;
-        width: 100%;
-        background-image: url(Wood.webp);
+        background-image: url("Wood.webp");
         background-size: contain;
         text-align: center;
     }
@@ -123,7 +122,7 @@ const HeaderComponentHtml = `
     .nav-items {
         cursor: pointer;
         display: flex;
-        background-image: url("Schilder/PfeilRechts.png");
+        background-image: url("Schilder/PfeilRechts.webp");
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
@@ -211,13 +210,13 @@ const HeaderComponentHtml = `
             top: 0px;
             opacity: 0;
             left: 100%;
-            position: absolute;
+            width: 100%;
+            position: fixed;
             display: flex;
             flex-direction: column;
             background-color: rgba(0, 0, 255, 0.39);
             box-shadow: 2px 2px 5px gray;
             padding: 10px;
-            width: 100%;
             justify-content: center;
             align-items: center;
             transition: all 1s;

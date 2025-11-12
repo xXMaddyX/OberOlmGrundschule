@@ -1,12 +1,224 @@
 const HomeHTML = `
-<div>
-    <h1>Das ist die Home Page</h1>
+<div id="main-container">
+    <div id="hero-wrapper">
+        <div class="hero-items" id="hero-text-box">
+            <h1>Herzlich willkommen!</h1>
+            <p>Wir sind eine zwei- bis dreizügige Grundschule mit musisch-ästhetischem Schwerpunkt in Rheinhessen vor den Toren von Mainz. Die Schule gehört zur Verbandsgemeinde Nieder-Olm im rheinland-pfälzischen Landkreis Mainz-Bingen. Unsere Schule wird von den etwa 180 Kindern besucht, welche fast ausschließlich unserer Ortsgemeinde angehören!</p>
+        </div>
+        <div class="hero-items" id="hero-image-box">
+            <img id="owl-img" src="owl-hero.webp" alt="" loading="lazy">
+        </div>
+    </div>
+    <div id="contact">
+        <div id="contact-wrapper">
+            <h1>Kontakt</h1>
+            <p>Grundschule Ober-Olm</p>
+            <p>Schulstraße 4, 55270 Ober-Olm, Rheinland-Pfalz</p>
+            <p>Telefon: 06136-89127</p>
+            <p>Telefax: 06136-997849</p>
+            <p>e-Mail: mail@gs-ober-olm.de</p>
+        </div>
+
+        <div id="sponsor-wrapper">
+            <h1>Sponsoren</h1>
+            <div id="sponsor-grid">
+                <img src="SponsorImages/digitalpakt.webp" alt="" loading="lazy">
+                <img src="SponsorImages/DigitaleSpinDoor.webp" alt="" loading="lazy">
+                <img src="SponsorImages/justmainz.webp" alt="" loading="lazy">
+                <img src="SponsorImages/kulturforscher.webp" alt="" loading="lazy">
+                <img src="SponsorImages/shoolfuture.webp" alt="" loading="lazy">
+                <img src="SponsorImages/Shoolprice.webp" alt="" loading="lazy">
+            </div>
+        </div>
+    </div>
 </div>
 <style>
     *{
         padding: 0px;
         margin: 0px;
         box-sizing: border-box;
+        font-family: var(--main-font);
+        text-shadow: 
+        1px 1px 2px rgb(255, 255, 255), 
+        -1px -1px 2px rgb(255, 255, 255), 
+        1px -1px 2px rgb(255, 255, 255),
+        -1px 1px 2px rgb(255, 255, 255);
+    }
+
+    #owl-img {
+        border-radius: 20px;
+    }
+
+    #main-container {
+        display: block;
+    }
+
+    #hero-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        justify-self: center;
+        font-size: 1.5rem;
+        gap: 40px;
+        width: 80%;
+        padding: 20px;
+        padding-bottom: 100px;
+        perspective: 800px;
+    }
+
+    .hero-items {
+        padding: 20px;
+        box-shadow: 2px 2px 10px black;
+        border: 1px solid gray;
+        border-radius: 20px;
+        max-width: 50%;
+        background-color: rgba(94, 255, 0, 0.158);
+    }
+
+    #hero-image-box {
+        transform: rotateY(-20deg);
+        transform-style: preserve-3d;
+    }
+    
+    #hero-text-box {
+        display: flex;
+        flex-direction: column;
+        transform: rotateY(20deg);
+        transform-style: preserve-3d;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 50px;
+    }
+
+    #hero-text-box p {
+        max-width: 80%;
+    }
+
+    #hero-image-box img {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    #contact {
+        display: block;
+    }
+
+    #contact-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        text-align: center;
+        margin-top: 100px;
+        padding: 20px;
+        width: 50%;
+        margin-bottom: 50px;
+        border: 2px solid black;
+        box-shadow: 2px 2px 5px gray;
+        background-color: rgba(94, 255, 0, 0.158);
+        border-radius: 20px;
+        transition: all 0.5s;
+    }
+
+    #sponsor-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+        padding: 20px;
+        width: 50%;
+        gap: 20px;
+        margin-bottom: 50px;
+        border: 2px solid black;
+        box-shadow: 2px 2px 5px gray;
+        background-color: rgba(94, 255, 0, 0.158);
+        border-radius: 20px;
+        transition: all 0.5s;
+    }
+
+    #sponsor-grid {
+        justify-self: center;
+        align-items: center;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #sponsor-grid img {
+        width: 200px;
+    }
+
+    @media (width < 1650px) {
+        #hero-wrapper {
+            font-size: 1.2rem;
+        }
+        #contact-wrapper {
+            width: 60%;
+        }
+        #sponsor-wrapper {
+            width: 60%;
+        }
+    }
+
+    @media (width < 1150px) {
+        #hero-wrapper {
+            flex-direction: column;
+            width: 100%;
+        }
+        .hero-items {
+            max-width: 90%;
+        }
+            #hero-image-box {
+            transform: rotateY(0deg);
+        }
+        #hero-text-box {
+            transform: rotateY(0deg);
+        }
+        #contact-wrapper {
+            width: 80%;
+        }
+        #sponsor-wrapper {
+            width: 80%;
+        }
+        #sponsor-grid {
+            gap: 5px;
+        }
+    }
+
+    @media (width < 800px) {
+        #hero-wrapper {
+            flex-direction: column;
+        }
+        .hero-items {
+            max-width: 100%;
+        }
+        #hero-image-box {
+            transform: rotateY(0deg);
+            transform-style: preserve-3d;
+        }
+        #hero-text-box {
+            transform: rotateY(0deg);
+        }
+        #contact-wrapper {
+            margin-top: 0px;
+            margin-bottom: 20px;
+            width: 95%;
+        }
+        #sponsor-wrapper {
+            width: 95%;
+        }
+        #sponsor-grid {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        #sponsor-grid img {
+            width: 50%;
+            justify-self: center;
+        }
     }
 </style>
 `

@@ -10,9 +10,10 @@ export default class HomeSite extends HTMLElement{
     };
 
     async connectedCallback() {
-        let rawhtml = await fetch("src/MainComponents/sites/HomeSite/Home.html")
-        let HTML = await rawhtml.text();
-        this.shadow.innerHTML = HTML
+        //SET UNCOMANTED FOR DEVELOPMENT
+        //let rawhtml = await fetch("src/MainComponents/sites/HomeSite/Home.html")
+        //let HTML = await rawhtml.text();
+        this.shadow.innerHTML = HomeHTML
     };
 
     attributeChangedCallback(name, oldValue, newValue) {
