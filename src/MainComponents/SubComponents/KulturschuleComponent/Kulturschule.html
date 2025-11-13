@@ -12,10 +12,10 @@
             <h1>„KULTURSCHULE“</h1>
             <h2>an der Grundschule Ober-Olm</h2>
             <h1>was heißt das eigentlich?</h1>
-            <a id="heading-pdf-link" href="https://www.gs-ober-olm.de/files/praes.pdf" target="_blank">Hier die Infos</a>
+            <a id="heading-pdf-link" href="https://www.gs-ober-olm.de/files/praes.pdf" target="_blank">Mehr erfahren...</a>
         </div>
         <div id="heading-film-wrapper">
-            <h3>UNSER SCHULFILM</h3>
+            <h2>UNSER SCHULFILM</h2>
             <h1>Flügel Verleihen (2024)</h1>
             <p>Hier ist der Film, der euch etwas darüber erzählt,<br>wie wir das Konzept der Kulturschule in Ober-Olm lebendig machen. Schaut mal rein!</p>
             <video width="50%" height="240" controls>
@@ -99,6 +99,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         width: 50%;
+        gap: 20px;
         background-color: rgba(94, 255, 0, 0.158);
     }
 
@@ -106,6 +107,14 @@
         width: 100%;
         height: 500px;
         border-radius: 50px;
+    }
+
+    #heading-film-wrapper h1 {
+        font-size: 3.5rem;
+    }
+
+    #heading-film-wrapper p {
+        font-size: 1.5rem;
     }
 
     @media (width < 1650px) {
@@ -135,6 +144,16 @@
         }
         #heading-film-wrapper{
             width: 95%;
+        }
+        #heading-film-wrapper video {
+            height: 350px;
+        }
+        #heading-film-wrapper h1 {
+            font-size: 2.5rem;
+        }
+
+        #heading-film-wrapper p {
+            font-size: 1.3rem;
         }
     }
 </style>

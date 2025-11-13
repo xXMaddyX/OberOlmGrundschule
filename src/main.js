@@ -21,6 +21,7 @@ const initApp = () => {
   AddHeader();
   LoadHomeSiteOnLoad();
   AddleavesBackground();
+  AddBackToTopButton();
 }
 
 const AddleavesBackground = () => {
@@ -32,6 +33,14 @@ const AddleavesBackground = () => {
 const AddHeader = () => {
   const HeaderComponent = document.createElement(GlobalData.Instance.ComponentKeys.HeaderComponent);
   AppHeader.append(HeaderComponent);
+}
+
+const AddBackToTopButton = () => {
+  /**@type {HTMLButtonElement} */
+  const backToTopButton = document.querySelector("#back-to-Top");
+  backToTopButton.addEventListener("click", () => {
+    window.scrollTo({top, behavior: "smooth"})
+  })
 }
 
 const LoadHomeSiteOnLoad = () => {
