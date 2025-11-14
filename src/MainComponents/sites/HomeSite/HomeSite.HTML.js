@@ -38,11 +38,7 @@ const HomeHTML = `
         margin: 0px;
         box-sizing: border-box;
         font-family: var(--main-font);
-        text-shadow: 
-        1px 1px 2px rgb(255, 255, 255), 
-        -1px -1px 2px rgb(255, 255, 255), 
-        1px -1px 2px rgb(255, 255, 255),
-        -1px 1px 2px rgb(255, 255, 255);
+        text-shadow: var(--text-shadow-white);
     }
 
     #owl-img {
@@ -69,11 +65,11 @@ const HomeHTML = `
 
     .hero-items {
         padding: 20px;
-        box-shadow: 2px 2px 10px black;
+        box-shadow: 2px 2px 10px var(--basic-border-color);
         border: 1px solid gray;
         border-radius: 20px;
         max-width: 50%;
-        background-color: rgba(94, 255, 0, 0.158);
+        background-color: var(--box-background-color);
     }
 
     #hero-image-box {
@@ -116,9 +112,9 @@ const HomeHTML = `
         margin-bottom: 50px;
         border: 2px solid black;
         box-shadow: 2px 2px 5px gray;
-        background-color: rgba(94, 255, 0, 0.158);
+        background-color: var(--box-background-color);
         border-radius: 20px;
-        transition: all 0.5s;
+        transition: all var(--basic-transition-time);
     }
 
     #sponsor-wrapper {
@@ -133,11 +129,11 @@ const HomeHTML = `
         width: 50%;
         gap: 20px;
         margin-bottom: 50px;
-        border: 2px solid black;
+        border: 2px solid var(--basic-border-color);
         box-shadow: 2px 2px 5px gray;
-        background-color: rgba(94, 255, 0, 0.158);
+        background-color: var(--box-background-color);
         border-radius: 20px;
-        transition: all 0.5s;
+        transition: all var(--basic-transition-time);
     }
 
     #sponsor-grid {

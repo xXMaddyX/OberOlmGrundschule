@@ -51,33 +51,33 @@ const leavesHTML = `
     }
     section .set div:nth-child(1) {
         left: 0%;
-        animation: animate 15s linear infinite;
+        animation: animate 30s linear infinite;
         animation-delay: -1s;
     }
     section .set div:nth-child(2) {
         left: 5%;
-        animation: animate 15s linear infinite;
+        animation: animate 30s linear infinite;
         animation-delay: -5s;
     }
     section .set div:nth-child(3) {
         left: 10%;
-        animation: animate 15s linear infinite;
+        animation: animate 30s linear infinite;
         animation-delay: -8s;
     }
     section .set div:nth-child(4) {
         left: 70%;
-        animation: animate 15s linear infinite;
+        animation: animate 30s linear infinite;
         animation-delay: -8s;
     }
     section .set div:nth-child(5) {
         left: 80%;
-        animation: animate 15s linear infinite;
+        animation: animate 30s linear infinite;
         animation-delay: -10s;
     }
     section .set div:nth-child(6) {
         left: 90%;
-        animation: animate 15s linear infinite;
-        animation-delay: -9s;
+        animation: animate 30s linear infinite;
+        animation-delay: -14s;
     }
 
     @keyframes animate {

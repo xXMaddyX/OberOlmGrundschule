@@ -33,11 +33,7 @@ const KulturschuleHTMLComponent = `
         padding: 0px;
         margin: 0px;
         box-sizing: border-box;
-        text-shadow: 
-        1px 1px 2px rgb(255, 255, 255), 
-        -1px -1px 2px rgb(255, 255, 255), 
-        1px -1px 2px rgb(255, 255, 255),
-        -1px 1px 2px rgb(255, 255, 255);
+        text-shadow: var(--text-shadow-white);
     }
 
     #main-container {
@@ -51,12 +47,12 @@ const KulturschuleHTMLComponent = `
         justify-content: center;
         text-align: center;
         padding: 20px;
-        box-shadow: 2px 2px 10px black;
+        box-shadow: 2px 2px 10px var(--basic-border-color);
         border: 1px solid gray;
         border-radius: 50px;
         margin-bottom: 100px;
         width: 50%;
-        background-color: rgba(94, 255, 0, 0.158);
+        background-color: var(--box-background-color);
     }
 
     #heading-wrapper h1 {
@@ -76,7 +72,7 @@ const KulturschuleHTMLComponent = `
         margin-top: 10px;
         font-size: 1.5rem;
         padding: 10px;
-        border: 1px solid black;
+        border: 1px solid var(--basic-border-color);
         border-radius: 20px;
         width: 50%;
         transition: all 1.0s;
@@ -92,7 +88,7 @@ const KulturschuleHTMLComponent = `
         justify-content: center;
         text-align: center;
         padding: 20px;
-        box-shadow: 2px 2px 10px black;
+        box-shadow: 2px 2px 10px var(--basic-border-color);
         border: 1px solid gray;
         border-radius: 50px;
         margin-bottom: 100px;
@@ -101,7 +97,7 @@ const KulturschuleHTMLComponent = `
         background-size: cover;
         width: 50%;
         gap: 20px;
-        background-color: rgba(94, 255, 0, 0.158);
+        background-color: var(--box-background-color);
     }
 
     #heading-film-wrapper video {

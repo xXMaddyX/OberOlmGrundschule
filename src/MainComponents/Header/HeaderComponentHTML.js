@@ -74,11 +74,7 @@ const HeaderComponentHtml = `
         align-items: center;
         margin-bottom: 20px;
         color: orange;
-        text-shadow: 
-        1px 1px 2px rgb(0, 0, 0), 
-        -1px -1px 2px rgb(0, 0, 0), 
-        1px -1px 2px rgb(0, 0, 0),
-        -1px 1px 2px rgb(0, 0, 0);
+        text-shadow: var(--text-shadow-black);
     }
 
     #heading-container h1 {
@@ -112,11 +108,7 @@ const HeaderComponentHtml = `
         justify-content: center;
         gap: 30px;
         font-size: 1.0rem;
-        text-shadow: 
-        1px 1px 2px rgb(255, 255, 255), 
-        -1px -1px 2px rgb(255, 255, 255), 
-        1px -1px 2px rgb(255, 255, 255),
-        -1px 1px 2px rgb(255, 255, 255);
+        text-shadow: var(--text-shadow-white);
     }
 
     .nav-items {
@@ -142,7 +134,7 @@ const HeaderComponentHtml = `
     }
 
     .mobile-menu-toggle {
-        background-color: rgb(255, 196, 0);
+        background-color: var(--home-titel-text-color);
         display: none;
         position: absolute;
         z-index: 2000;
