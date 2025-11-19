@@ -5,11 +5,13 @@ import HeaderComponent from './MainComponents/Header/HeaderComponent.js';
 import HomeSite from './MainComponents/sites/HomeSite/HomeSite.js';
 import Leaves from './MainComponents/leaves/leaves.js';
 import KulturschuleElement from './MainComponents/SubComponents/KulturschuleComponent/KulturschuleComponent.js';
+import SectionNavComponent from './MainComponents/SectionNavComponent/SectionNavComponent.js';
 
 customElements.define(GlobalData.Instance.ComponentKeys.HeaderComponent, HeaderComponent);
 customElements.define(GlobalData.Instance.ComponentKeys.Leaves, Leaves);
 customElements.define("home-site", HomeSite);
 customElements.define("kulturschule-site", KulturschuleElement);
+customElements.define("section-nav-component", SectionNavComponent);
 
 
 const AppHeader = document.querySelector("#header-section");
