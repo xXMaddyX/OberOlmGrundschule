@@ -1,0 +1,92 @@
+<div>
+    <nav id="section-nav">
+        <button id="open-site-nav"></button>
+        <div id="nav-section-list">
+            <section-nav-component class="section-nav-element"
+                button-name="Pädagogische Konzeption" nav-target="top"
+            ></section-nav-component>
+            <section-nav-component class="section-nav-element"
+                button-name="Profil" nav-target="schulprofil"
+            ></section-nav-component>
+            <section-nav-component class="section-nav-element"
+                button-name="Profil" nav-target="schulprofil"
+            ></section-nav-component>
+            <section-nav-component class="section-nav-element"
+                button-name="Profil" nav-target="schulprofil"
+            ></section-nav-component>
+        </div>
+    </nav>
+</div>
+<template id="nav-element-template">
+        <button id="nav-element-button"></button>
+</template>
+<style>
+    * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    #section-nav {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        justify-content: center;
+        align-items: center;
+        position: sticky;
+    }
+
+    #open-site-nav {
+        all: unset;
+        cursor: pointer;
+        width: 100px;
+        height: 100px;
+        margin-bottom: 20px;
+        background-image: url("Schilder/ViereckSchild.webp");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        transition: all 1s;
+    }
+    #open-site-nav:hover {
+        filter: drop-shadow(0px 0px 5px black);
+    }
+
+    #open-site-nav.active {
+        transform: rotateZ(180deg);
+    }
+    
+    #nav-section-list {
+        display: flex;
+        overflow: hidden;
+        padding: 10px;
+        flex-direction: column;
+        max-height: 0;
+        opacity: 0;
+        transition: max-height 1.0s ease, opacity 0.5s ease;
+        margin-bottom: 50px;
+    }
+
+    #nav-section-list.active {
+        max-height: 1000px;
+        opacity: 1;
+    }
+
+    @media (width < 1650px) {
+        
+    }
+
+    @media (width < 1150px) {
+        
+    }
+
+    @media (width < 800px) {
+        #open-site-nav {
+            margin-top: 20px;
+            width: 80px;
+            height: 80px;
+        }
+    }
+    @media (width < 800px) {
+         
+    }
+</style>

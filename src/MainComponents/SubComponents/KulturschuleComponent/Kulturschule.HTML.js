@@ -90,6 +90,14 @@ const KulturschuleHTMLComponent = `
         text-shadow: var(--text-shadow-white);
     }
 
+    section[name="top"] {
+        scroll-margin-top: 100px;
+    }
+
+    section[name="schulprofil"] {
+        scroll-margin-top: 100px;
+    }
+
     #section-nav {
         display: flex;
         flex-direction: column;
@@ -120,30 +128,19 @@ const KulturschuleHTMLComponent = `
     }
     
     #nav-section-list {
+        display: flex;
+        overflow: hidden;
+        padding: 10px;
+        flex-direction: column;
+        max-height: 0;
         opacity: 0;
-        height: 0px;
-        visibility: hidden;
+        transition: max-height 1.0s ease, opacity 0.5s ease;
         margin-bottom: 50px;
     }
 
     #nav-section-list.active {
-        display: flex;
-        visibility: visible;
-        flex-direction: row;
-        animation-name: fadeIn;
-        animation-duration: 1s;
-        animation-timing-function: ease;
-        animation-fill-mode: forwards;
-    }
-
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            height: 0px;
-        } to {
-            opacity: 1;
-            height: 100px;
-        }
+        max-height: 1000px;
+        opacity: 1;
     }
 
     #main-container {

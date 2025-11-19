@@ -1,15 +1,14 @@
-import KulturschuleHTMLComponent from "./Kulturschule.HTML.js";
-
-export default class KulturschuleElement extends HTMLElement{
+export default class SoLernenWirComponent extends HTMLElement{
     constructor() {
         super();
         this.shadow = this.attachShadow({mode: "open"});
-    };
-    
+        
+    }
     async connectedCallback() {
-        let rawHTML = await fetch("src/MainComponents/SubComponents/KulturschuleComponent/Kulturschule.html");
-        let HTML = await rawHTML.text();
+        const rawHTML = await fetch("src/MainComponents/SubComponents/SoLernenWirComponent/SoLernenWir.html");
+        const HTML = await rawHTML.text();
         this.shadow.innerHTML = HTML;
+
         const navElement = this.shadow.querySelector("section-nav-component");
         if (navElement) navElement.parentShadow = this.shadow;
         
@@ -40,8 +39,5 @@ export default class KulturschuleElement extends HTMLElement{
         this.toggleSiteButton.addEventListener("click", () => {
             this.toggleSiteButton.classList.toggle("active")
         })
-    }
-    
-    attributeChangedCallback(name, oldValue, newValue) {}
-    disconnectedCallback() {}
+    };
 }
