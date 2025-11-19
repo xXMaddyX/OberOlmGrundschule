@@ -322,6 +322,15 @@ const KulturschuleHTMLComponent = `
             height: 80px;
         }
     }
+    @media (width < 800px) {
+        #heading-wrapper h1 {
+            font-size: 2.0rem;
+        }
+        #heading-pdf-link {
+            text-align: center;
+        }
+        
+    }
 </style>
 `
 

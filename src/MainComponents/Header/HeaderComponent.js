@@ -4,9 +4,9 @@ import HeaderComponentHtml from "./HeaderComponentHTML.js";
 
 const routes = {
     "#home": "home-site",
-    "#kult": "kulturschule-site",
     "#demo": "",
-    "#new": "",
+    "#news": "",
+    "#kult": "kulturschule-site",
     "#team": "",
     "#living": ""
 }

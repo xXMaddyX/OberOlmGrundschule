@@ -17,22 +17,31 @@
                     </button>
                     <ul id="nav-list">
                         <li name="#home" class="nav-items nav-active">
-                            <p>Home</p>
+                            <p>Das Sind Wir</p>
+                        </li>
+                        <li name="#howwelearn" class="nav-items">
+                            <p>So lernen wir!</p>
+                        </li>
+                        <li name="#news" class="nav-items">
+                            <p>Neues und-<br>Aktuelles</p>
                         </li>
                         <li name="#kult" class="nav-items">
-                            <p>Kulturschule</p>
+                            <p>Wir sind-<br>Kulturschule!</p>
                         </li>
-                        <li name="#demo" class="nav-items">
-                            <p>Demokratie-<br>erziehung</p>
+                        <li name="#demokratisch" class="nav-items">
+                            <p>Wir agieren-<br>demokratisch!</p>
                         </li>
-                        <li name="#new" class="nav-items">
-                            <p>Neues</p>
-                        </li>
-                        <li name="#team" class="nav-items">
-                            <p>Unser Team</p>
-                        </li>
-                        <li name="#living" class="nav-items">
+                        <li name="#schulleben" class="nav-items">
                             <p>Schulleben</p>
+                        </li>
+                        <li name="#schulederzukunft" class="nav-items">
+                            <p>Schule der-<br>Zukunft</p>
+                        </li>
+                        <li name="#eltern" class="nav-items">
+                            <p>Eltern</p>
+                        </li>
+                        <li name="#kinder" class="nav-items">
+                            <p>Kinder</p>
                         </li>
                     </ul>
                 </nav>
@@ -48,6 +57,7 @@
         box-sizing: border-box;
         font-family: var(--main-font);
         z-index: 1000;
+        max-width: 100%;
     }
 
     #owl-img {
@@ -71,7 +81,10 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        text-align: center;
         align-items: center;
+        justify-self: center;
+        align-self: center;
         margin-bottom: 20px;
         color: orange;
         text-shadow: var(--text-shadow-black);
@@ -106,8 +119,9 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        gap: 30px;
+        gap: 5px;
         font-size: 1.0rem;
+        max-width: 100%;
         text-shadow: var(--text-shadow-white);
     }
 
@@ -126,7 +140,7 @@
         text-justify: center;
         filter: drop-shadow(2px 2px 5px black);
         transition: all 0.5s ease-in-out;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .nav-items:hover {
@@ -166,17 +180,60 @@
     }
 
     @media (width < 1150px) {
-        #nav-list {
-            gap: 0px;
+        #header-wrapper {
+            flex-direction: column-reverse;
+        }
+        #nav-container {
+            background-image: none;
+        }
+        
+        .mobile-menu-toggle {
+            position: fixed;
+            display: flex;
+            left: 90%;
+            box-shadow: 0px 0px 0px inset rgb(0, 0, 0);
+            align-self: flex-end;
+            justify-self: flex-end;
+            transition: all 0.1s;
+        }
+        .mobile-menu-toggle:active {
+            box-shadow: 0px 0px 5px inset rgb(0, 0, 0);
         }
         .nav-items {
-            width: 130px;
-            height: 80px;
-            font-size: 1.0rem;
+            width: 180px;
+            height: 85px;
+        }
+        #nav-list {
+            top: 0px;
+            opacity: 0;
+            left: 100%;
+            width: 100%;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            background-color: rgba(0, 0, 255, 0.39);
+            box-shadow: 2px 2px 5px gray;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            transition: all 1s;
+        }
+
+        #nav-list.isActive {
+            left: 0%;
+            opacity: 1;
         }
     }
 
     @media (width < 800px) {
+        #heading-container h1 {
+            font-size: 3.0rem;
+        }
+
+        #heading-container h3 {
+            font-size: 1.5rem;
+        }
+
         #header-wrapper {
             flex-direction: column-reverse;
         }
@@ -218,6 +275,13 @@
         #nav-list.isActive {
             left: 0%;
             opacity: 1;
+        }
+        
+    }
+    @media (width < 400px) {
+        .nav-items {
+            width: 200px;
+            height: 62px;
         }
     }
 </style>
