@@ -24,7 +24,7 @@ const HeaderComponentHtml = `
                             <p>Kulturschule</p>
                         </li>
                         <li name="#demo" class="nav-items">
-                            <p>Demokratieerziehung</p>
+                            <p>Demokratie-<br>erziehung</p>
                         </li>
                         <li name="#new" class="nav-items">
                             <p>Neues</p>
@@ -48,6 +48,7 @@ const HeaderComponentHtml = `
         margin: 0px;
         box-sizing: border-box;
         font-family: var(--main-font);
+        z-index: 1000;
     }
 
     #owl-img {
@@ -119,7 +120,7 @@ const HeaderComponentHtml = `
         background-position: center;
         background-repeat: no-repeat;
         width: 250px;
-        height: 170px;
+        height: 120px;
         justify-content: center;
         align-items: center;
         text-align: center;
@@ -185,6 +186,7 @@ const HeaderComponentHtml = `
         }
         
         .mobile-menu-toggle {
+            position: fixed;
             display: flex;
             left: 85%;
             box-shadow: 0px 0px 0px inset rgb(0, 0, 0);

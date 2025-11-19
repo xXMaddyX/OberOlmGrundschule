@@ -1,6 +1,7 @@
 const KulturschuleHTMLComponent = `
 <div id="main-container">
     <nav id="section-nav">
+        <button id="open-site-nav"></button>
         <div id="nav-section-list">
             <section-nav-component class="section-nav-element"
                 button-name="Kultur" nav-target="top"
@@ -96,6 +97,53 @@ const KulturschuleHTMLComponent = `
         justify-content: center;
         align-items: center;
         position: sticky;
+    }
+
+    #open-site-nav {
+        all: unset;
+        cursor: pointer;
+        width: 100px;
+        height: 100px;
+        margin-bottom: 20px;
+        background-image: url("Schilder/ViereckSchild.webp");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        transition: all 1s;
+    }
+    #open-site-nav:hover {
+        filter: drop-shadow(0px 0px 5px black);
+    }
+
+    #open-site-nav.active {
+        transform: rotateZ(180deg);
+    }
+    
+    #nav-section-list {
+        opacity: 0;
+        height: 0px;
+        visibility: hidden;
+        margin-bottom: 50px;
+    }
+
+    #nav-section-list.active {
+        display: flex;
+        visibility: visible;
+        flex-direction: row;
+        animation-name: fadeIn;
+        animation-duration: 1s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            height: 0px;
+        } to {
+            opacity: 1;
+            height: 100px;
+        }
     }
 
     #main-container {
@@ -206,7 +254,7 @@ const KulturschuleHTMLComponent = `
     }
 
     #container-image {
-        width: 400px;
+        width: 50%;
     }
 
     @media (width < 1650px) {
@@ -230,6 +278,9 @@ const KulturschuleHTMLComponent = `
         }
         #schulprofil-wrapper {
             width: 80%;
+        }
+        #container-image {
+            width: 70%;
         }
     }
 
@@ -259,6 +310,16 @@ const KulturschuleHTMLComponent = `
 
         #heading-film-wrapper p {
             font-size: 1.3rem;
+        }
+        #container-image {
+            width: 95%;
+            justify-self: center;
+            align-self: center;
+        }
+        #open-site-nav {
+            margin-top: 20px;
+            width: 80px;
+            height: 80px;
         }
     }
 </style>

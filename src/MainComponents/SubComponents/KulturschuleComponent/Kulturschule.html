@@ -1,5 +1,6 @@
 <div id="main-container">
     <nav id="section-nav">
+        <button id="open-site-nav"></button>
         <div id="nav-section-list">
             <section-nav-component class="section-nav-element"
                 button-name="Kultur" nav-target="top"
@@ -35,11 +36,11 @@
                 </div>
                 <div class="schulprofil-element">
                     <h2>Fachunterricht in professioneller Hand:</h2>
-                    <p>Der künstlerische Fachunterricht liegt bei uns in der Hand von dafür ausgebildeten Fachlehrerinnen. Ziel ist, dass die `Bildung in den Künsten` auf einem hohen Niveau stattfinden und somit intensiver wirken kann. Dies gilt natürlich auch für Künstler/-innen, die in den schulischen Alltag integriert werden: auch diese müssen qualitativ hochwertig im künstlerischen und pädagogischen Bereich arbeiten. Selbstverständlich sollte auch das Vermeiden von Unterrichtsausfall im künstlerischen Unterricht sein.</p>
+                    <p>Der künstlerische Fachunterricht liegt bei uns in der Hand von dafür ausgebildeten Fachlehrerinnen. Ziel ist, dass die 'Bildung in den Künsten' auf einem hohen Niveau stattfinden und somit intensiver wirken kann. Dies gilt natürlich auch für Künstler/-innen, die in den schulischen Alltag integriert werden: auch diese müssen qualitativ hochwertig im künstlerischen und pädagogischen Bereich arbeiten. Selbstverständlich sollte auch das Vermeiden von Unterrichtsausfall im künstlerischen Unterricht sein.</p>
                 </div>
                 <div class="schulprofil-element">
                     <h2>Künstlerische Lernmethoden in nicht-musischen Fächern:</h2>
-                    <p>Auch in nicht- künstlerischen Fächern finden sich Zugänge durch kulturell-ästhetische Lehr- und Lernpraxis. Dieser Bereich beschreibt neben der `Bildung in den Künsten` die `Bildung durch die Künste`. Kunst kann in diesem Unterricht „ein pädagogisches Mittel“ sein, den Schülern Inhalte auf eine bestimmte Weise zu vermitteln.</p>
+                    <p>Auch in nicht- künstlerischen Fächern finden sich Zugänge durch kulturell-ästhetische Lehr- und Lernpraxis. Dieser Bereich beschreibt neben der 'Bildung in den Künsten' die 'Bildung durch die Künste'. Kunst kann in diesem Unterricht „ein pädagogisches Mittel“ sein, den Schülern Inhalte auf eine bestimmte Weise zu vermitteln.</p>
                 </div>
                 <div class="schulprofil-element">
                     <h2>Bildungspartnerschaften:</h2>
@@ -95,6 +96,53 @@
         justify-content: center;
         align-items: center;
         position: sticky;
+    }
+
+    #open-site-nav {
+        all: unset;
+        cursor: pointer;
+        width: 100px;
+        height: 100px;
+        margin-bottom: 20px;
+        background-image: url("Schilder/ViereckSchild.webp");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        transition: all 1s;
+    }
+    #open-site-nav:hover {
+        filter: drop-shadow(0px 0px 5px black);
+    }
+
+    #open-site-nav.active {
+        transform: rotateZ(180deg);
+    }
+    
+    #nav-section-list {
+        opacity: 0;
+        height: 0px;
+        visibility: hidden;
+        margin-bottom: 50px;
+    }
+
+    #nav-section-list.active {
+        display: flex;
+        visibility: visible;
+        flex-direction: row;
+        animation-name: fadeIn;
+        animation-duration: 1s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            height: 0px;
+        } to {
+            opacity: 1;
+            height: 100px;
+        }
     }
 
     #main-container {
@@ -205,7 +253,7 @@
     }
 
     #container-image {
-        width: 400px;
+        width: 50%;
     }
 
     @media (width < 1650px) {
@@ -229,6 +277,9 @@
         }
         #schulprofil-wrapper {
             width: 80%;
+        }
+        #container-image {
+            width: 70%;
         }
     }
 
@@ -258,6 +309,16 @@
 
         #heading-film-wrapper p {
             font-size: 1.3rem;
+        }
+        #container-image {
+            width: 95%;
+            justify-self: center;
+            align-self: center;
+        }
+        #open-site-nav {
+            margin-top: 20px;
+            width: 80px;
+            height: 80px;
         }
     }
 </style>
