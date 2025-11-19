@@ -27,7 +27,4 @@ export default class SectionNavComponent extends HTMLElement{
 
         
     }
-
-    disconnectedCallback() {
-    }
 }

@@ -19,8 +19,4 @@ export default class HomeSite extends HTMLElement{
     attributeChangedCallback(name, oldValue, newValue) {
 
     };
-
-    disconnectedCallback() {
-
-    };
 };

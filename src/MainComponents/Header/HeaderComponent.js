@@ -35,7 +35,7 @@ export default class HeaderComponent extends HTMLElement{
 
         /**@type {HTMLButtonElement} */
         this.ToggleButton = this.shadow.querySelector(".mobile-menu-toggle");
-        this.togglebuttonListener = this.ToggleButton.addEventListener("blur", () => {
+        this.ToggleButton.addEventListener("blur", () => {
             this.ToggleButton.classList.remove("active");
             this.NavListElement.classList.remove("isActive");
             this.isActive = false;
@@ -94,8 +94,4 @@ export default class HeaderComponent extends HTMLElement{
             this.App.append(item);
         };
     };
-
-    disconnectedCallback() {
-        window.removeEventListener(this.togglebuttonListener);
-    }
 };
