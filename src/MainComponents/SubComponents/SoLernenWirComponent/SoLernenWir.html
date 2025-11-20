@@ -6,16 +6,67 @@
                 button-name="Pädagogische Konzeption" nav-target="top"
             ></section-nav-component>
             <section-nav-component class="section-nav-element"
-                button-name="Profil" nav-target="schulprofil"
+                button-name="Leistungsbeurteilung" nav-target="leistung"
             ></section-nav-component>
             <section-nav-component class="section-nav-element"
-                button-name="Profil" nav-target="schulprofil"
+                button-name="Fördern und Fordern" nav-target="fordern"
             ></section-nav-component>
             <section-nav-component class="section-nav-element"
-                button-name="Profil" nav-target="schulprofil"
+                button-name="Kunst im Haus" nav-target="kunst"
+            ></section-nav-component>
+            <section-nav-component class="section-nav-element"
+                button-name="Klassenstufenförderung" nav-target="klassenstufen"
+            ></section-nav-component>
+            <section-nav-component class="section-nav-element"
+                button-name="Bewegungserziehung" nav-target="bewegung"
             ></section-nav-component>
         </div>
     </nav>
+    <section name="top">
+        <div id="peadagogisch-wrapper">
+            <div id="peadagogisch-wrapper-top">
+                <div>
+                    <img id="peadagogisch-wrapper-top-img" src="images/peadagogische-konzeption.jpg" alt="">
+                </div>
+                <div>
+                    <h2>Pädagogische Konzeption</h2>
+                    <h1>Lernen in guter Atmosphäre</h1>
+                </div>
+            </div>
+            <p>Dieses Ziel haben wir uns auf die Fahnen geschrieben. Es soll in allen Bereichen des schulischen Lebens zum Tragen kommen: Wir erziehen die Kinder, die unsere Schule besuchen, zu freundschaftlichem und fairem Umgang miteinander. Unsere Schule soll ein Ort sein, an dem sich alle gut aufgehoben fühlen. Wir lernen in wunderbar großzügigen Räumen und haben sogar einen großen Versammlungssaal, in dem sich die gesamte Schulgemeinschaft treffen kann. Beim Schultreff, der etwa alle 6 Wochen stattfindet und von jeweils einer Klasse moderiert wird, dürfen alle zeigen, was sie gelernt haben oder was es Neues gibt. Die Lehrerinnen arbeiten in Stufenteams gemeinsam und sind in stetigem Austausch, was ebenfalls den Zusammenhalt im Kollegium stärkt. Auch Feste und Feiern zu verschiedensten Gelegenheiten tragen zur positiven Atmosphäre bei.</p>
+        </div>
+    </section>
+    <section name="leistung">
+        <div id="leistungs-wrapper">
+            <div id="leistungs-wrapper-top">
+                <div>
+                    <img id="leistungs-wrapper-top-img" src="images/leistungImage.jpg" alt="">
+                </div>
+                <div id="leistungs-wrapper-top-text">
+                    <h1>Leistungs-<br>beurteilung</h1>
+                </div>
+            </div>
+            <div id="leistungs-wrapper-center">
+
+            </div>
+        </div>
+    </section>
+    <section name="fordern">
+        <div id="fordern-wrapper"></div>
+    </section>
+    <section name="kunst">
+        <div id="kunst-wrapper"></div>
+    </section>
+    <section name="klassenstufen">
+        <div id="klassenstufen-wrapper">
+
+        </div>
+    </section>
+    <section name="bewegung">
+        <div id="bewegungs-wrapper">
+
+        </div>
+    </section>
 </div>
 <template id="nav-element-template">
         <button id="nav-element-button"></button>
@@ -25,7 +76,18 @@
         padding: 0px;
         margin: 0px;
         box-sizing: border-box;
+        text-shadow: var(--text-shadow-white);
     }
+    section{
+        scroll-margin-top: 300px;
+    }
+    h1 {
+        font-size: 3.5rem;
+    }
+    p {
+        font-size: 1.5rem;
+    }
+
     #section-nav {
         display: flex;
         flex-direction: column;
@@ -71,12 +133,93 @@
         opacity: 1;
     }
 
+    #peadagogisch-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+        box-shadow: 2px 2px 10px var(--basic-border-color);
+        border: 1px solid gray;
+        border-radius: 50px;
+        margin-bottom: 100px;
+        width: 50%;
+        background-color: var(--box-background-color);
+    }
+
+    #peadagogisch-wrapper-top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    #peadagogisch-wrapper-top div {
+        justify-content: center;
+        align-content: center;
+    }
+
+    #peadagogisch-wrapper-top img {
+        border-radius: 20px;
+        box-shadow: 2px 2px 5px black;
+    }
+
+    #leistungs-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+        box-shadow: 2px 2px 10px var(--basic-border-color);
+        border: 1px solid gray;
+        border-radius: 50px;
+        margin-bottom: 100px;
+        width: 50%;
+        background-color: var(--box-background-color);
+    }
+
+    #leistungs-wrapper-top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #leistungs-wrapper-top div {
+        justify-self: center;
+        align-self: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #leistungs-wrapper-top-text {
+        width: 80%;
+    }
+
+    #leistungs-wrapper-top img {
+        border-radius: 20px;
+        box-shadow: 2px 2px 5px black;
+    }
+
     @media (width < 1650px) {
-        
+        #peadagogisch-wrapper {
+            width: 80%;
+        }
+        #leistungs-wrapper {
+            width: 80%;
+        }
     }
 
     @media (width < 1150px) {
-        
+        #peadagogisch-wrapper {
+            width: 80%;
+        }
+        #leistungs-wrapper {
+            width: 80%;
+        }
+        h1 {
+            font-size: 2.5rem;
+        }
     }
 
     @media (width < 800px) {
@@ -85,8 +228,18 @@
             width: 80px;
             height: 80px;
         }
-    }
-    @media (width < 800px) {
-         
+        #peadagogisch-wrapper {
+            width: 95%;
+        }
+        #leistungs-wrapper {
+            width: 95%;
+        }
+        #peadagogisch-wrapper-top {
+            flex-direction: column;
+        }
+        #leistungs-wrapper-top {
+            flex-direction: column;
+        }
+        
     }
 </style>
