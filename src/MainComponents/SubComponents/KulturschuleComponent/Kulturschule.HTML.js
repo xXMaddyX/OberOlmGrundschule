@@ -98,6 +98,20 @@ const KulturschuleHTMLComponent = `
         scroll-margin-top: 100px;
     }
 
+    h1 {
+        font-size: 3.5rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+
     #section-nav {
         display: flex;
         flex-direction: column;

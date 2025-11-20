@@ -8,9 +8,9 @@ export default class SoLernenWirComponent extends HTMLElement{
         
     }
     async connectedCallback() {
-        const rawHTML = await fetch("src/MainComponents/SubComponents/SoLernenWirComponent/SoLernenWir.html");
-        const HTML = await rawHTML.text();
-        this.shadow.innerHTML = HTML;
+        //const rawHTML = await fetch("src/MainComponents/SubComponents/SoLernenWirComponent/SoLernenWir.html");
+        //const HTML = await rawHTML.text();
+        this.shadow.innerHTML = SoLernenWirHTML;
 
         MakeSubSiteNav.Instance.createSiteNavigation(this);
     };
