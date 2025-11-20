@@ -119,11 +119,11 @@ const SoLernenWirHTML = `
                     </div>
                     <div class="spacer"></div>
                     <div class="fordern-wrapper-element-top">
+                        <img src="images/schulhausgestaltung.jpg" alt="" loading="lazy">
                         <div class="fordern-wrapper-element-top-head-text">
                             <h3>Förderstunde</h3>
                             <h1>Schulhaus-gestaltung</h1>
                         </div>
-                        <img src="images/schulhausgestaltung.jpg" alt="" loading="lazy">
                     </div>
                     <div class="fordern-wrapper-element-center">
                         <p>Kunst- und gestaltungsinteressierte Kinder haben hier die Gelegenheit, Ihre Schule zu verschönern! 
@@ -146,10 +146,10 @@ const SoLernenWirHTML = `
                     </div>
                     <div class="spacer"></div>
                     <div class="fordern-wrapper-element-top">
+                        <img src="images/mutterspracheimg.jpg" alt="" loading="lazy">
                         <div class="fordern-wrapper-element-top-head-text">
                             <h1>Kinder fremder<br>Muttersprache</h1>
                         </div>
-                        <img src="images/mutterspracheimg.jpg" alt="" loading="lazy">
                     </div>
                     <div class="fordern-wrapper-element-center">
                         <p>
@@ -167,11 +167,11 @@ const SoLernenWirHTML = `
                     </div>
                     <div class="spacer"></div>
                     <div class="fordern-wrapper-element-top">
+                        <img src="images/sprachakrobaten.jpg" alt="" loading="lazy" style="width: 300px;">
                         <div class="fordern-wrapper-element-top-head-text">
                             <h3>Förderstunde</h3>
                             <h1>Sprachakrobaten</h1>
                         </div>
-                        <img src="images/sprachakrobaten.jpg" alt="" loading="lazy" style="width: 300px;">
                     </div>
                     <div class="fordern-wrapper-element-center">
                         <p>
@@ -424,7 +424,7 @@ const SoLernenWirHTML = `
             font-size: 2.5rem;
         }
         .fordern-wrapper-element-top {
-            flex-direction: column;
+            flex-direction: column-reverse;
         }
     }
 
