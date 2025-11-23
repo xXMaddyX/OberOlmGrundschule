@@ -20,7 +20,7 @@ customElements.define("neues-und-aktuelles-site", NeuesUndAktuellesComponent);
 const routes = {
     "#home": "home-site",
     "#solernenwir": "so-lernen-wir-site",
-    "#news": "",
+    "#news": "neues-und-aktuelles-site",
     "#kult": "kulturschule-site",
     "#team": "",
     "#living": ""
@@ -102,11 +102,17 @@ const initNavBar = () => {
 
 const initApp = () => {
   GlobalData.Instance.AppRef = App;
+  const hashRoute = window.location.hash;
   AddHeader();
   LoadHomeSiteOnLoad();
   AddleavesBackground();
   AddBackToTopButton();
   initNavBar();
+  if (hashRoute === "") {
+    routing("#home")
+  } else {
+    routing(hashRoute);
+  }
 }
 
 const AddleavesBackground = () => {

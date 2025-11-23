@@ -23,10 +23,10 @@
         </div>
     </nav>
     <section name="top">
-        <div id="peadagogisch-wrapper">
+        <div class="peadagogisch wrapper">
             <div id="peadagogisch-wrapper-top">
                 <div>
-                    <img id="peadagogisch-wrapper-top-img" src="images/peadagogische-konzeption.jpg" alt="" loading="lazy">
+                    <img id="peadagogisch-wrapper-top-img" src="images/peadagogische-konzeption.webp" alt="" loading="lazy">
                 </div>
                 <div>
                     <h2>Pädagogische Konzeption</h2>
@@ -44,10 +44,10 @@
         </div>
     </section>
     <section name="leistung">
-        <div id="leistungs-wrapper">
+        <div class="leistungs wrapper">
             <div id="leistungs-wrapper-top">
                 <div>
-                    <img id="leistungs-wrapper-top-img" src="images/leistungImage.jpg" alt="" loading="lazy">
+                    <img id="leistungs-wrapper-top-img" src="images/leistungImage.webp" alt="" loading="lazy">
                 </div>
                 <div id="leistungs-wrapper-top-text">
                     <h1>Leistungs-<br>beurteilung</h1>
@@ -92,7 +92,7 @@
         </div>
     </section>
     <section name="fordern">
-        <div id="fordern-wrapper">
+        <div class="fordern wrapper">
             <div id="fordern-wrapper-top">
                 <div id="fordern-wrapper-element">
                     <div class="fordern-wrapper-element-top">
@@ -107,7 +107,7 @@
                     </div>
                     <div class="spacer"></div>
                     <div class="fordern-wrapper-element-top">
-                        <img src="images/MatheKnobeln.jpeg" alt="" loading="lazy" style="width: 200px;">
+                        <img src="images/MatheKnobeln.webp" alt="" loading="lazy" style="width: 200px;">
                         <h1>Mathematik-Knobelstunden</h1>
                     </div>
                     <div class="fordern-wrapper-element-center">
@@ -118,7 +118,7 @@
                     </div>
                     <div class="spacer"></div>
                     <div class="fordern-wrapper-element-top">
-                        <img src="images/schulhausgestaltung.jpg" alt="" loading="lazy">
+                        <img src="images/schulhausgestaltung.webp" alt="" loading="lazy">
                         <div class="fordern-wrapper-element-top-head-text">
                             <h3>Förderstunde</h3>
                             <h1>Schulhaus-gestaltung</h1>
@@ -132,7 +132,7 @@
                     </div>
                     <div class="spacer"></div>
                     <div class="fordern-wrapper-element-top">
-                        <img src="images/foerder-sport.jpg" alt="" loading="lazy">
+                        <img src="images/foerder-sport.webp" alt="" loading="lazy">
                         <div class="fordern-wrapper-element-top-head-text">
                             <h3>Förderstunde</h3>
                             <h1>Sport</h1>
@@ -145,7 +145,7 @@
                     </div>
                     <div class="spacer"></div>
                     <div class="fordern-wrapper-element-top">
-                        <img src="images/mutterspracheimg.jpg" alt="" loading="lazy">
+                        <img src="images/mutterspracheimg.webp" alt="" loading="lazy">
                         <div class="fordern-wrapper-element-top-head-text">
                             <h1>Kinder fremder<br>Muttersprache</h1>
                         </div>
@@ -166,7 +166,7 @@
                     </div>
                     <div class="spacer"></div>
                     <div class="fordern-wrapper-element-top">
-                        <img src="images/sprachakrobaten.jpg" alt="" loading="lazy" style="width: 300px;">
+                        <img src="images/sprachakrobaten.webp" alt="" loading="lazy" style="width: 300px;">
                         <div class="fordern-wrapper-element-top-head-text">
                             <h3>Förderstunde</h3>
                             <h1>Sprachakrobaten</h1>
@@ -186,16 +186,36 @@
         </div>
     </section>
     <section name="kunst">
-        <div id="kunst-wrapper"></div>
-    </section>
-    <section name="klassenstufen">
-        <div id="klassenstufen-wrapper">
+        <div id="kunst-wrapper">
 
         </div>
     </section>
+    <section name="klassenstufen">
+        <div class="klassenstufen wrapper">
+            <div id="klassenstufen-wrapper-top">
+                <div>
+                    <h1>Klassenstufen-<br>förderung</h1>
+                </div>
+            </div>
+            <p id="klassenstufen-wrapper-top-text">
+                hier werden Kinder in kleinen Gruppen unterstützt, an den Inhalte des Unterrichts vertieft zu arbeiten. 
+                Dadurch gelingt es ihnen besser, die Angestrebten Kompetenzen und Inhalte zu erfassen. 
+            </p>
+        </div>
+    </section>
     <section name="bewegung">
-        <div id="bewegungs-wrapper">
-
+        <div class="bewegungs wrapper">
+            <div id="bewegungs-wrapper-top">
+                <div>
+                    <h2>Sportunterricht in Ober-Olm</h2>
+                    <h1>Bewegungserziehung</h1>
+                </div>
+            </div>
+            <p id="bewegungs-wrapper-top-text">
+                Nach umfangreichen Renovierungsarbeiten in der Turnhalle freuen wir uns sehr über einen tollen neuen Hallenboden, 
+                und schicke Umkleidekabinen. Zudem wurden noch neue Geräte und Schaukelanlagen installiert Sogar eine Kletterwand lädt zum Turnen und Mutigsein ein! 
+                Der Sportunterricht bietet unseren Schülern eine Vielzahl von Aktivitäten in unterschiedlichen Bewegungsfeldern. 
+            </p>
         </div>
     </section>
 </div>
@@ -279,7 +299,7 @@
         opacity: 1;
     }
 
-    #peadagogisch-wrapper {
+    .wrapper {
         display: flex;
         flex-direction: column;
         justify-self: center;
@@ -315,21 +335,6 @@
         box-shadow: 2px 2px 5px black;
     }
 
-    #leistungs-wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-self: center;
-        justify-content: center;
-        text-align: center;
-        padding: 20px;
-        box-shadow: 2px 2px 10px var(--basic-border-color);
-        border: 1px solid gray;
-        border-radius: 50px;
-        margin-bottom: 100px;
-        width: 50%;
-        background-color: var(--box-background-color);
-    }
-
     #leistungs-wrapper-top {
         display: flex;
         flex-direction: row;
@@ -354,21 +359,6 @@
 
     #leistungs-wrapper-center {
         text-align: start;
-    }
-
-    #fordern-wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-self: center;
-        justify-content: center;
-        text-align: center;
-        padding: 20px;
-        box-shadow: 2px 2px 10px var(--basic-border-color);
-        border: 1px solid gray;
-        border-radius: 50px;
-        margin-bottom: 100px;
-        width: 50%;
-        background-color: var(--box-background-color);
     }
 
     .fodern-wrapper-text {
@@ -397,26 +387,21 @@
         gap: 25px;
     }
 
+    #klassenstufen-wrapper-top-text {
+        text-align: start;
+    }
+
+    #bewegungs-wrapper-top-text {
+        text-align: start;
+    }
     @media (width < 1650px) {
-        #peadagogisch-wrapper {
-            width: 80%;
-        }
-        #leistungs-wrapper {
-            width: 80%;
-        }
-        #fordern-wrapper {
+        .wrapper {
             width: 80%;
         }
     }
 
     @media (width < 1150px) {
-        #peadagogisch-wrapper {
-            width: 80%;
-        }
-        #leistungs-wrapper {
-            width: 80%;
-        }
-        #fordern-wrapper {
+        .wrapper {
             width: 80%;
         }
         h1 {
@@ -433,13 +418,7 @@
             width: 80px;
             height: 80px;
         }
-        #peadagogisch-wrapper {
-            width: 95%;
-        }
-        #leistungs-wrapper {
-            width: 95%;
-        }
-        #fordern-wrapper {
+        .wrapper {
             width: 95%;
         }
         #peadagogisch-wrapper-top {
@@ -448,7 +427,5 @@
         #leistungs-wrapper-top {
             flex-direction: column;
         }
-        
-        
     }
 </style>

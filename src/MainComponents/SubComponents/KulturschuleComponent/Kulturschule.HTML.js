@@ -12,13 +12,13 @@ const KulturschuleHTMLComponent = `
         </div>
     </nav>
     <section name="top">
-        <div id="heading-wrapper">
+        <div class="heading wrapper">
             <h1>„KULTURSCHULE“</h1>
             <h2>an der Grundschule Ober-Olm</h2>
             <h1>was heißt das eigentlich?</h1>
             <a id="heading-pdf-link" href="https://www.gs-ober-olm.de/files/praes.pdf" target="_blank">Mehr erfahren...</a>
         </div>
-        <div id="heading-film-wrapper">
+        <div class="heading-film wrapper">
             <h2>UNSER SCHULFILM</h2>
             <h1>Flügel Verleihen (2024)</h1>
             <p>Hier ist der Film, der euch etwas darüber erzählt,<br>wie wir das Konzept der Kulturschule in Ober-Olm lebendig machen. Schaut mal rein!</p>
@@ -28,7 +28,7 @@ const KulturschuleHTMLComponent = `
         </div>
     </section>
     <section name="schulprofil">
-        <div id="schulprofil-wrapper">
+        <div class="schulprofil wrapper">
             <h1>Die Grundschule Ober-Olm ist Kulturschule, was heißt das eigentlich?</h1>
             <div id="schulprofil-content">
                 <div class="schulprofil-element">
@@ -161,7 +161,7 @@ const KulturschuleHTMLComponent = `
         display: block;
     }
 
-    #heading-wrapper {
+    .wrapper {
         display: flex;
         flex-direction: column;
         justify-self: center;
@@ -176,16 +176,16 @@ const KulturschuleHTMLComponent = `
         background-color: var(--box-background-color);
     }
 
-    #heading-wrapper h1 {
+    .heading h1 {
         font-size: 3.5rem;
     }
 
-    #heading-wrapper h2 {
+    .heading h2 {
         margin-top: 10px;
         margin-bottom: 10px;
     }
 
-    #heading-wrapper a {
+    .heading a {
         all: unset;
         cursor: pointer;
         justify-self: center;
@@ -198,11 +198,11 @@ const KulturschuleHTMLComponent = `
         width: 50%;
         transition: all 1.0s;
     }
-    #heading-wrapper a:hover {
+    .heading a:hover {
         background-color: rgba(94, 255, 0, 0.700);
     }
 
-    #heading-film-wrapper {
+    .heading-film {
         display: flex;
         flex-direction: column;
         justify-self: center;
@@ -213,7 +213,7 @@ const KulturschuleHTMLComponent = `
         border: 1px solid gray;
         border-radius: 50px;
         margin-bottom: 100px;
-        background-image: url("https://www.piepssoft.de/ober-olmer-grundschule/images/videoBack.jpg");
+        background-image: url("https://www.piepssoft.de/ober-olmer-grundschule/images/videoBack.webp");
         background-repeat: no-repeat;
         background-size: cover;
         width: 50%;
@@ -221,36 +221,21 @@ const KulturschuleHTMLComponent = `
         background-color: var(--box-background-color);
     }
 
-    #heading-film-wrapper video {
+    .heading-film video {
         width: 100%;
         height: 500px;
         border-radius: 50px;
     }
 
-    #heading-film-wrapper h1 {
+    .heading-film h1 {
         font-size: 3.5rem;
     }
 
-    #heading-film-wrapper p {
+    .heading-film p {
         font-size: 1.5rem;
     }
 
-    #schulprofil-wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-self: center;
-        justify-content: center;
-        text-align: center;
-        padding: 20px;
-        box-shadow: 2px 2px 10px var(--basic-border-color);
-        border: 1px solid gray;
-        border-radius: 50px;
-        margin-bottom: 100px;
-        width: 50%;
-        background-color: var(--box-background-color);
-    }
-
-    #schulprofil-wrapper h1 {
+    .schulprofil h1 {
         font-size: 3.5rem;
     }
 
@@ -269,25 +254,13 @@ const KulturschuleHTMLComponent = `
     }
 
     @media (width < 1650px) {
-        #heading-wrapper {
-            width: 80%;
-        }
-        #heading-film-wrapper {
-            width: 80%;
-        }
-        #schulprofil-wrapper {
+        .wrapper {
             width: 80%;
         }
     }
 
     @media (width < 1150px) {
-        #heading-wrapper {
-            width: 80%;
-        }
-        #heading-film-wrapper {
-            width: 80%;
-        }
-        #schulprofil-wrapper {
+        .wrapper {
             width: 80%;
         }
         #container-image {
@@ -296,30 +269,27 @@ const KulturschuleHTMLComponent = `
     }
 
     @media (width < 800px) {
-        #heading-wrapper {
-            width: 95%;
-        }
-        #schulprofil-wrapper {
+        .wrapper {
             width: 95%;
         }
 
-        #schulprofil-wrapper h1 {
+        .schulprofil h1 {
             font-size: 2.5rem;
         }
-        #heading-wrapper h1 {
+        .heading h1 {
             font-size: 2.5rem;
         }
-        #heading-film-wrapper{
+        .heading-film{
             width: 95%;
         }
-        #heading-film-wrapper video {
+        .heading-film video {
             height: 350px;
         }
-        #heading-film-wrapper h1 {
+        .heading-film h1 {
             font-size: 2.5rem;
         }
 
-        #heading-film-wrapper p {
+        .heading-film p {
             font-size: 1.3rem;
         }
         #container-image {
@@ -334,7 +304,7 @@ const KulturschuleHTMLComponent = `
         }
     }
     @media (width < 800px) {
-        #heading-wrapper h1 {
+        .heading h1 {
             font-size: 2.0rem;
         }
         #heading-pdf-link {
@@ -344,5 +314,4 @@ const KulturschuleHTMLComponent = `
     }
 </style>
 `
-
 export default KulturschuleHTMLComponent;

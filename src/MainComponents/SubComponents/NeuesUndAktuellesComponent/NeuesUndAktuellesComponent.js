@@ -9,9 +9,9 @@ export default class NeuesUndAktuellesComponent extends HTMLElement{
     async connectedCallback() {
         //const rawHTML = await fetch("src/MainComponents/SubComponents/NeuesUndAktuellesComponent/NeuesUndAktuelles.html");
         //const HTML = await rawHTML.text();
-        //this.shadow.innerHTML = HTML;
+        this.shadow.innerHTML = NeusUndAktuellesHTML;
 
 
-        //MakeSubSiteNav.Instance.createSiteNavigation(this);
+        MakeSubSiteNav.Instance.createSiteNavigation(this);
     }
 }
