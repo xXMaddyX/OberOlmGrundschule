@@ -8,6 +8,7 @@ import KulturschuleElement from './MainComponents/SubComponents/KulturschuleComp
 import SectionNavComponent from './MainComponents/SectionNavComponent/SectionNavComponent.js';
 import SoLernenWirComponent from './MainComponents/SubComponents/SoLernenWirComponent/SoLernenWirComponent.js';
 import NeuesUndAktuellesComponent from './MainComponents/SubComponents/NeuesUndAktuellesComponent/NeuesUndAktuellesComponent.js';
+import DemokratischComponent from './MainComponents/SubComponents/DemokratischComponent/DemokratischComponent.js';
 
 //customElements.define(GlobalData.Instance.ComponentKeys.HeaderComponent, HeaderComponent);
 customElements.define(GlobalData.Instance.ComponentKeys.Leaves, Leaves);
@@ -16,14 +17,18 @@ customElements.define("kulturschule-site", KulturschuleElement);
 customElements.define("section-nav-component", SectionNavComponent);
 customElements.define("so-lernen-wir-site", SoLernenWirComponent);
 customElements.define("neues-und-aktuelles-site", NeuesUndAktuellesComponent);
+customElements.define("demokratisch-site", DemokratischComponent);
 
 const routes = {
     "#home": "home-site",
     "#solernenwir": "so-lernen-wir-site",
     "#news": "neues-und-aktuelles-site",
     "#kult": "kulturschule-site",
-    "#team": "",
-    "#living": ""
+    "#demokratisch": "demokratisch-site",
+    "#schulleben": "",
+    "#schulederzukunft": "",
+    "#eltern": "",
+    "#kinder": "",
 }
 
 const AppHeader = document.querySelector("#header-section");
