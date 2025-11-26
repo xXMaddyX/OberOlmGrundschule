@@ -9,6 +9,9 @@ import SectionNavComponent from './MainComponents/SectionNavComponent/SectionNav
 import SoLernenWirComponent from './MainComponents/SubComponents/SoLernenWirComponent/SoLernenWirComponent.js';
 import NeuesUndAktuellesComponent from './MainComponents/SubComponents/NeuesUndAktuellesComponent/NeuesUndAktuellesComponent.js';
 import DemokratischComponent from './MainComponents/SubComponents/DemokratischComponent/DemokratischComponent.js';
+import SchullebenComponent from './MainComponents/SubComponents/SchullebenComponent/SchullebenComponent.js';
+
+
 
 //customElements.define(GlobalData.Instance.ComponentKeys.HeaderComponent, HeaderComponent);
 customElements.define(GlobalData.Instance.ComponentKeys.Leaves, Leaves);
@@ -18,6 +21,7 @@ customElements.define("section-nav-component", SectionNavComponent);
 customElements.define("so-lernen-wir-site", SoLernenWirComponent);
 customElements.define("neues-und-aktuelles-site", NeuesUndAktuellesComponent);
 customElements.define("demokratisch-site", DemokratischComponent);
+customElements.define("schulleben-site", SchullebenComponent);
 
 const routes = {
     "#home": "home-site",
@@ -25,7 +29,7 @@ const routes = {
     "#news": "neues-und-aktuelles-site",
     "#kult": "kulturschule-site",
     "#demokratisch": "demokratisch-site",
-    "#schulleben": "",
+    "#schulleben": "schulleben-site",
     "#schulederzukunft": "",
     "#eltern": "",
     "#kinder": "",

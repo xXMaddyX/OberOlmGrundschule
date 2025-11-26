@@ -3,19 +3,14 @@
         <button id="open-site-nav"></button>
         <div id="nav-section-list">
             <section-nav-component class="section-nav-element"
-                button-name="Pädagogische Konzeption" nav-target="top"
+                button-name="AGS an unserer Schule" nav-target="AGS"
             ></section-nav-component>
-            <section-nav-component class="section-nav-element"
-                button-name="Profil" nav-target="schulprofil"
-            ></section-nav-component>
-            <section-nav-component class="section-nav-element"
-                button-name="Profil" nav-target="schulprofil"
-            ></section-nav-component>
-            <section-nav-component class="section-nav-element"
-                button-name="Profil" nav-target="schulprofil"
-            ></section-nav-component>
+            
         </div>
     </nav>
+    <section name="AGS">
+        <div class="AGS wrapper"></div>
+    </section>
 </div>
 <template id="nav-element-template">
         <button id="nav-element-button"></button>
@@ -25,6 +20,12 @@
         padding: 0px;
         margin: 0px;
         box-sizing: border-box;
+    }
+    img {
+        height: 250px;
+    }
+    p {
+        font-size: 1.2rem;
     }
     #section-nav {
         display: flex;
@@ -71,12 +72,61 @@
         opacity: 1;
     }
 
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+        box-shadow: 2px 2px 10px var(--basic-border-color);
+        border: 1px solid gray;
+        border-radius: 50px;
+        margin-bottom: 100px;
+        width: 50%;
+        background-color: var(--box-background-color);
+    }
+
+    .AGS {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        gap: 50px;
+    }
+
+    .ags-element-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .ags-element-img-container {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-self: center;
+    }
+
+    .ags-element-img-container img {
+        border-radius: 20px;
+        box-shadow: 2px 2px 5px black;
+    }
+
     @media (width < 1650px) {
-        
+        .wrapper {
+            width: 80%;
+        }
     }
 
     @media (width < 1150px) {
-        
+        .wrapper {
+            width: 80%;
+        }
+        .ags-element-img-container {
+            flex-direction: column;
+        }
     }
 
     @media (width < 800px) {
@@ -85,8 +135,10 @@
             width: 80px;
             height: 80px;
         }
+        .wrapper {
+            width: 95%;
+        }
+        
     }
-    @media (width < 800px) {
-         
-    }
+    
 </style>
