@@ -249,10 +249,10 @@ const SoLernenWirHTML = `
     }
     .spacer {
         height: 1px;
-        width: 80%;
         background-color: black;
         justify-self: center;
         align-self: center;
+        width: 100%;
     }
 
     #section-nav {
@@ -386,6 +386,7 @@ const SoLernenWirHTML = `
         display: flex;
         flex-direction: column;
         gap: 25px;
+        width: 100%;
     }
 
     #klassenstufen-wrapper-top-text {

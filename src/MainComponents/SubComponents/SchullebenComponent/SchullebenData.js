@@ -184,6 +184,51 @@ const SchullebenData = [
         ],
         text: `Hier wird unser Schulhof weiterentwickelt und so gestaltet, dass die Kinder die Dinge vorfinden, die sie brauchen, um gut Pause machen zu können.`
     },
-]
+];
 
-export default SchullebenData;
+const SchullebenDataKooperationen = [
+    {
+        header: "MGV Cäcilia & Quartettverein",
+        text: `Die beiden Musikvereine in Ober-Olm haben sich etwas ganz besonderes ausgedacht: 
+        Ab sofort haben die Kinder hier alle 2 Jahre die Möglichkeit im Rahmen einer AG ein Blasinstrument zu erlernen und dies im schuleigenen Orchester, 
+        dem „Grundschulgebläse“ in der Gruppe zu spielen. Der Quartettverein bereichert unseren Unterricht durch besondere Aktionen im Klassenzimmer und 
+        unterstützt die Schule bei Feiern und Festen. 
+        Der ortsansässige Musikverein MCV Cäcilia bietet Instrumentenschnupperstunden im Unterricht an.`,
+        link: ""
+    },
+    {
+        header: "KiTas:",
+        text: `Unser Vorschulprojekt mit der Kita Abenteuerland und dem katholischen Kindergarten besteht aus einer achtwöchigen Einheit zum Thema „darstellendes Spiel“. 
+        Mit der Theaterpädagogin und Schauspielerin Verena Gerlach erproben die Kinder sich in darstellendem Spiel und Körperarbeit. 
+        Dieses Projekt mit den Vorschulkindern und unseren Erstklässlern ist eingebettet in die musisch-ästhetische Arbeit an unserer Schule.`,
+        link: ""
+    },
+    {
+        header: "Kulturschulen:",
+        text: `Wir tauschen uns aus mit anderen kulturell profilierten Regelschulen in Rheinland-Pfalz und anderen Bundesländern und beteiligen uns aktiv am Netzwerk 
+        kulturelle Bildung an Schulen.
+        Zudem sind wir neuer Kooperationspartner im bundesweiten Kulturforscher-Netzwerk.`,
+        link: ""
+    },
+    {
+        header: "Kulturforscher-Netzwerk:",
+        text: "Als Schule sind wir Teil des bundesweiten Kulturforscher-Netzwerkes.",
+        link: "https://kultur-forscher.de/",
+        linktext: "Kulturforscher-Netzwerk"
+    },
+    {
+        header: "",
+        text: "",
+        link: ""
+    },
+    {
+        header: "",
+        text: "",
+        link: ""
+    }
+];
+
+export { 
+    SchullebenData,
+    SchullebenDataKooperationen,
+}
