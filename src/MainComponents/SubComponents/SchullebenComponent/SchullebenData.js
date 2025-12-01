@@ -189,9 +189,7 @@ const SchullebenData = [
 const SchullebenDataKooperationen = [
     {
         header: "MGV Cäcilia & Quartettverein",
-        text: `Die beiden Musikvereine in Ober-Olm haben sich etwas ganz besonderes ausgedacht: 
-        Ab sofort haben die Kinder hier alle 2 Jahre die Möglichkeit im Rahmen einer AG ein Blasinstrument zu erlernen und dies im schuleigenen Orchester, 
-        dem „Grundschulgebläse“ in der Gruppe zu spielen. Der Quartettverein bereichert unseren Unterricht durch besondere Aktionen im Klassenzimmer und 
+        text: `Der Quartettverein bereichert unseren Unterricht durch besondere Aktionen im Klassenzimmer und 
         unterstützt die Schule bei Feiern und Festen. 
         Der ortsansässige Musikverein MCV Cäcilia bietet Instrumentenschnupperstunden im Unterricht an.`,
         link: ""
@@ -217,18 +215,57 @@ const SchullebenDataKooperationen = [
         linktext: "Kulturforscher-Netzwerk"
     },
     {
-        header: "",
-        text: "",
-        link: ""
+        header: "KuBiS:",
+        text: `Arbeitsstelle KuBiS Marburg: Wir arbeiten mit der KuBiS zusammen. Das steigert die Qualität und schafft Vernetzung. 
+        Immer wieder studieren Kolleginnen und Kollegen dort "KuBi an Schulen" (Kulturelle Bildung an Schulen).`,
+        link: "https://www.uni-marburg.de/de/fb21/schulpaedagogik/arbeitsstelle-kubis",
+        linktext: "KuBiS-Link"
     },
     {
-        header: "",
-        text: "",
-        link: ""
+        header: "JuSt Staatstheater Mainz:",
+        text: "Offizieller Partner im Kulturforscher-Netzwerk.",
+        link: "https://www.staatstheater-mainz.com/home",
+        linktext: "JuSt Staatstheater Link"
     }
+];
+
+const SchullebenDataHausordung = [
+    {
+        header: "In unserem Haus des Lernens gelten für alle folgende Regeln:",
+        textArr: [
+            "o Wir grüßen einander freundlich.",
+            "o Wir lösen Streit mit Worten, nicht mit Gewalt. Wenn wir das nicht alleine schaffen, holen wir uns Hilfe.",
+            "o Wir achten darauf, dass unser Schulhaus schön sauber bleibt, damit wir uns alle wohlfühlen können.",
+            "o In unsere Schule sind alle elektronischen Geräte (Handys, iPads, Smartwatches) ausgeschaltet und im Schulranzen. Die Schule übernimmt für elektronische Geräte keine Haftung."
+        ],
+    },
+    {
+        header: "Im Unterricht brauchen wir Regeln, damit alle gut lernen können:",
+        textArr: [
+            "o Wir beginnen den Unterricht, auch nach der Pause, pünktlich.",
+            "o Wir hören einander zu und lassen andere ausreden.",
+            "o Wir melden uns, wenn wir etwas sagen wollen.",
+            "o Wir arbeiten so leise, dass wir die anderen Kinder nicht stören.",
+            "o Wir helfen dadurch mit, dass wir unsere Dienste einhalten.",
+            "o Wir haben das nötige Material dabei und die Stifte vollständig und gespitzt.",
+            "o Den Unterricht beendet unsere Lehrerin.",
+            "o Material für die Hausaufgaben packen wir am Vormittag ein, nach 13:15 Uhr sind die Klassenräume nicht mehr zugänglich.",
+        ]
+    },
+    {
+        header: "In der Pause oder bei einem Raumwechsel ist folgendes wichtig:",
+        textArr: [
+            "o In der Pause halten wir uns auf dem Schulhof auf.",
+            "o Wir rennen nicht in den Gängen.",
+            "o Bei Zwischenpausen und Raumwechseln bewegen wir uns leise, da die anderen Kinder Unterricht haben.",
+            "o Bei Regenpausen bleiben wir im Klassenraum und arbeiten, reden oder spielen friedlich miteinander.",
+            "o Sammelbilder oder –karten tauschen wir nur vor dem Unterricht oder in der zweiten Pause.",
+        ],
+    },
 ];
 
 export { 
     SchullebenData,
     SchullebenDataKooperationen,
+    SchullebenDataHausordung,
 }

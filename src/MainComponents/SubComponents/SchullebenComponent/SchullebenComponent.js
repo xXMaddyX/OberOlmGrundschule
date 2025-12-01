@@ -1,6 +1,6 @@
 import MakeSubSiteNav from "../../../Singeltones/MakeSubSiteNavigation.js";
 import SchullebenComponentHTML from "./SchullebenComponentHTML.js";
-import { SchullebenData, SchullebenDataKooperationen } from "./SchullebenData.js";
+import { SchullebenData, SchullebenDataKooperationen, SchullebenDataHausordung } from "./SchullebenData.js";
 
 export default class SchullebenComponent extends HTMLElement{
     constructor() {
@@ -9,19 +9,46 @@ export default class SchullebenComponent extends HTMLElement{
     };
 
     async connectedCallback() {
-        const rawHTML = await fetch("src/MainComponents/SubComponents/SchullebenComponent/Schulleben.html");
-        const HTML = await rawHTML.text();
-        this.shadow.innerHTML = HTML;
+        //const rawHTML = await fetch("src/MainComponents/SubComponents/SchullebenComponent/Schulleben.html");
+        //const HTML = await rawHTML.text();
+        this.shadow.innerHTML = SchullebenComponentHTML;
 
         MakeSubSiteNav.Instance.createSiteNavigation(this);
         this.addRefsToElems();
         this.generateElements();
         this.generateKooperation();
+        this.generateHausordung();
     }
 
     addRefsToElems() {
         this.AGSRef = this.shadow.querySelector(".AGS");
         this.KoopRef = this.shadow.querySelector(".kooperationen");
+        this.HausordungRef = this.shadow.querySelector(".haus-ordnung");
+    }
+
+    generateHausordung() {
+        SchullebenDataHausordung.forEach(({header, textArr}) => {
+            /**@type {HTMLDivElement} */
+            const elementContainer = document.createElement("div");
+            elementContainer.classList.add("hausordung-element-container");
+            
+            /**@type {HTMLHeadingElement} */
+            const headerElem = document.createElement("h2");
+            headerElem.textContent = header;
+            elementContainer.append(headerElem);
+            
+            textArr.forEach((item) => {
+                let textarrElem = document.createElement("p");
+                textarrElem.textContent = item;
+                elementContainer.append(textarrElem);
+            });
+
+            const SpanElement = document.createElement("span");
+            SpanElement.classList.add("spacer-elem");
+
+            this.HausordungRef.append(SpanElement, elementContainer);
+        });
+
     }
 
     generateKooperation() {
@@ -40,13 +67,19 @@ export default class SchullebenComponent extends HTMLElement{
             textElem.textContent = text;
             elementContainer.append(textElem);
 
-            /**@type {HTMLLinkElement} */
-            const linkElem = document.createElement("a");
-            linkElem.textContent = linktext;
-            linkElem.href = link;
-            elementContainer.append(linkElem);
+            if (link && linktext) {
+                /**@type {HTMLLinkElement} */
+                const linkElem = document.createElement("a");
+                linkElem.classList.add("koop-link-button");
+                linkElem.textContent = linktext;
+                linkElem.href = link;
+                elementContainer.append(linkElem);
+            }
 
-            this.KoopRef.append(elementContainer);
+            const SpanElement = document.createElement("span");
+            SpanElement.classList.add("spacer-elem");
+
+            this.KoopRef.append(SpanElement, elementContainer);
         });
     }
 

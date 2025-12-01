@@ -12,6 +12,12 @@ const SchullebenComponentHTML = `
             <section-nav-component class="section-nav-element"
                 button-name="Kooperationen" nav-target="kooperationen"
             ></section-nav-component>
+            <section-nav-component class="section-nav-element"
+                button-name="Hausordnung" nav-target="haus-ordnung"
+            ></section-nav-component>
+            <section-nav-component class="section-nav-element"
+                button-name="Schulkino" nav-target="schulkino"
+            ></section-nav-component>
         </div>
     </nav>
     <section name="AGS">
@@ -43,6 +49,30 @@ const SchullebenComponentHTML = `
 
         </div>
     </section>
+    <section name="haus-ordnung">
+        <div class="haus-ordnung wrapper">
+            <div id="haus-ordnung-heading">
+                <img src="images/hausordnung_img.webp" alt="">
+                <h1>Hausordnung</h1>
+            </div>
+            <p>
+                Damit sich alle in der Schule wohlfühlen können und nicht beim Lernen gestört
+                werden, gibt es Regeln, an die sich alle halten müssen.
+            </p>
+        </div>
+    </section>
+    <section name="schulkino">
+        <div class="schulkino wrapper">
+            <div id="schulkino-heading">
+                <img src="images/Schulkino-1-768x1024.webp" alt="">
+                <h1>Schulkino</h1>
+            </div>
+            <p>
+                Als Belohnung für die große Anstengung im ersten Halbjahr gibt es für die dritten und vierten Klassen eine Kinovorführung mit Projektor und auf großer Leinwand. 
+                Popcorn und Getränke dürfen natürlich auch nicht fehlen.
+            </p>
+        </div>
+    </section>
 </div>
 <template id="nav-element-template">
         <button id="nav-element-button"></button>
@@ -64,7 +94,7 @@ const SchullebenComponentHTML = `
         font-size: 3.5rem;
     }
     p {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
     .spacer-elem {
         width: 95%;
@@ -140,7 +170,7 @@ const SchullebenComponentHTML = `
         align-items: center;
         text-align: left;
         gap: 25px;
-
+        padding-bottom: 50px;
         & h1 {
             margin-top: 50px;
         }
@@ -170,6 +200,7 @@ const SchullebenComponentHTML = `
 
     .schulbibliothek {
         gap: 50px;
+        padding-bottom: 50px;
         & p {
             width: 80%;
             justify-self: center;
@@ -182,9 +213,91 @@ const SchullebenComponentHTML = `
         flex-direction: row;
         align-items: center;
         text-align: center;
-        gap: 100px;
+        gap: 50px;
         margin-top: 25px;
         margin-bottom: 25px;
+        & img {
+            border-radius: 20px;
+            box-shadow: 2px 2px 5px black;
+        }
+    }
+
+    .kooperationen {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        padding-bottom: 50px;
+        & p {
+            width: 80%;
+            text-align: start;
+            align-self: center;
+            justify-self: center;
+            margin-bottom: 50px;
+        }
+        & h2 {
+            margin-bottom: 20px;
+        }
+    }
+
+    .koop-link-button {
+        all: unset;
+        cursor: pointer;
+        border: 1px solid black;
+        padding: 10px;
+        border-radius: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-shadow: 2px 2px 5px black;
+        transition: all .5s;
+    }
+
+    .koop-link-button:hover {
+        background-color: orange;
+    }
+
+    .haus-ordnung {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        padding-bottom: 50px;
+        & p {
+            width: 80%;
+            text-align: start;
+            align-self: center;
+            justify-self: center;
+        }
+        & h2 {
+            margin-bottom: 20px;
+        }
+    }
+    #haus-ordnung-heading {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        & img {
+            border-radius: 20px;
+            box-shadow: 2px 2px 5px black;
+        }
+    }
+
+    .schulkino {
+        display: flex;
+        padding-bottom: 20px;
+    }
+
+    #schulkino-heading {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        margin-bottom: 50px;
+        & img {
+            border-radius: 20px;
+            box-shadow: 2px 2px 5px black;
+        }
     }
 
     @media (width < 1650px) {
@@ -222,6 +335,23 @@ const SchullebenComponentHTML = `
         .spacer-elem {
             width: 90%;
         }
+        .kooperationen {
+            & p {
+                width: 90%;
+            }
+        }
+        .haus-ordnung {
+            & p {
+                width: 90%;
+            }
+        }
+        #haus-ordnung-heading {
+            flex-direction: column-reverse;
+            gap: 10px;
+        }
+        #schulkino-heading {
+            flex-direction: column-reverse;
+        }
     }
 
     @media (width < 800px) {
@@ -233,7 +363,6 @@ const SchullebenComponentHTML = `
         .wrapper {
             width: 95%;
         }
-        
     }
     
 </style>
