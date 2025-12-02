@@ -10,6 +10,9 @@ import SoLernenWirComponent from './MainComponents/SubComponents/SoLernenWirComp
 import NeuesUndAktuellesComponent from './MainComponents/SubComponents/NeuesUndAktuellesComponent/NeuesUndAktuellesComponent.js';
 import DemokratischComponent from './MainComponents/SubComponents/DemokratischComponent/DemokratischComponent.js';
 import SchullebenComponent from './MainComponents/SubComponents/SchullebenComponent/SchullebenComponent.js';
+import SchuleDerZukunftComponent from './MainComponents/SubComponents/SchuleDerZukunftComponent/SchuleDerZukunftComponent.js';
+import ElternComponent from './MainComponents/SubComponents/ElternComponent/ElternComponent.js';
+import KinderComponent from './MainComponents/SubComponents/KinderComponent/KinderComponent.js';
 
 
 
@@ -22,6 +25,9 @@ customElements.define("so-lernen-wir-site", SoLernenWirComponent);
 customElements.define("neues-und-aktuelles-site", NeuesUndAktuellesComponent);
 customElements.define("demokratisch-site", DemokratischComponent);
 customElements.define("schulleben-site", SchullebenComponent);
+customElements.define("schule-der-zukunft-site", SchuleDerZukunftComponent);
+customElements.define("eltern-site", ElternComponent);
+customElements.define("kinder-site", KinderComponent);
 
 const routes = {
     "#home": "home-site",
@@ -30,9 +36,9 @@ const routes = {
     "#kult": "kulturschule-site",
     "#demokratisch": "demokratisch-site",
     "#schulleben": "schulleben-site",
-    "#schulederzukunft": "",
-    "#eltern": "",
-    "#kinder": "",
+    "#schulederzukunft": "schule-der-zukunft-site",
+    "#eltern": "eltern-site",
+    "#kinder": "kinder-site",
 }
 
 const AppHeader = document.querySelector("#header-section");

@@ -18,6 +18,9 @@ const SchullebenComponentHTML = `
             <section-nav-component class="section-nav-element"
                 button-name="Schulkino" nav-target="schulkino"
             ></section-nav-component>
+            <section-nav-component class="section-nav-element"
+                button-name="Projektwochen" nav-target="projektwochen"
+            ></section-nav-component>
         </div>
     </nav>
     <section name="AGS">
@@ -71,6 +74,50 @@ const SchullebenComponentHTML = `
                 Als Belohnung für die große Anstengung im ersten Halbjahr gibt es für die dritten und vierten Klassen eine Kinovorführung mit Projektor und auf großer Leinwand. 
                 Popcorn und Getränke dürfen natürlich auch nicht fehlen.
             </p>
+        </div>
+    </section>
+    <section name="projektwochen">
+        <div class="projektwochen wrapper">
+            <div id="projektwochen-heading">
+                <img src="images/projektwochen_img.webp" alt="">
+                <div>
+                    <h2>Die Projektzeitungen der</h2>
+                    <h1>Projektwochen</h1>
+                </div>
+            </div>
+            <div id="projektwochen-grid">
+                <div id="projektwochen-grid-elem-first" class="projektwochen-grid-elem">
+                    <p>Zur Ansicht die Datei anklicken</p>
+                </div>
+                <div class="projektwochen-grid-elem">
+                    <img class="download-img" src="images/download.webp" alt="">
+                    <a href="https://www.gs-ober-olm.de/files/1sj.pdf" target="_blank">Projektwoche 2013</a>
+                </div>
+                <div class="projektwochen-grid-elem projektwochen-grid-elem-cont">
+                    <img class="download-img" src="images/download.webp" alt="">
+                    <a href="https://www.gs-ober-olm.de/files/2sj.pdf" target="_blank">Projektwoche 2015</a>
+                </div>
+                <div class="projektwochen-grid-elem">
+                    <img class="download-img" src="images/download.webp" alt="">
+                    <a href="https://www.gs-ober-olm.de/files/3sj.pdf" target="_blank">Projektwoche 2017</a>
+                </div>
+                <div class="projektwochen-grid-elem projektwochen-grid-elem-cont">
+                    <img class="download-img" src="images/download.webp" alt="">
+                    <a href="https://www.gs-ober-olm.de/files/4sj.pdf" target="_blank">Projektwoche 2019</a>
+                </div>
+                <div class="projektwochen-grid-elem">
+                    <img class="download-img" src="images/download.webp" alt="">
+                    <a href="https://www.gs-ober-olm.de/files/SBA.pdf" target="_blank">Projektwoche 2021</a>
+                </div>
+                <div class="projektwochen-grid-elem">
+                    <img class="download-img" src="images/download.webp" alt="">
+                    <a href="https://www.gs-ober-olm.de/files/SBA.pdf" target="_blank">Projektwoche 2023</a>
+                </div>
+                <div class="projektwochen-grid-elem">
+                    <img class="download-img" src="images/download.webp" alt="">
+                    <a href="https://www.gs-ober-olm.de/files/SBA.pdf" target="_blank">Projektwoche 2025</a>
+                </div>
+            </div>
         </div>
     </section>
 </div>
@@ -300,6 +347,45 @@ const SchullebenComponentHTML = `
         }
     }
 
+    .projektwochen {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        & img {
+            border-radius: 20px;
+        }
+    }
+
+    #projektwochen-grid {
+        display: grid;
+        row-gap: 10px;
+        border-radius: 20px;
+        background-color: white;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        font-size: 1.3rem;
+        box-shadow: 0px 0px 5px black;
+        & div {
+            padding: 15px;
+        }
+    }
+
+    #projektwochen-heading {
+        & img {
+            box-shadow: 2px 2px 5px black;
+            margin-bottom: 10px;
+        }
+    }
+
+    .projektwochen-grid-elem-cont {
+        background-color: gray;
+    }
+
+    .download-img {
+        width: 25px;
+        height: 25px;
+    }
+
     @media (width < 1650px) {
         .wrapper {
             width: 80%;
@@ -351,6 +437,14 @@ const SchullebenComponentHTML = `
         }
         #schulkino-heading {
             flex-direction: column-reverse;
+        }
+
+
+
+        #projektwochen-heading {
+            & img {
+                width: 90%;
+            }
         }
     }
 

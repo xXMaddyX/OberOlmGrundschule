@@ -1,16 +1,21 @@
-const DemokratischComponentHTML = `
 <div>
     <nav id="section-nav">
         <button id="open-site-nav"></button>
-        <div id="nav-section-list"></div>
-    </nav>
-    <section name="main">
-        <div class="main wrapper">
-            <a class="wrapper-links" href="https://www.gs-ober-olm.de/files/demokratieerziehung.pdf" target="_blank">Modell der Demokratieerziehung<br>an unserer Schule</a>
-            <a class="wrapper-links" href="https://www.gs-ober-olm.de/files/klassenrat.pdf" target="_blank">Klassenrat und Wochenwiese</a>
-            <a class="wrapper-links" href="https://www.gs-ober-olm.de/files/sch%C3%BClerparlament.pdf" target="_blank">Schülerparlament</a>
+        <div id="nav-section-list">
+            <section-nav-component class="section-nav-element"
+                button-name="Pädagogische Konzeption" nav-target="top"
+            ></section-nav-component>
+            <section-nav-component class="section-nav-element"
+                button-name="Profil" nav-target="schulprofil"
+            ></section-nav-component>
+            <section-nav-component class="section-nav-element"
+                button-name="Profil" nav-target="schulprofil"
+            ></section-nav-component>
+            <section-nav-component class="section-nav-element"
+                button-name="Profil" nav-target="schulprofil"
+            ></section-nav-component>
         </div>
-    </section>
+    </nav>
 </div>
 <template id="nav-element-template">
         <button id="nav-element-button"></button>
@@ -21,7 +26,6 @@ const DemokratischComponentHTML = `
         margin: 0px;
         box-sizing: border-box;
     }
-
     #section-nav {
         display: flex;
         flex-direction: column;
@@ -79,38 +83,15 @@ const DemokratischComponentHTML = `
         border-radius: 50px;
         margin-bottom: 100px;
         width: 50%;
-        gap: 20px;
         background-color: var(--box-background-color);
     }
 
-    .wrapper-links {
-        all: unset;
-        cursor: pointer;
-        font-size: 1.2rem;
-        padding: 15px;
-        border: 1px solid black;
-        border-radius: 20px;
-        width: 50%;
-        justify-self: center;
-        align-self: center;
-        box-shadow: 2px 2px 5px black;
-        transition: all 1.0s;
-    }
-
-    .wrapper-links:hover {
-        background-color: orange;
-    }
-
     @media (width < 1650px) {
-        .wrapper {
-            width: 80%;
-        }
+        
     }
 
     @media (width < 1150px) {
-        .wrapper {
-            width: 80%;
-        }
+        
     }
 
     @media (width < 800px) {
@@ -119,13 +100,8 @@ const DemokratischComponentHTML = `
             width: 80px;
             height: 80px;
         }
-        .wrapper {
-            width: 95%;
-        }
     }
     @media (width < 800px) {
          
     }
 </style>
-`;
-export default DemokratischComponentHTML;

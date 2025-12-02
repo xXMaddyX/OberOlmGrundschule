@@ -1,4 +1,5 @@
 import MakeSubSiteNav from "../../../Singeltones/MakeSubSiteNavigation.js";
+import SchuleDerZukunftHTML from "./SchuleDerZukunftHTML.js";
 
 export default class SchuleDerZukunftComponent extends HTMLElement{
     constructor() {
@@ -7,9 +8,9 @@ export default class SchuleDerZukunftComponent extends HTMLElement{
     };
 
     async connectedCallback() {
-        const rawHTML = await fetch();
-        const HTML = rawHTML.text();
-        this.shadow.innerHTML = HTML;
+        //const rawHTML = await fetch("src/MainComponents/SubComponents/SchuleDerZukunftComponent/SchuleDerZukunft.html");
+        //const HTML = await rawHTML.text();
+        this.shadow.innerHTML = SchuleDerZukunftHTML;
 
         MakeSubSiteNav.Instance.createSiteNavigation(this);
     }
