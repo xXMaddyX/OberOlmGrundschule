@@ -2,9 +2,17 @@
   /*TEXT_COLORS_AND_FONDS*/
     --main-font: "Arial Narrow";
     --home-titel-text-color: orange;
-    --basic-text-color: black;
+    --basic-text-color: rgb(0, 0, 0);
     --text-shadow-black: 1px 1px 2px rgb(0, 0, 0), -1px -1px 2px rgb(0, 0, 0), 1px -1px 2px rgb(0, 0, 0), -1px 1px 2px rgb(0, 0, 0);
-    --text-shadow-white: 1px 1px 2px rgb(255, 255, 255), -1px -1px 2px rgb(255, 255, 255), 1px -1px 2px rgb(255, 255, 255), -1px 1px 2px rgb(255, 255, 255);
+    --text-shadow-white: 
+      2px 0 3px rgb(255, 255, 255), 
+    -2px 0 3px rgb(255, 255, 255), 
+    0 2px 3px rgb(255, 255, 255), 
+    0 -2px 3px rgb(255, 255, 255), 
+    2px 2px 3px rgb(255, 255, 255), 
+    -2px -2px 3px rgb(255, 255, 255),
+    2px -2px 3px rgb(255, 255, 255),
+    -2px 2px 3px rgb(255, 255, 255);
 
     --box-background-color: rgba(255, 255, 255, 0.4);
     --basic-transition-time: 0.5s;

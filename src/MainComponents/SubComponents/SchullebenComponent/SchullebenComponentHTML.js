@@ -413,11 +413,17 @@ const SchullebenComponentHTML = `
         .AGS p {
             width: 90%;
         }
-        .schulbibliothek p {
-            width: 90%;
-            justify-self: center;
-            align-self: center;
+        .schulbibliothek {
+            & p {
+                width: 90%;
+                justify-self: center;
+                align-self: center;
+            }
+            & img {
+                width: 100%;
+            }
         }
+
         .spacer-elem {
             width: 90%;
         }
@@ -456,9 +462,9 @@ const SchullebenComponentHTML = `
         }
         .wrapper {
             width: 95%;
+            text-align: center;
         }
     }
-    
 </style>
 `;
 export default SchullebenComponentHTML;

@@ -30,8 +30,8 @@ const SoLernenWirHTML = `
                     <img id="peadagogisch-wrapper-top-img" src="images/peadagogische-konzeption.webp" alt="" loading="lazy">
                 </div>
                 <div>
-                    <h2>Pädagogische Konzeption</h2>
                     <h1>Lernen in guter Atmosphäre</h1>
+                    <h2>Pädagogische Konzeption</h2>
                 </div>
             </div>
             <p id="peadagogisch-wrapper-top-text">
@@ -121,8 +121,8 @@ const SoLernenWirHTML = `
                     <div class="fordern-wrapper-element-top">
                         <img src="images/schulhausgestaltung.webp" alt="" loading="lazy">
                         <div class="fordern-wrapper-element-top-head-text">
-                            <h3>Förderstunde</h3>
                             <h1>Schulhaus-gestaltung</h1>
+                            <h3>Förderstunde</h3>
                         </div>
                     </div>
                     <div class="fordern-wrapper-element-center">
@@ -135,8 +135,8 @@ const SoLernenWirHTML = `
                     <div class="fordern-wrapper-element-top">
                         <img src="images/foerder-sport.webp" alt="" loading="lazy">
                         <div class="fordern-wrapper-element-top-head-text">
-                            <h3>Förderstunde</h3>
                             <h1>Sport</h1>
+                            <h3>Förderstunde</h3>
                         </div>
                     </div>
                     <div class="fordern-wrapper-element-center">
@@ -169,8 +169,8 @@ const SoLernenWirHTML = `
                     <div class="fordern-wrapper-element-top">
                         <img src="images/sprachakrobaten.webp" alt="" loading="lazy" style="width: 300px;">
                         <div class="fordern-wrapper-element-top-head-text">
-                            <h3>Förderstunde</h3>
                             <h1>Sprachakrobaten</h1>
+                            <h3>Förderstunde</h3>
                         </div>
                     </div>
                     <div class="fordern-wrapper-element-center">
@@ -208,8 +208,8 @@ const SoLernenWirHTML = `
         <div class="bewegungs wrapper">
             <div id="bewegungs-wrapper-top">
                 <div>
-                    <h2>Sportunterricht in Ober-Olm</h2>
                     <h1>Bewegungserziehung</h1>
+                    <h2>Sportunterricht in Ober-Olm</h2>
                 </div>
             </div>
             <p id="bewegungs-wrapper-top-text">
@@ -425,9 +425,22 @@ const SoLernenWirHTML = `
         }
         #peadagogisch-wrapper-top {
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
         }
         #leistungs-wrapper-top {
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        h1 {
+            font-size: 1.6rem;
+            font-weight: 800;
+        }
+        h2 {
+            font-size: 1.3rem;
         }
     }
 </style>

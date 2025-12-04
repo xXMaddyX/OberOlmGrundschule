@@ -122,9 +122,9 @@ const DemokratischComponentHTML = `
         .wrapper {
             width: 95%;
         }
-    }
-    @media (width < 800px) {
-         
+        .wrapper-links {
+            width: 90%;
+        }
     }
 </style>
 `;

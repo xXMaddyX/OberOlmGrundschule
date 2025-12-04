@@ -144,6 +144,11 @@ const SchuleDerZukunftHTML = `
         .wrapper {
             width: 95%;
         }
+        .schule-der-zukunft {
+            & h1 {
+                font-size: 2.5rem;
+            }
+        }
     }
 </style>
 `;

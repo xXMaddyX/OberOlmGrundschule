@@ -382,6 +382,9 @@ const NeusUndAktuellesHTML = `
     }
 
     @media (width < 800px) {
+        h1 {
+            font-size: 2.5rem;
+        }
         h2 {
             font-size: 1.5rem;
         }
