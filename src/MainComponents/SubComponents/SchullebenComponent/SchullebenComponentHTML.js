@@ -138,10 +138,10 @@ const SchullebenComponentHTML = `
         height: 250px;
     }
     h1 {
-        font-size: 3.5rem;
+        font-size: var(--h1-font-size);
     }
     p {
-        font-size: 1.3rem;
+        font-size: var(--main-p-size);
     }
     .spacer-elem {
         width: 95%;
@@ -363,7 +363,7 @@ const SchullebenComponentHTML = `
         background-color: white;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(6, 1fr);
-        font-size: 1.3rem;
+        font-size: var(--main-p-size);
         box-shadow: 0px 0px 5px black;
         & div {
             padding: 15px;
@@ -400,7 +400,7 @@ const SchullebenComponentHTML = `
             flex-direction: column;
         }
         h1 {
-            font-size: 2.5rem;
+            font-size: var(--h1-font-mobile-size);
             text-align: center;
         }
         .schulbibliothek-heading {
