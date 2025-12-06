@@ -3,13 +3,13 @@
         <button id="open-site-nav"></button>
         <div id="nav-section-list">
             <section-nav-component class="section-nav-element"
-                button-name="Pädagogische Konzeption" nav-target="top"
+                button-name="Eltern-ABC" nav-target="eltern-abc"
             ></section-nav-component>
             <section-nav-component class="section-nav-element"
-                button-name="Profil" nav-target="schulprofil"
+                button-name="Sdui App" nav-target="sdui-app"
             ></section-nav-component>
             <section-nav-component class="section-nav-element"
-                button-name="Profil" nav-target="schulprofil"
+                button-name="Schulelternbeirat" nav-target="seb"
             ></section-nav-component>
             <section-nav-component class="section-nav-element"
                 button-name="Profil" nav-target="schulprofil"
@@ -452,8 +452,22 @@
     </section>
     <section name="sdui-app">
         <div class="sdui-app wrapper">
-            
+            <div id="sdui-app-heading">
+                <img src="images/Sdui-Hero-Image-1.webp" alt="">
+                <h1>Die neue Sdui-App</h1>
+            </div>
+            <p>
+                Die App „Sdui“, mit der wir ab dem Schuljahr 2023/24 arbeiten erleichtert die schulische Kommunikation sehr.<br>
+                Ab sofort finden Sie hier alle Elternbriefe und aktuellen Informationen.<br>
+                Zudem sind die Kinder ab sofort über die App abzumelden, wenn sie die Schule nicht besuchen können. 
+                Wie geht das? Hier gibt's die nötigen Infos:
+            </p>
+            <a href="https://gs-ober-olm.de/files/sdui.pdf" target="_blank">PDF</a>
+            <a href="https://sdui.de/" target="_blank">Website</a>
         </div>
+    </section>
+    <section name="seb">
+        <div class="seb wrapper"></div>
     </section>
 </div>
 <template id="nav-element-template">
@@ -465,8 +479,14 @@
         margin: 0px;
         box-sizing: border-box;
     }
+    h1 {
+        font-size: var(--h1-font-size);
+    }
     p {
-        font-size: 1.3rem;
+        font-size: var(--main-p-size);
+    }
+    section {
+        scroll-margin-top: 300px;
     }
     #section-nav {
         display: flex;
@@ -574,6 +594,90 @@
             background-color: rgb(135, 206, 29);
         }
     }
+    
+    .sdui-app {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 50px;
+        & p {
+            margin-top: 20px;
+        }
+        & a {
+            width: 250px;
+            justify-self: center;
+            align-self: center;
+            border: 1px solid black;
+            box-shadow: 2px 2px 5px black;
+            border-radius: 20px;
+            padding: 15px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-top: 20px;
+            transition: all 1s;
+        }
+        & a:hover {
+            background-color: orange;
+        }
+    }
+
+    #sdui-app-heading {
+        & img {
+            box-shadow: 2px 2px 5px black;
+            border-radius: 20px;
+        }
+        & h1 {
+            margin-top: 20px;
+        }
+    }
+    
+    .seb {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 20px;
+        column-gap: 10px;
+    }
+
+    .seb-card-container {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        text-align: start;
+        border-radius: 20px;
+        min-height: 550px;
+        padding: 20px;
+        border: 1px solid black;
+        box-shadow: 2px 2px 5px black;
+        background-color: rgba(255, 255, 255, 0.6);
+        & img {
+            width: 200px;
+            margin-bottom: 10px;
+            box-shadow: 2px 2px 5px black;
+        }
+        & h1 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        & h2 {
+            font-size: 1.2rem;
+        }
+        & p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+    }
+
+    .seb-card-list-elem {
+        display: flex;
+        flex-direction: column;
+        & ul {
+            width: 80%;
+            align-self: center;
+            text-align: start;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+
 
     @media (width < 1650px) {
         .wrapper {
@@ -610,6 +714,26 @@
                 }
             }
 
+        }
+        #sdui-app-heading {
+            & img {
+                width: 90%;
+            }
+            & h1 {
+                font-size: 2.0rem;
+            }
+        }
+
+        .seb {
+            grid-template-columns: 1fr;
+            & .seb-card-container {
+                width: 98%;
+                align-self: center;
+                justify-self: center;
+            }
+            & h2 {
+                font-size: 1.0rem;
+            }
         }
     }
 </style>
