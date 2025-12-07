@@ -12,7 +12,13 @@
                 button-name="Schulelternbeirat" nav-target="seb"
             ></section-nav-component>
             <section-nav-component class="section-nav-element"
-                button-name="Profil" nav-target="schulprofil"
+                button-name="Förderverein" nav-target="foerderverein"
+            ></section-nav-component>
+            <section-nav-component class="section-nav-element"
+                button-name="Sicherer Schulweg" nav-target="schulweg"
+            ></section-nav-component>
+            <section-nav-component class="section-nav-element"
+                button-name="Förderverein" nav-target="foerderverein"
             ></section-nav-component>
         </div>
     </nav>
@@ -467,7 +473,83 @@
         </div>
     </section>
     <section name="seb">
-        <div class="seb wrapper"></div>
+        <div class="seb wrapper">
+            <h1>Schulelternbeirat</h1>
+            <h2>Mitglieder des SEB</h2>
+            <div class="seb-grid"></div>
+            <div class="seb-links">
+                <a href="" target="_blank">ADAC Fahrradturnier</a>
+                <a href="" target="_blank">Sichere Schulwege</a>
+            </div>
+        </div>
+    </section>
+    <section name="foerderverein">
+        <div class="foerder-verein wrapper">
+            <h1>FörderVerein</h1>
+            <div class="foerder-verein-element">
+                <h2>Wissenswertes über den Förderverein</h2>
+                <p>
+                    Seit 1999 gibt es an unserer Schule den Förderverein. Wir erweitern den oft engen finanziellen Spielraum der Schule durch Mitgliedsbeiträge,<br>
+                    Spenden und Fördermittel, die von öffentlichen und privaten Institutionen angeworben wurden.<br>
+                    Außerdem fördern wir die Grundschule sowohl ideell als auch durch personelle Unterstützung.
+                </p>
+            </div>
+            <div class="foerder-verein-element">
+                <h2>Wie wir fördern</h2>
+                <p>
+                    Wichtig ist uns eine  gute, verlässliche und  unbürokratische Zusammenarbeit mit allen Personen und Gremien der Schule -Schulleitung,
+                    Kollegium, Eltern, Schulträger, Referenten, Lieferanten usw.<br>
+                    Dabei ist und  bleibt unser oberstes Ziel die  Förderung der Kinder an  der  Grundschule Ober-Olm.
+                </p>
+            </div>
+            <div class="foerder-verein-element">
+                <h2>Was wir fördern</h2>
+                <p>
+                    Der Förderverein ist gemeinnützig und fördert Vorhaben, die  unseren satzungsmäßigen Zielen entsprechen.<br><br>Dazu gehören unter anderem:<br>
+                    > die Förderung der Erziehungs- und Bildungsarbeit<br>
+                    > Unterstützung bedürftiger Kinder<br>
+                    > Förderung der Integration der Schule in das Gemeindeleben<br><br>
+                    Beispiele hierfür sind:<br>
+                    Ausstattung des  Medienzentrums, jährlicher  PIX-Kurs für die  4.Klassen, kontinuierliche Förderung der Bibliothek, kurzfristige Beschaffung von Verbrauchsmaterial, Beschaffung der  Schul-T-Shirts, individuelle Förderung von Schulausflügen und Klassenfahrten, Kindersachenbasar, Weihnachtsmarkt, Bläser AG und Vieles mehr.
+                </p>
+            </div>
+            <div class="foerder-verein-element">
+                <h2>Was Sie tun können:</h2>
+                <p>
+                    Wir freuen uns über jedes Mitglied, das durch Mitgliedsbeiträge unsere Arbeit unterstützt.<br>
+                    Am meisten freuen wir uns aber  über aktive Mitglieder, die bereit sind, neue Ideen  einzubringen und tatkräftig umzusetzen.
+                </p>
+            </div>
+            <div class="foerder-verein-element">
+                <h2>Kontakt:</h2>
+                <p>Sabine Vogt (1. Vorsitzende),<br>&#9742; 06136-9264727<br>&#9993; sabine.vogt.oo@gmx.de</p>
+            </div>
+            <div class="foerder-verein-element foerder-verein-element-last">
+                <h2>Weitere Infos:</h2>
+                <div class="foerder-verein-element-last-container">
+                    <img src="images/download.webp" alt="">
+                    <a href="">Unsere Satzung</a>
+                </div>
+                <div class="foerder-verein-element-last-container">
+                    <img src="images/download.webp" alt="">
+                    <a href="">Aufnahmeantrag</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section name="schulweg">
+        <div class="schulweg wrapper">
+            <h1>Sichere Schulwege</h1>
+            <p>
+                Der Schulelternbeirat hat für Sie sichere Schulwege in Ober-Olm herausgearbeitet und in der Karte unseres Ortes eingezeichnet.<br>
+                Die besten Sammelpunkte und Überquerungsmöglichkeiten der Straßen sind mit gelben Blumen und roten Dreiecken auf den Asphalt gemalt.<br>
+                Bitte üben Sie mit Ihrem Kind diese Wege ein, damit es sicher in der Schule ankommt.
+            </p>
+            <div class="schulweg-wrapper-item">
+                <img src="images/download.webp" alt="">
+                <a href="" target="_blank">Pressemitteilung "Aktion für sichere Schulwege"</a>
+            </div>
+        </div>
     </section>
 </div>
 <template id="nav-element-template">
@@ -562,39 +644,38 @@
             width: 50%;
             margin-bottom: 20px;
         }
-    }
-
-    .eltern-abc-grid {
-        display: grid;
-        max-width: 100%;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 1fr);
-        margin-top: 20px;
-        & :first-child {
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-        }
-        & :last-child {
-            border-bottom-right-radius: 20px;
-            border-bottom-left-radius: 20px;
-        }
-        & .eltern-abc-grid-element {
+        .eltern-abc-grid {
             display: grid;
-            text-align: start;
-            grid-template-columns: 1fr 3fr;
-            padding: 5px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            background-color: rgb(228, 228, 228);
-            & :nth-child(1) {
-                color: blue;
+            max-width: 100%;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 1fr);
+            margin-top: 20px;
+            & :first-child {
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+            }
+            & :last-child {
+                border-bottom-right-radius: 20px;
+                border-bottom-left-radius: 20px;
+            }
+            & .eltern-abc-grid-element {
+                display: grid;
+                text-align: start;
+                grid-template-columns: 1fr 3fr;
+                padding: 5px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                background-color: rgba(255, 255, 255, 0.0);
+                & :nth-child(1) {
+                    color: blue;
+                }
+            }
+            & .eltern-abc-grid-element-second {
+                background-color: rgb(100, 255, 100, 0.6);
             }
         }
-        & .eltern-abc-grid-element-second {
-            background-color: rgb(135, 206, 29);
-        }
     }
-    
+
     .sdui-app {
         display: flex;
         flex-direction: column;
@@ -618,66 +699,150 @@
         & a:hover {
             background-color: orange;
         }
+        #sdui-app-heading {
+            & img {
+                box-shadow: 2px 2px 5px black;
+                border-radius: 20px;
+            }
+            & h1 {
+                margin-top: 20px;
+            }
+        }
     }
 
-    #sdui-app-heading {
-        & img {
-            box-shadow: 2px 2px 5px black;
-            border-radius: 20px;
-        }
+
+    .seb {
+        display: flex;
+        flex-direction: column;
         & h1 {
+            margin-bottom: 10px;
+        }
+        & .seb-links {
+            display: flex;
+            flex-direction: column;
+            margin-top: 50px;
+            align-self: center;
+            gap: 10px;
+            & a {
+                all: unset;
+                color: blue;
+                border: 1px solid black;
+                box-shadow: 2px 2px 5px black;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                border-radius: 20px;
+                width: 200px;
+                transition: all 1s;
+            }
+            & a:hover {
+                background-color: orange;
+            }
+            cursor: pointer;
+        }
+        & .seb-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 20px;
+            column-gap: 10px;
             margin-top: 20px;
+            & .seb-card-container {
+                display: flex;
+                flex-direction: column;
+                align-self: center;
+                text-align: start;
+                border-radius: 20px;
+                min-height: 550px;
+                padding: 20px;
+                border: 1px solid black;
+                box-shadow: 2px 2px 5px black;
+                background-color: rgba(255, 255, 255, 0.6);
+                & img {
+                    width: 200px;
+                    margin-bottom: 10px;
+                    box-shadow: 2px 2px 5px black;
+                }
+                & h1 {
+                    font-size: 1.5rem;
+                    margin-bottom: 10px;
+                }
+                & h2 {
+                    font-size: 1.2rem;
+                }
+                & p {
+                    font-size: 1rem;
+                    margin-bottom: 20px;
+                }
+                .seb-card-list-elem {
+                    display: flex;
+                    flex-direction: column;
+                    & ul {
+                        width: 80%;
+                        align-self: center;
+                        text-align: start;
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
         }
     }
     
-    .seb {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: 20px;
-        column-gap: 10px;
-    }
-
-    .seb-card-container {
+    .foerder-verein {
         display: flex;
         flex-direction: column;
-        align-self: center;
-        text-align: start;
-        border-radius: 20px;
-        min-height: 550px;
-        padding: 20px;
-        border: 1px solid black;
-        box-shadow: 2px 2px 5px black;
-        background-color: rgba(255, 255, 255, 0.6);
-        & img {
-            width: 200px;
-            margin-bottom: 10px;
-            box-shadow: 2px 2px 5px black;
+        & .foerder-verein-element {
+            text-align: start;
+            & h2 {
+                margin-top: 10px;
+                background-color: rgb(100, 255, 100, 0.6);
+                padding: 10px;
+            }  
+            & p {
+                margin-top: 5px;
+                padding: 10px;
+            }
+            & img {
+                width: 25px;
+            }
+            & .foerder-verein-element-last-container {
+                font-size: 1.3rem;
+                padding: 10px;
+                margin-top: 10px;
+                gap: 10px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
         }
+        & .foerder-verein-element-last {
+            & h2 {
+                background-color: rgb(255, 166, 0, 0.6);
+            }
+        }
+    }
+
+    .schulweg {
+        display: flex;
+        flex-direction: column;
         & h1 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-        & h2 {
-            font-size: 1.2rem;
+            font-size: var(--h1-font-size);
+            margin-bottom: 20px;
         }
         & p {
-            font-size: 1rem;
-            margin-bottom: 20px;
-        }
-    }
-
-    .seb-card-list-elem {
-        display: flex;
-        flex-direction: column;
-        & ul {
-            width: 80%;
-            align-self: center;
             text-align: start;
+        }
+        & .schulweg-wrapper-item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.3rem;
             margin-top: 20px;
-            margin-bottom: 20px;
+            & img {
+                width: 25px;
+            }
         }
     }
-
 
     @media (width < 1650px) {
         .wrapper {
@@ -689,7 +854,26 @@
         .wrapper {
             width: 80%;
         }
+        .seb {
+            & h1 {
+                font-size: 2.0rem;
+            }
+            .seb-grid {
+                display: flex;
+                flex-direction: column;
+                & h2 {
+                    font-size: 1.0rem;
+                }
+                & .seb-card-container {
+                    width: 98%;
+                    & h2 {
+                        max-width: max-content;
+                    }
+                }
+            }
+        }
     }
+    
 
     @media (width < 800px) {
         #open-site-nav {
@@ -704,16 +888,13 @@
             & img {
                 width: 95%;
             }
-        }
-        .eltern-abc-grid {
-            & .eltern-abc-grid-element {
+            & .eltern-abc-grid {
                 grid-template-columns: 1fr;
-                & :first-child {
-                    font-size: 1.2rem;
-                    margin-bottom: 10px;
+                & .eltern-abc-grid-element {
+                    display: flex;
+                    flex-direction: column;
                 }
             }
-
         }
         #sdui-app-heading {
             & img {
@@ -723,7 +904,6 @@
                 font-size: 2.0rem;
             }
         }
-
         .seb {
             grid-template-columns: 1fr;
             & .seb-card-container {

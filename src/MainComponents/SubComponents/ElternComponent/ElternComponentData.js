@@ -14,7 +14,7 @@ const ElternComponentData = [
                 'Koordination "Einschulungsfeier"',
             ],
         },
-        cardFooterLine: 'Mitglied im Schulausschuss/Gesamtkonferenz',
+        cardFooterLine: 'Mitglied im Schulausschuss/ Gesamtkonferenz',
     },
     {
         imageLink: 'images/eltern-abc-img.webp',
@@ -28,18 +28,18 @@ const ElternComponentData = [
                 'Schulbuchausschuss'
             ],
         },
-        cardFooterLine: 'Mitglied im Schulausschuss/Gesamtkonferenz',
+        cardFooterLine: 'Mitglied im Schulausschuss/ Gesamtkonferenz',
     },
     {
         imageLink: 'images/eltern-abc-img.webp',
         headingH1: '',
-        cardName: '',
-        cardNameDes: '',
+        cardName: 'Nathalie Bush',
+        cardNameDes: '1 Kind: Karl (3b)',
         cardList: {
-            listHeading: '',
+            listHeading: 'Aufgabenschwerpunkt im SEB',
             listPoints: [
-                '',
-                ''
+                'Schriftführerin',
+                'Schulranzen-Aktion'
             ],
         },
         cardFooterLine: '',
@@ -47,13 +47,29 @@ const ElternComponentData = [
     {
         imageLink: 'images/eltern-abc-img.webp',
         headingH1: '',
-        cardName: '',
-        cardNameDes: '',
+        cardName: 'Eva-Marie Borowiack',
+        cardNameDes: '3 Kinder: Hannah(GYMNO), Ella(GYMNO), Thea(1b)',
         cardList: {
-            listHeading: '',
+            listHeading: 'Aufgabenschwerpunkt im SEB',
             listPoints: [
-                '',
-                ''
+                'SEB-Homepage',
+                'Koordination-Schulfest'
+            ],
+        },
+        cardFooterLine: 'Mitglied im Schulbuchaussschuss',
+    },
+    {
+        imageLink: 'images/eltern-abc-img.webp',
+        headingH1: '',
+        cardName: 'Sabine Hoffmann',
+        cardNameDes: '2 Kinder: Katharina(4a), Alexander(KiGa)',
+        cardList: {
+            listHeading: 'Aufgabenschwerpunkt im SEB',
+            listPoints: [
+                'Koordination-Schulfest',
+                'Koordinatiorin Einschulungsfeiern',
+                'ADAC-Fahrradparcours',
+                'Schulranzenaktion'
             ],
         },
         cardFooterLine: '',
@@ -61,30 +77,18 @@ const ElternComponentData = [
     {
         imageLink: 'images/eltern-abc-img.webp',
         headingH1: '',
-        cardName: '',
-        cardNameDes: '',
+        cardName: 'Michael Schmitt',
+        cardNameDes: '3 Kinder: Emil(4a), Simon(3b) und Beatrice(KiGa)',
         cardList: {
-            listHeading: '',
+            listHeading: 'Aufgabenschwerpunkt im SEB',
             listPoints: [
-                '',
-                ''
-            ],
-        },
-        cardFooterLine: '',
-    },
-    {
-        imageLink: 'images/eltern-abc-img.webp',
-        headingH1: '',
-        cardName: '',
-        cardNameDes: '',
-        cardList: {
-            listHeading: '',
-            listPoints: [
-                '',
-                ''
+                'Kontakt zu Hausaufgabenbetreuern',
+                'Koordination Einschulungsfeier'
             ],
         },
         cardFooterLine: '',
     },
 ];
-export default ElternComponentData;
+export {
+    ElternComponentData,
+}

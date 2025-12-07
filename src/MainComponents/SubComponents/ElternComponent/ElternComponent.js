@@ -1,5 +1,5 @@
 import MakeSubSiteNav from "../../../Singeltones/MakeSubSiteNavigation.js";
-import ElternComponentData from "./ElternComponentData.js";
+import { ElternComponentData, } from "./ElternComponentData.js";
 import ElternHTML from "./ElternHTML.js";
 
 export default class ElternComponent extends HTMLElement{
@@ -20,7 +20,7 @@ export default class ElternComponent extends HTMLElement{
     }
 
     initRefs() {
-        this.sebClass = this.shadow.querySelector(".seb");
+        this.sebClass = this.shadow.querySelector(".seb-grid");
     }
 
     render() {
