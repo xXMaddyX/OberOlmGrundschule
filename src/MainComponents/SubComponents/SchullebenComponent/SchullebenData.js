@@ -21,6 +21,11 @@ const SchullebenData = [
     },
     {
         header: `Musik-AG`,
+        imagesSrc: [],
+        text: `In Kooperation mit unserem Musikverein MGV wird hier gesungen und Musik gemacht. Vielleicht macht das Lust auf das Singen im Chor des Musikvereins?`
+    },
+    {
+        header: `AG Sport`,
         imagesSrc: [
             "https://www.gs-ober-olm.de/assets/img/Unbenannt6-300x225.png",
             "https://www.gs-ober-olm.de/assets/img/Unbenannt9-300x225.png"
@@ -200,6 +205,16 @@ const SchullebenDataKooperationen = [
         Mit der Theaterpädagogin und Schauspielerin Verena Gerlach erproben die Kinder sich in darstellendem Spiel und Körperarbeit. 
         Dieses Projekt mit den Vorschulkindern und unseren Erstklässlern ist eingebettet in die musisch-ästhetische Arbeit an unserer Schule.`,
         link: ""
+    },
+    {
+        header: "Initiative, Schule der Zukunft:",
+        text: `Wir sind teil der Inivtiative: "Schule der Zukunft RLP"`,
+        link: "https://schule-der-zukunft.rlp.de/"
+    },
+    {
+        header: "TV 1848 Ober-Olm e.V.:",
+        text: `Der TV Ober-Olm bietet immer mal wieder eine Sport-AG an und unterstützt und durch ihren FSJler im Unterricht `,
+        link: "https://www.tvoo.de/"
     },
     {
         header: "Kulturschulen:",

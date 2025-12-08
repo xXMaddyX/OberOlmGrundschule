@@ -376,7 +376,7 @@ footer .grid-bg {
   }
   .nav-items {
     width: 200px;
-    height: 78px;
+    height: 75px;
   }
   #nav-list {
     top: 0px;
@@ -402,13 +402,13 @@ footer .grid-bg {
 @media (width < 400px) {
   .nav-items {
     width: 200px;
-    height: 73px;
+    height: 70px;
   }
 }
 
 @media(width < 390px) {
   .nav-items {
     width: 200px;
-    height: 55px;
+    height: 50px;
   }
 }

@@ -20,7 +20,7 @@ const HomeHTML = `
         </div>
 
         <div id="sponsor-wrapper">
-            <h1>Sponsoren</h1>
+            <h1>Kooperationspartner</h1>
             <div id="sponsor-grid">
                 <img src="SponsorImages/digitalpakt.webp" alt="" loading="lazy">
                 <img src="SponsorImages/DigitaleSpinDoor.webp" alt="" loading="lazy">
@@ -86,15 +86,13 @@ const HomeHTML = `
         align-items: center;
         text-align: center;
         gap: 50px;
-    }
-
-    #hero-text-box p {
-        max-width: 80%;
-    }
-
-    #hero-image-box img {
-        width: 100%;
-        object-fit: contain;
+        & p { 
+            max-width: 80%; 
+        }
+        & img {
+            width: 100%;
+            object-fit: contain;
+        }
     }
 
     #contact {
@@ -142,10 +140,9 @@ const HomeHTML = `
         display: grid;
         gap: 20px;
         grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    #sponsor-grid img {
-        width: 200px;
+        & img {
+            width: 200px;
+        }
     }
 
     @media (width < 1650px) {
@@ -210,14 +207,12 @@ const HomeHTML = `
         #sponsor-grid {
             grid-template-columns: 1fr;
             gap: 20px;
-        }
-        #sponsor-grid img {
-            width: 50%;
-            justify-self: center;
+            & img {
+                width: 50%;
+                justify-self: center;
+            }
         }
     }
 </style>
 `
-
-
 export default HomeHTML;

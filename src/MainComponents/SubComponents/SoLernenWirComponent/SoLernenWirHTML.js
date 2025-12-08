@@ -133,6 +133,20 @@ const SoLernenWirHTML = `
                     </div>
                     <div class="spacer"></div>
                     <div class="fordern-wrapper-element-top">
+                        <img src="images/sprachakrobaten.webp" style="width: 250px;" alt="" loading="lazy">
+                        <div class="fordern-wrapper-element-top-head-text">
+                            <h1>Klassenstufenförderung</h1>
+                        </div>
+                    </div>
+                    <div class="fordern-wrapper-element-center">
+                        <p>
+                            Ein neuer Punkt dazu: „Klassenstufenförderung“ hier werden Kinder in kleinen Gruppen unterstützt, 
+                            an den Inhalte des Unterrichts vertieft zu arbeiten. Dadurch gelingt es ihnen besser, 
+                            die Angestrebten Kompetenzen und Inhalte zu erfassen.
+                        </p>
+                    </div>
+                    <div class="spacer"></div>
+                    <div class="fordern-wrapper-element-top">
                         <img src="images/foerder-sport.webp" alt="" loading="lazy">
                         <div class="fordern-wrapper-element-top-head-text">
                             <h1>Sport</h1>
