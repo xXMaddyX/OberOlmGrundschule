@@ -23,6 +23,9 @@
             <section-nav-component class="section-nav-element"
                 button-name="Entschuldingungs-Formular" nav-target="entschuldingung"
             ></section-nav-component>
+            <section-nav-component class="section-nav-element"
+                button-name="Ehrenamtl. Hausaufgaben-betreuung" nav-target="ehrenamt"
+            ></section-nav-component>
         </div>
     </nav>
     <section name="eltern-abc">
@@ -612,10 +615,21 @@
                 Ihr Team der Grundschule Ober-Olm
             </p>
             <h2>Zur Ansicht die Datei anklicken</h2>
-            <div>
-                <img src="" alt="">
-                <a href=""></a>
+            <div class="entschuldigung-download-element">
+                <img src="images/download.webp" alt="">
+                <a href="https://www.gs-ober-olm.de/files/Entschuldigungsformular.pdf">Entschuldigungsformular als Download</a>
             </div>
+        </div>
+    </section>
+    <section name="ehrenamt">
+        <div class="ehrenamt wrapper">
+            <div class="ehrenamt-header">
+                <img src="images/eltern-links-img/Hausaufgaben-betreuung-img.webp" alt="">
+                <h1>Ehrenamtliche Hausaufgaben-betreuung</h1>
+            </div>
+            <p>
+                Unsere Schüler werden bei den Hausaufgaben von ehrenamtlichen Helfern unterstützt. Mit viel Freude und Engagement bereichern die Senioren aus dem Ort unser Schulleben.
+            </p>
         </div>
     </section>
 </div>
@@ -963,6 +977,42 @@
                 box-shadow: 2px 2px 5px black;
             }
         }
+        & p {
+            text-align: start;
+            margin-bottom: 20px;
+        }
+        & h2 {
+            text-align: start;
+        }
+        & .entschuldigung-download-element {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 20px;
+            & img {
+                width: 25px;
+            }
+        }
+    }
+    .ehrenamt {
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        padding-bottom: 25px;
+        & h1 {
+            font-size: 3.2rem;
+        }
+        & .ehrenamt-header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 50px;
+            margin-bottom: 20px;
+            & img {
+                box-shadow: 2px 2px 5px black;
+                border-radius: 20px;
+            }
+        }
     }
 
     @media (width < 1650px) {
@@ -993,7 +1043,6 @@
                 }
             }
         }
-
         .links-eltern {
             & .links-eltern-grid {
                 & .links-elter-grid-elem {
@@ -1009,6 +1058,22 @@
                 }
             }
         }
+        .entschuldingung {
+            & h1 {
+                font-size: 2.5rem;
+            }
+            & #entschuldingung-heading {
+                flex-direction: column;
+            }
+        }
+        .ehrenamt {
+            & h1 {
+                font-size: 2.5rem;
+            }
+            & .ehrenamt-header {
+                flex-direction: column;
+            }
+        }
     }
     
 
@@ -1022,6 +1087,9 @@
             width: 95%;
         }
         .eltern-abc {
+            & h1 {
+                font-size: 2.5rem;
+            }
             & img {
                 width: 95%;
             }
@@ -1042,6 +1110,9 @@
             }
         }
         .seb {
+            & h2 {
+                font-size: 2.5rem;
+            }
             grid-template-columns: 1fr;
             & .seb-card-container {
                 width: 98%;
@@ -1050,6 +1121,32 @@
             }
             & h2 {
                 font-size: 1.0rem;
+            }
+        }
+        .foerder-verein {
+            & h1 {
+                font-size: 2.5rem;
+            }
+        }
+        .schulweg {
+            & h1 {
+                font-size: 2.5rem;
+            }
+        }
+        .links-eltern {
+            & h1 {
+                font-size: 2.5rem;
+            }
+        }
+        .ehrenamt {
+            align-items: center;
+            & h1 {
+                text-align: center;
+                font-size: 2.5rem;
+
+            }
+            & .ehrenamt-header {
+                flex-direction: column;
             }
         }
     }

@@ -9,9 +9,9 @@ export default class ElternComponent extends HTMLElement{
     };
 
     async connectedCallback() {
-        const rawHTML = await fetch("src/MainComponents/SubComponents/ElternComponent/Eltern.html");
-        const HTML = await rawHTML.text();
-        this.shadow.innerHTML = HTML;
+        //const rawHTML = await fetch("src/MainComponents/SubComponents/ElternComponent/Eltern.html");
+        //const HTML = await rawHTML.text();
+        this.shadow.innerHTML = ElternHTML;
 
         MakeSubSiteNav.Instance.createSiteNavigation(this);
 

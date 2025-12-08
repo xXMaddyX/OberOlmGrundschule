@@ -13,6 +13,7 @@ import SchullebenComponent from './MainComponents/SubComponents/SchullebenCompon
 import SchuleDerZukunftComponent from './MainComponents/SubComponents/SchuleDerZukunftComponent/SchuleDerZukunftComponent.js';
 import ElternComponent from './MainComponents/SubComponents/ElternComponent/ElternComponent.js';
 import KinderComponent from './MainComponents/SubComponents/KinderComponent/KinderComponent.js';
+import UnserTeamComponent from './MainComponents/SubComponents/UnserTeam/UnserTeam.js';
 
 
 
@@ -28,11 +29,13 @@ customElements.define("schulleben-site", SchullebenComponent);
 customElements.define("schule-der-zukunft-site", SchuleDerZukunftComponent);
 customElements.define("eltern-site", ElternComponent);
 customElements.define("kinder-site", KinderComponent);
+customElements.define("unser-team", UnserTeamComponent);
 
 const routes = {
     "#home": "home-site",
     "#solernenwir": "so-lernen-wir-site",
     "#news": "neues-und-aktuelles-site",
+    "#team": "unser-team",
     "#kult": "kulturschule-site",
     "#demokratisch": "demokratisch-site",
     "#schulleben": "schulleben-site",

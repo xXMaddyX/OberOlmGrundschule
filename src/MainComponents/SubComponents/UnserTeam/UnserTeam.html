@@ -1,0 +1,293 @@
+<div>
+    <nav id="section-nav">
+        <button id="open-site-nav"></button>
+        <div id="nav-section-list">
+            <section-nav-component class="section-nav-element"
+                button-name="Betreuende Grundschule" nav-target="betreuende-grundschule"
+            ></section-nav-component>
+            <section-nav-component class="section-nav-element"
+                button-name="Team" nav-target="team"
+            ></section-nav-component>
+            <section-nav-component class="section-nav-element"
+                button-name="Profil" nav-target="schulprofil"
+            ></section-nav-component>
+            <section-nav-component class="section-nav-element"
+                button-name="Profil" nav-target="schulprofil"
+            ></section-nav-component>
+        </div>
+    </nav>
+    <section name="betreuende-grundschule">
+        <div class="betreuende-grundschule wrapper">
+            <div class="betreuende-grundschule-heading">
+                <img src="images/team/Logo_Fruehe_Bildung_RZ_05.webp" alt="">
+                <h1>Betreuende Grundschule</h1>
+            </div>
+            <div class="betreuende-grundschule-body">
+                <h2>Wie Sie uns erreichen: 06136-7600920</h2>
+                <p>
+                    Die Betreuung der Kinder am Nachmittag ist in direkter Nachbarschaft zur Schule und sogar vom Schulgelände aus zugänglich.<br>
+                    Seit Beginn des Schuljahres 2015/2016 wird nach Schulende in den frisch renovierten Räumen der alten Schule gegessen, gespielt und gelernt.<br>
+                    Die Betreuungskräfte geben weiterhin ihr Bestes, um den Kindern am Nachmittag Ruhephasen, Spaß, Bewegung, Abwechslung und ein offenes Ohr zu bieten.<br>
+                    Die Hausaufgaben werden wie in der Vergangenheit bereits üblich in den Klassenräumen der beiden ersten Klassen erledigt.<br>
+                    Zum Glück liegt zwischen der „Alten“ und der „Neuen Schule“ nur ein Katzensprung.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section name="team">
+        <div class="team wrapper">
+            <div class="team-heading">
+                <h1>Team</h1>
+                <img src="images/team/_SZA6496-2.webp" alt="">
+            </div>
+            <div class="team-body">
+                <div class="team-body-heading">
+                    <h2>Unser Lehrerteam</h2>
+                    <p>Sprechstunden bitte nur nach vorheriger Vereinbarung!</p>
+                </div>
+                <div class="team-body-grid">
+                    <div class="team-body-grid-elem team-body-grid-elem-first">
+                        <p>Lehrerin</p>
+                        <p>Sprechzeit</p>
+                    </div>
+                    <div class="team-body-grid-elem team-body-grid-elem-gray">
+                        <p>Frau Brand</p>
+                        <p>DIE, 13:30</p>
+                    </div>
+                    <div class="team-body-grid-elem">
+                        <p>Frau Engel</p>
+                        <p>DIE, 13:30</p>
+                    </div>
+                    <div class="team-body-grid-elem team-body-grid-elem-gray">
+                        <p>Frau Hesse</p>
+                        <p>MIT, 13:15</p>
+                    </div>
+                    <div class="team-body-grid-elem">
+                        <p>Frau Herzberg</p>
+                        <p>FRE, 10:30</p>
+                    </div>
+                    <div class="team-body-grid-elem team-body-grid-elem-gray">
+                        <p>Frau Müller</p>
+                        <p>MIT, 10:15</p>
+                    </div>
+                    <div class="team-body-grid-elem">
+                        <p>Frau Hofmann</p>
+                        <p>DIE, 13:30</p>
+                    </div>
+                    <div class="team-body-grid-elem team-body-grid-elem-gray">
+                        <p>Frau Moergel</p>
+                        <p>FRE, 10:15</p>
+                    </div>
+                    <div class="team-body-grid-elem">
+                        <p>Frau Ruster</p>
+                        <p>MON, 12:50</p>
+                    </div>
+                    <div class="team-body-grid-elem team-body-grid-elem-gray">
+                        <p>Frau Wolf</p>
+                        <p>MIT, 11:30</p>
+                    </div>
+                    <div class="team-body-grid-elem">
+                        <p>Frau Schunck</p>
+                        <p>FRE, 10:15</p>
+                    </div>
+                    <div class="team-body-grid-elem team-body-grid-elem-gray">
+                        <p>Frau Mauer</p>
+                        <p>DIE, 9:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<template id="nav-element-template">
+        <button id="nav-element-button"></button>
+</template>
+<style>
+    * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    section {
+        scroll-margin-top: 400px;
+    }
+    h1 {
+        font-size: var(--h1-font-size);
+    }
+    h2 {
+        font-size: var(--h2-font-size);
+    }
+    p {
+        font-size: var(--p-font-size);
+    }
+    #section-nav {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        justify-content: center;
+        align-items: center;
+        position: sticky;
+    }
+
+    #open-site-nav {
+        all: unset;
+        cursor: pointer;
+        width: 100px;
+        height: 100px;
+        margin-bottom: 20px;
+        background-image: url("Schilder/ViereckSchild.webp");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        transition: all 1s;
+    }
+    #open-site-nav:hover {
+        filter: drop-shadow(0px 0px 5px black);
+    }
+
+    #open-site-nav.active {
+        transform: rotateZ(180deg);
+    }
+    
+    #nav-section-list {
+        display: flex;
+        overflow: hidden;
+        padding: 10px;
+        flex-direction: column;
+        max-height: 0;
+        opacity: 0;
+        transition: max-height 1.0s ease, opacity 0.5s ease;
+        margin-bottom: 50px;
+    }
+
+    #nav-section-list.active {
+        max-height: 1000px;
+        opacity: 1;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+        box-shadow: 2px 2px 10px var(--basic-border-color);
+        border: 1px solid gray;
+        border-radius: 50px;
+        margin-bottom: 100px;
+        width: 50%;
+        background-color: var(--box-background-color);
+    }
+
+    .betreuende-grundschule {
+        & .betreuende-grundschule-heading {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 50px;
+            & img {
+                border-radius: 20px;
+                box-shadow: 2px 2px 5px black;
+                width: 40%;
+            }
+        };
+        & .betreuende-grundschule-body {
+            display: flex;
+            flex-direction: column;
+            margin-top: 50px;
+            margin-bottom: 25px;
+            text-align: start;
+            & h2 {
+                background-color: rgb(100, 255, 100, 0.6);
+                padding: 5px;
+            }
+            & p {
+                padding: 10px;
+            }
+        }
+    }
+    .team {
+        display: flex;
+        flex-direction: column;
+        & .team-heading {
+            & h1 {
+                margin-bottom: 10px;
+            }
+            & img {
+                width: 100%;
+                border-radius: 20px;
+                box-shadow: 2px 2px 5px black;
+            }
+        }
+        & .team-body {
+            display: flex;
+            flex-direction: column;
+            & .team-body-heading {
+                display: flex;
+                flex-direction: column;
+                text-align: start;
+                margin-top: 25px;
+                margin-bottom: 25px;
+            }
+            & .team-body-grid {
+                display: flex;
+                flex-direction: column;
+                background-color: rgb(255, 255, 255, 0.6);
+                & .team-body-grid-elem {
+                    padding: 10px;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    & p {
+                        text-align: start;
+                    }
+                    
+                }
+                & .team-body-grid-elem-first {
+                    background-color: rgb(100, 255, 100, 0.6);
+                }
+                & .team-body-grid-elem-gray {
+                    background-color: rgba(125, 125, 125, 0.2);
+                }
+            }
+        }
+    }
+
+    @media (width < 1650px) {
+        .wrapper {
+            width: 80%;
+        }
+        h1 {
+            font-size: 3.0rem;
+        }
+    }
+
+    @media (width < 1150px) {
+        .wrapper {
+            width: 80%;
+        }
+    }
+
+    @media (width < 800px) {
+        #open-site-nav {
+            margin-top: 20px;
+            width: 80px;
+            height: 80px;
+        }
+        .wrapper {
+            width: 95%;
+        }
+        h1 {
+            font-size: 2.5rem;
+        }
+        .betreuende-grundschule {
+            & .betreuende-grundschule-heading {
+                flex-direction: column;
+                gap: 20px;
+                & img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+</style>
