@@ -87,7 +87,7 @@ const KulturschuleHTMLComponent = `
         padding: 0px;
         margin: 0px;
         box-sizing: border-box;
-        text-shadow: var(--text-shadow-white);
+        /*text-shadow: var(--text-shadow-white);*/
     }
 
     section[name="top"] {
@@ -176,28 +176,29 @@ const KulturschuleHTMLComponent = `
         background-color: var(--box-background-color);
     }
 
-    .heading h1 {
-        font-size: 3.5rem;
+    .heading {
+        & h1 {
+            font-size: 3.5rem;
+        }
+        & h2 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        & a {
+            all: unset;
+            cursor: pointer;
+            justify-self: center;
+            align-self: center;
+            margin-top: 10px;
+            font-size: 1.5rem;
+            padding: 10px;
+            border: 1px solid var(--basic-border-color);
+            border-radius: 20px;
+            width: 50%;
+            transition: all 1.0s;
+        }
     }
 
-    .heading h2 {
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-
-    .heading a {
-        all: unset;
-        cursor: pointer;
-        justify-self: center;
-        align-self: center;
-        margin-top: 10px;
-        font-size: 1.5rem;
-        padding: 10px;
-        border: 1px solid var(--basic-border-color);
-        border-radius: 20px;
-        width: 50%;
-        transition: all 1.0s;
-    }
     .heading a:hover {
         background-color: rgba(94, 255, 0, 0.700);
     }
@@ -213,26 +214,24 @@ const KulturschuleHTMLComponent = `
         border: 1px solid gray;
         border-radius: 50px;
         margin-bottom: 100px;
-        background-image: url("https://www.piepssoft.de/ober-olmer-grundschule/images/videoBack.webp");
+        background-image: url("images/videoBack.webp");
         background-repeat: no-repeat;
         background-size: cover;
         width: 50%;
         gap: 20px;
         background-color: var(--box-background-color);
-    }
-
-    .heading-film video {
-        width: 100%;
-        height: 500px;
-        border-radius: 50px;
-    }
-
-    .heading-film h1 {
-        font-size: 3.5rem;
-    }
-
-    .heading-film p {
-        font-size: 1.5rem;
+        & video {
+            width: 100%;
+            height: 500px;
+            border-radius: 50px;
+        }
+        & h1 {
+            font-size: 3.5rem;
+        }
+        & p {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
     }
 
     .schulprofil h1 {
@@ -281,16 +280,15 @@ const KulturschuleHTMLComponent = `
         }
         .heading-film{
             width: 95%;
-        }
-        .heading-film video {
-            height: 350px;
-        }
-        .heading-film h1 {
-            font-size: 2.5rem;
-        }
-
-        .heading-film p {
-            font-size: 1.3rem;
+            & video {
+                height: 350px;
+            }
+            & h1 {
+                font-size: 2.5rem;
+            }
+            & p {
+                font-size: 1.3rem;
+            }
         }
         #container-image {
             width: 95%;

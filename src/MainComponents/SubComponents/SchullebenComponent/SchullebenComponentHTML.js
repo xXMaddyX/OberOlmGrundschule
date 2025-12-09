@@ -129,7 +129,7 @@ const SchullebenComponentHTML = `
         padding: 0px;
         margin: 0px;
         box-sizing: border-box;
-        text-shadow: var(--text-shadow-white);
+        /*text-shadow: var(--text-shadow-white);*/
     }
     section{
         scroll-margin-top: 300px;

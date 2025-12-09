@@ -8,9 +8,9 @@ export default class KinderComponent extends HTMLElement{
     };
 
     async connectedCallback() {
-        const rawHTML = await fetch("src/MainComponents/SubComponents/KinderComponent/Kinder.html");
-        const HTML = await rawHTML.text();
-        this.shadow.innerHTML = HTML;
+        //const rawHTML = await fetch("src/MainComponents/SubComponents/KinderComponent/Kinder.html");
+        //const HTML = await rawHTML.text();
+        this.shadow.innerHTML = KinderHTML;
 
         MakeSubSiteNav.Instance.createSiteNavigation(this);
     }

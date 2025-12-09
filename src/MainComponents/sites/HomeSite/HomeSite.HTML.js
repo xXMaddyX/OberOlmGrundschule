@@ -38,7 +38,7 @@ const HomeHTML = `
         margin: 0px;
         box-sizing: border-box;
         font-family: var(--main-font);
-        text-shadow: var(--text-shadow-white);
+        /*text-shadow: var(--text-shadow-white);*/
     }
 
     #owl-img {
