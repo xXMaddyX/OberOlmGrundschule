@@ -574,27 +574,27 @@ const ElternHTML = `
                     <p>Immer wieder haben wir Kinderwingertklassen.</p>
                 </div>
                 <div class="links-elter-grid-elem">
-                    <a href="">&#10162;Turnverein O-O</a>
+                    <a href="https://www.tvoo.de/" target="_blank">&#10162;Turnverein O-O</a>
                     <img src="images/eltern-links-img/turnverein-o-o.webp" alt="">
                 </div>
                 <div class="links-elter-grid-elem">
-                    <a href="">&#10162;KiTA</a>
+                    <a href="https://www.ober-olm.de/kita-startseite" target="_blank">&#10162;KiTA</a>
                     <img src="images/eltern-links-img/kiga.webp" alt="">
                 </div>
                 <div class="links-elter-grid-elem">
-                    <a href="">&#10162;Musikalische Akademie O-O</a>
+                    <a href="https://mgv-ober-olm.de/" target="_blank">&#10162;Musikalische Akademie O-O</a>
                     <img src="images/eltern-links-img/musik-o-o.webp" alt="">
                 </div>
                 <div class="links-elter-grid-elem">
-                    <a href="">&#10162;Quartettverein</a>
+                    <a href="https://www.quartett-verein.de/" target="_blank">&#10162;Quartettverein</a>
                     <img src="images/eltern-links-img/quartett.webp" alt="">
                 </div>
                 <div class="links-elter-grid-elem">
-                    <a href="">&#10162;Staatstheater</a>
+                    <a href="https://www.staatstheater-mainz.com/service/paedagogik" target="_blank">&#10162;Staatstheater</a>
                     <img src="images/eltern-links-img/theater.webp" alt="">
                 </div>
                 <div class="links-elter-grid-elem">
-                    <a href="">&#10162;Kath. KiTa O-O</a>
+                    <a href="https://www.ober-olm.de/wohlfuehlen-auf-dem-land/kath-kita-st-elisabeth" target="_blank">&#10162;Kath. KiTa O-O</a>
                     <img src="images/eltern-links-img/kita-elisabeth.webp" alt="">
                 </div>
             </div>
