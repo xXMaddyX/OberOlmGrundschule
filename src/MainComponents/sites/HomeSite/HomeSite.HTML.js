@@ -42,6 +42,7 @@ const HomeHTML = `
     }
 
     #owl-img {
+        width: 100%;
         border-radius: 20px;
     }
 

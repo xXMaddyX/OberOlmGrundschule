@@ -13,7 +13,7 @@ export default class HomeSite extends HTMLElement{
         //SET UNCOMANTED FOR DEVELOPMENT
         //let rawhtml = await fetch("src/MainComponents/sites/HomeSite/Home.html")
         //let HTML = await rawhtml.text();
-        this.shadow.innerHTML = HomeHTML
+        this.shadow.innerHTML = HomeHTML;
     };
 
     attributeChangedCallback(name, oldValue, newValue) {
