@@ -21,6 +21,7 @@ const NeusUndAktuellesHTML = `
         
      </iframe>
     </section>
+    <div class="spacer"></div>
     <section name="unterricht">
         <div class="unterricht wrapper">
             <div id="unterrichts-wrapper-main-grid">
@@ -104,6 +105,7 @@ const NeusUndAktuellesHTML = `
             </div>
         </div>
     </section>
+    <div class="spacer"></div>
     <section name="elternbriefe">
         <div class="elternbriefe wrapper">
             <h3>Noch einmal zum nachlesen</h3>
@@ -131,6 +133,7 @@ const NeusUndAktuellesHTML = `
             </div>
         </div>
     </section>
+    <div class="spacer"></div>
     <section name="schulbuchlisten">
         <div class="schulbuchlisten wrapper">
             <h3>Alles da?</h3>
@@ -173,6 +176,9 @@ const NeusUndAktuellesHTML = `
         box-sizing: border-box;
         /*text-shadow: var(--text-shadow-white);*/
     }
+    .spacer {
+        display: none;
+    }
     section{
         scroll-margin-top: 300px;
     }
@@ -192,6 +198,7 @@ const NeusUndAktuellesHTML = `
         border-radius: 50px;
         margin-bottom: 100px;
         width: 50%;
+        backdrop-filter: blur(30px);
         background-color: var(--box-background-color);
     }
 
@@ -396,10 +403,26 @@ const NeusUndAktuellesHTML = `
             width: 80px;
             height: 80px;
         }
+        .spacer {
+            display: flex;
+            flex-direction: column;
+            height: 2px;
+            margin-bottom: 25px;
+            margin-top: 25px;
+            background-color: gray;
+            align-self: center;
+            justify-self: center;
+            width: 85%;
+        }
         .wrapper {
-            width: 95%;
-            padding: 5px;
-            border-radius: 5px;
+            width: 100%;
+            border: none;
+            box-shadow: none;
+            border-radius: 0px;
+            padding-bottom: 100px;
+            padding-top: 100px;
+            background-color: none;
+            mask-image: linear-gradient(0deg,rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 2%, rgb(0, 0, 0) 98%, rgba(0, 0, 0, 0) 100%);
         }
         .pause {
             border-radius: 5px;

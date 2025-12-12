@@ -463,6 +463,7 @@ const ElternHTML = `
             </div>
         </div>
     </section>
+    <div class="spacer"></div>
     <section name="sdui-app">
         <div class="sdui-app wrapper">
             <div id="sdui-app-heading">
@@ -479,6 +480,7 @@ const ElternHTML = `
             <a href="https://sdui.de/" target="_blank">Website</a>
         </div>
     </section>
+    <div class="spacer"></div>
     <section name="seb">
         <div class="seb wrapper">
             <h1>Schulelternbeirat</h1>
@@ -490,6 +492,7 @@ const ElternHTML = `
             </div>
         </div>
     </section>
+    <div class="spacer"></div>
     <section name="foerderverein">
         <div class="foerder-verein wrapper">
             <h1>FörderVerein</h1>
@@ -544,6 +547,7 @@ const ElternHTML = `
             </div>
         </div>
     </section>
+    <div class="spacer"></div>
     <section name="schulweg">
         <div class="schulweg wrapper">
             <h1>Sichere Schulwege</h1>
@@ -561,6 +565,7 @@ const ElternHTML = `
             </div>
         </div>
     </section>
+    <div class="spacer"></div>
     <section name="links-eltern">
         <div class="links-eltern wrapper">
             <h1>Links für Eltern</h1>
@@ -600,6 +605,7 @@ const ElternHTML = `
             </div>
         </div>
     </section>
+    <div class="spacer"></div>
     <section name="entschuldingung">
         <div class="entschuldingung wrapper">
             <div id="entschuldingung-heading">
@@ -622,17 +628,6 @@ const ElternHTML = `
             </div>
         </div>
     </section>
-    <section name="ehrenamt">
-        <div class="ehrenamt wrapper">
-            <div class="ehrenamt-header">
-                <img src="images/eltern-links-img/Hausaufgaben-betreuung-img.webp" alt="">
-                <h1>Ehrenamtliche Hausaufgaben-betreuung</h1>
-            </div>
-            <p>
-                Unsere Schüler werden bei den Hausaufgaben von ehrenamtlichen Helfern unterstützt. Mit viel Freude und Engagement bereichern die Senioren aus dem Ort unser Schulleben.
-            </p>
-        </div>
-    </section>
 </div>
 <template id="nav-element-template">
         <button id="nav-element-button"></button>
@@ -642,6 +637,9 @@ const ElternHTML = `
         padding: 0px;
         margin: 0px;
         box-sizing: border-box;
+    }
+    .spacer {
+        display: none;
     }
     h1 {
         font-size: var(--h1-font-size);
@@ -707,8 +705,8 @@ const ElternHTML = `
         box-shadow: 2px 2px 10px var(--basic-border-color);
         border: 1px solid gray;
         border-radius: 50px;
-        margin-bottom: 100px;
         width: 50%;
+        backdrop-filter: blur(30px);
         background-color: var(--box-background-color);
     }
 
@@ -995,26 +993,6 @@ const ElternHTML = `
             }
         }
     }
-    .ehrenamt {
-        display: flex;
-        flex-direction: column;
-        text-align: start;
-        padding-bottom: 25px;
-        & h1 {
-            font-size: 3.2rem;
-        }
-        & .ehrenamt-header {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 50px;
-            margin-bottom: 20px;
-            & img {
-                box-shadow: 2px 2px 5px black;
-                border-radius: 20px;
-            }
-        }
-    }
 
     @media (width < 1650px) {
         .wrapper {
@@ -1067,14 +1045,7 @@ const ElternHTML = `
                 flex-direction: column;
             }
         }
-        .ehrenamt {
-            & h1 {
-                font-size: 2.5rem;
-            }
-            & .ehrenamt-header {
-                flex-direction: column;
-            }
-        }
+        
     }
     
 
@@ -1084,8 +1055,26 @@ const ElternHTML = `
             width: 80px;
             height: 80px;
         }
+        .spacer {
+            display: flex;
+            flex-direction: column;
+            height: 2px;
+            margin-bottom: 25px;
+            margin-top: 25px;
+            background-color: gray;
+            align-self: center;
+            justify-self: center;
+            width: 85%;
+        }
         .wrapper {
-            width: 95%;
+            width: 100%;
+            border: none;
+            box-shadow: none;
+            border-radius: 0px;
+            padding-bottom: 100px;
+            padding-top: 100px;
+            background-color: none;
+            mask-image: linear-gradient(0deg,rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 2%, rgb(0, 0, 0) 98%, rgba(0, 0, 0, 0) 100%);
         }
         .eltern-abc {
             & h1 {
@@ -1137,17 +1126,6 @@ const ElternHTML = `
         .links-eltern {
             & h1 {
                 font-size: 2.5rem;
-            }
-        }
-        .ehrenamt {
-            align-items: center;
-            & h1 {
-                text-align: center;
-                font-size: 2.5rem;
-
-            }
-            & .ehrenamt-header {
-                flex-direction: column;
             }
         }
     }

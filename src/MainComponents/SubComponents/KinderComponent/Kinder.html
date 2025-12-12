@@ -3,30 +3,10 @@
         <button id="open-site-nav"></button>
         <div id="nav-section-list">
             <section-nav-component class="section-nav-element"
-                button-name="Vorschul-Programm" nav-target="vorschule"
-            ></section-nav-component>
-            <section-nav-component class="section-nav-element"
                 button-name="Pix Kurs" nav-target="pix"
             ></section-nav-component>
         </div>
     </nav>
-    <section name="vorschule">
-        <div class="vorschule wrapper">
-            <h1>Vorschul-Programm</h1>
-            <div class="vorschule-img-grid">
-                <img src="images/vorschule-imgs/DSCN9576-300x225.webp" alt="" loading="lazy">
-                <img src="images/vorschule-imgs/DSCN0287-300x225.webp" alt="" loading="lazy">
-                <img src="images/vorschule-imgs/DSCN0283-300x225.webp" alt="" loading="lazy">
-                <img src="images/vorschule-imgs/DSCN0226-300x225.webp" alt="" loading="lazy">
-            </div>
-            <p>
-                Die Kinder der KITA Abenteuerland und der katholische Kindertagesstätte dürfen in einem achtwöchigen Kurs gemeinsam mit den Erstklässlern unter Leitung von Verena Gerlach das darstellende Spiel erproben.<br>
-                Szenische Elemente, lautes Sprechen vor der Gruppe und Körperarbeit sind der Inhalt des Programms.<br>
-                Diese Arbeit ist eingebettet in den musisch-ästhetischen Schwerpunkt unserer Schule und erweitert unserer Repertoire im Bereich „Theater“.<br>
-                Es ist schön, dass die Kinder die Schule auch schon im Vorschuljahr als Ort der kulturellen Bildung kennenlernen. Und die Schule die neuen Kinder!
-            </p>
-        </div>
-    </section>
     <section name="pix">
         <div class="pix wrapper">
             <div class="pix-heading">
@@ -40,7 +20,7 @@
                 Eine prima Vorbereitung auf die weiterführende Schule.
             </p>
             <p class="pix-bold-first">
-                Hi PIXaner!<br>
+                Hi Kinder!<br>
                 Auf diesen Seiten findet ihr viele Links, die in unserem PIX-Kurs und auch darüber hinaus eine Hilfe für euch sein können.
             </p>
 
@@ -106,6 +86,9 @@
         margin: 0px;
         box-sizing: border-box;
     }
+    .spacer {
+        display: none;
+    }
     h1 {
         font-size: var(--h1-font-size);
     }
@@ -170,32 +153,11 @@
         box-shadow: 2px 2px 10px var(--basic-border-color);
         border: 1px solid gray;
         border-radius: 50px;
-        margin-bottom: 100px;
         width: 50%;
+        backdrop-filter: blur(30px);
         background-color: var(--box-background-color);
     }
-    .vorschule {
-        justify-content: center;
-        align-items: center;
-        & h1 {
-            margin-bottom: 20px;
-        }
-        & p {
-            text-align: start;
-            padding: 10px;
-        }
-        & .vorschule-img-grid {
-            display: grid;
-            column-gap: 25px;
-            row-gap: 25px;
-            grid-template-columns: repeat(2, 1fr);
-            margin-bottom: 20px;
-            & img {
-                border-radius: 20px;
-                box-shadow: 2px 2px 5px black;
-            }
-        }
-    }
+    
     .pix {
         display: flex;
         flex-direction: column;
@@ -255,14 +217,24 @@
             width: 80px;
             height: 80px;
         }
-        
-        .wrapper {
-            width: 95%;
+        .spacer {
+            display: flex;
+            flex-direction: column;
+            height: 2px;
+            background-color: gray;
+            align-self: center;
+            justify-self: center;
+            width: 85%;
         }
-        .vorschule {
-            & .vorschule-img-grid {
-                grid-template-columns: 1fr;
-            }
+        .wrapper {
+            width: 100%;
+            border: none;
+            box-shadow: none;
+            border-radius: 0px;
+            padding-bottom: 100px;
+            padding-top: 100px;
+            background-color: none;
+            mask-image: linear-gradient(0deg,rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 2%, rgb(0, 0, 0) 98%, rgba(0, 0, 0, 0) 100%);
         }
         .pix {
             & a {
@@ -282,5 +254,4 @@
             }
         }
     }
-    
 </style>

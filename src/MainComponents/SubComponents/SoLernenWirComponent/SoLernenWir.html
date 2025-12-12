@@ -20,6 +20,12 @@
             <section-nav-component class="section-nav-element"
                 button-name="Bewegungserziehung" nav-target="bewegung"
             ></section-nav-component>
+            <section-nav-component class="section-nav-element"
+                button-name="Ehrenamtl. Hausaufgaben-betreuung" nav-target="ehrenamt"
+            ></section-nav-component>
+            <section-nav-component class="section-nav-element"
+                button-name="Vorschul-Programm" nav-target="vorschule"
+            ></section-nav-component>
         </div>
     </nav>
     <section name="top">
@@ -43,6 +49,7 @@
             </p>
         </div>
     </section>
+    <div class="spacer"></div>
     <section name="leistung">
         <div class="leistungs wrapper">
             <div id="leistungs-wrapper-top">
@@ -91,6 +98,7 @@
             </div>
         </div>
     </section>
+    <div class="spacer"></div>
     <section name="fordern">
         <div class="fordern wrapper">
             <div id="fordern-wrapper-top">
@@ -120,7 +128,7 @@
                     <div class="fordern-wrapper-element-top">
                         <img src="images/schulhausgestaltung.webp" alt="" loading="lazy">
                         <div class="fordern-wrapper-element-top-head-text">
-                            <h1>Schulhaus-gestaltung</h1>
+                            <h1>Kunst im Haus</h1>
                             <h3>Förderstunde</h3>
                         </div>
                     </div>
@@ -139,9 +147,9 @@
                     </div>
                     <div class="fordern-wrapper-element-center">
                         <p>
-                            Ein neuer Punkt dazu: „Klassenstufenförderung“ hier werden Kinder in kleinen Gruppen unterstützt, 
+                            Hier werden Kinder in kleinen Gruppen unterstützt, 
                             an den Inhalte des Unterrichts vertieft zu arbeiten. Dadurch gelingt es ihnen besser, 
-                            die Angestrebten Kompetenzen und Inhalte zu erfassen.
+                            die angestrebten Kompetenzen und Inhalte zu erfassen.
                         </p>
                     </div>
                     <div class="spacer"></div>
@@ -199,6 +207,7 @@
             </div>
         </div>
     </section>
+    <div class="spacer"></div>
     <section name="kunst">
         <div id="kunst-wrapper">
 
@@ -217,6 +226,7 @@
             </p>
         </div>
     </section>
+    <div class="spacer"></div>
     <section name="bewegung">
         <div class="bewegungs wrapper">
             <div id="bewegungs-wrapper-top">
@@ -232,6 +242,40 @@
             </p>
         </div>
     </section>
+    <div class="spacer"></div>
+    <section name="ehrenamt">
+        <div class="ehrenamt wrapper">
+            <div class="ehrenamt-header">
+                <img src="images/eltern-links-img/Hausaufgaben-betreuung-img.webp" alt="">
+                <h1>Ehrenamtliche Hausaufgaben-betreuung</h1>
+            </div>
+            <p>
+                Unsere Schüler werden bei den Hausaufgaben von ehrenamtlichen Helfern unterstützt. 
+                Mit viel Freude und Engagement bereichern die Senioren aus dem Ort unser Schulleben.
+                Die Schule ist den Senioren auf besondere Weise verbunden:
+                Gerne besuchen diese unsere Schulfeste, die Einschulungen und Abschlussfeiern und begleiten uns bei Ausflügen ins Theater.
+                Dadurch enstehen Beziehungen zwischen den Generationen und dadurch wiederum ein tiefes gegenseitiges Verständnis.
+            </p>
+        </div>
+    </section>
+    <div class="spacer"></div>
+    <section name="vorschule">
+        <div class="vorschule wrapper">
+            <h1>Vorschul-Programm</h1>
+            <div class="vorschule-img-grid">
+                <img src="images/vorschule-imgs/DSCN9576-300x225.webp" alt="" loading="lazy">
+                <img src="images/vorschule-imgs/DSCN0287-300x225.webp" alt="" loading="lazy">
+                <img src="images/vorschule-imgs/DSCN0283-300x225.webp" alt="" loading="lazy">
+                <img src="images/vorschule-imgs/DSCN0226-300x225.webp" alt="" loading="lazy">
+            </div>
+            <p>
+                Die Kinder der KITA Abenteuerland und der katholische Kindertagesstätte dürfen in einem achtwöchigen Kurs gemeinsam mit den Erstklässlern unter Leitung von Verena Gerlach das darstellende Spiel erproben.<br>
+                Szenische Elemente, lautes Sprechen vor der Gruppe und Körperarbeit sind der Inhalt des Programms.<br>
+                Diese Arbeit ist eingebettet in den musisch-ästhetischen Schwerpunkt unserer Schule und erweitert unserer Repertoire im Bereich „Theater“.<br>
+                Es ist schön, dass die Kinder die Schule auch schon im Vorschuljahr als Ort der kulturellen Bildung kennenlernen. Und die Schule die neuen Kinder!
+            </p>
+        </div>
+    </section>
 </div>
 <template id="nav-element-template">
         <button id="nav-element-button"></button>
@@ -242,6 +286,9 @@
         margin: 0px;
         box-sizing: border-box;
         /*text-shadow: var(--text-shadow-white);*/
+    }
+    .spacer {
+        display: none;
     }
     section{
         scroll-margin-top: 300px;
@@ -323,8 +370,9 @@
         box-shadow: 2px 2px 10px var(--basic-border-color);
         border: 1px solid gray;
         border-radius: 50px;
-        margin-bottom: 100px;
         width: 50%;
+        margin-bottom: 100px;
+        backdrop-filter: blur(30px);
         background-color: var(--box-background-color);
     }
 
@@ -409,6 +457,48 @@
     #bewegungs-wrapper-top-text {
         text-align: start;
     }
+    .ehrenamt {
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        padding-bottom: 25px;
+        & h1 {
+            font-size: 3.2rem;
+        }
+        & .ehrenamt-header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 50px;
+            margin-bottom: 20px;
+            & img {
+                box-shadow: 2px 2px 5px black;
+                border-radius: 20px;
+            }
+        }
+    }
+    .vorschule {
+        justify-content: center;
+        align-items: center;
+        & h1 {
+            margin-bottom: 20px;
+        }
+        & p {
+            text-align: start;
+            padding: 10px;
+        }
+        & .vorschule-img-grid {
+            display: grid;
+            column-gap: 25px;
+            row-gap: 25px;
+            grid-template-columns: repeat(2, 1fr);
+            margin-bottom: 20px;
+            & img {
+                border-radius: 20px;
+                box-shadow: 2px 2px 5px black;
+            }
+        }
+    }
     @media (width < 1650px) {
         .wrapper {
             width: 80%;
@@ -425,6 +515,14 @@
         .fordern-wrapper-element-top {
             flex-direction: column-reverse;
         }
+        .ehrenamt {
+            & h1 {
+                font-size: 2.5rem;
+            }
+            & .ehrenamt-header {
+                flex-direction: column;
+            }
+        }
     }
 
     @media (width < 800px) {
@@ -433,8 +531,27 @@
             width: 80px;
             height: 80px;
         }
+        .spacer {
+            display: flex;
+            flex-direction: column;
+            height: 2px;
+            margin-bottom: 25px;
+            margin-top: 25px;
+            background-color: gray;
+            align-self: center;
+            justify-self: center;
+            width: 85%;
+        }
         .wrapper {
-            width: 95%;
+            width: 100%;
+            border: none;
+            box-shadow: none;
+            border-radius: 0px;
+            margin-bottom: 0px;
+            padding-bottom: 100px;
+            padding-top: 100px;
+            background-color: none;
+            mask-image: linear-gradient(0deg,rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 2%, rgb(0, 0, 0) 98%, rgba(0, 0, 0, 0) 100%);
         }
         #peadagogisch-wrapper-top {
             flex-direction: column;
@@ -454,6 +571,22 @@
         }
         h2 {
             font-size: 1.3rem;
+        }
+        .ehrenamt {
+            align-items: center;
+            & h1 {
+                text-align: center;
+                font-size: 2.5rem;
+
+            }
+            & .ehrenamt-header {
+                flex-direction: column;
+            }
+        }
+        .vorschule {
+            & .vorschule-img-grid {
+                grid-template-columns: 1fr;
+            }
         }
     }
 </style>

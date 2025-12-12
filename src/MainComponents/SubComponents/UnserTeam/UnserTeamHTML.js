@@ -23,24 +23,6 @@ const UnserTeamHTML = `
             ></section-nav-component>
         </div>
     </nav>
-    <section name="betreuende-grundschule">
-        <div class="betreuende-grundschule wrapper">
-            <div class="betreuende-grundschule-heading">
-                <img src="images/team/Logo_Fruehe_Bildung_RZ_05.webp" alt="">
-                <h1>Betreuende Grundschule</h1>
-            </div>
-            <div class="betreuende-grundschule-body">
-                <h2>Wie Sie uns erreichen: 06136-7600920</h2>
-                <p>
-                    Die Betreuung der Kinder am Nachmittag ist in direkter Nachbarschaft zur Schule und sogar vom Schulgelände aus zugänglich.<br>
-                    Seit Beginn des Schuljahres 2015/2016 wird nach Schulende in den frisch renovierten Räumen der alten Schule gegessen, gespielt und gelernt.<br>
-                    Die Betreuungskräfte geben weiterhin ihr Bestes, um den Kindern am Nachmittag Ruhephasen, Spaß, Bewegung, Abwechslung und ein offenes Ohr zu bieten.<br>
-                    Die Hausaufgaben werden wie in der Vergangenheit bereits üblich in den Klassenräumen der beiden ersten Klassen erledigt.<br>
-                    Zum Glück liegt zwischen der „Alten“ und der „Neuen Schule“ nur ein Katzensprung.
-                </p>
-            </div>
-        </div>
-    </section>
     <section name="team">
         <div class="team wrapper">
             <div class="team-heading">
@@ -102,6 +84,24 @@ const UnserTeamHTML = `
                         <p>DIE, 9:00</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+    <section name="betreuende-grundschule">
+        <div class="betreuende-grundschule wrapper">
+            <div class="betreuende-grundschule-heading">
+                <img src="images/team/Logo_Fruehe_Bildung_RZ_05.webp" alt="">
+                <h1>Betreuende Grundschule</h1>
+            </div>
+            <div class="betreuende-grundschule-body">
+                <h2>Wie Sie uns erreichen: 06136-7600920</h2>
+                <p>
+                    Die Betreuung der Kinder am Nachmittag ist in direkter Nachbarschaft zur Schule und sogar vom Schulgelände aus zugänglich.<br>
+                    Seit Beginn des Schuljahres 2015/2016 wird nach Schulende in den frisch renovierten Räumen der alten Schule gegessen, gespielt und gelernt.<br>
+                    Die Betreuungskräfte geben weiterhin ihr Bestes, um den Kindern am Nachmittag Ruhephasen, Spaß, Bewegung, Abwechslung und ein offenes Ohr zu bieten.<br>
+                    Die Hausaufgaben werden wie in der Vergangenheit bereits üblich in den Klassenräumen der beiden ersten Klassen erledigt.<br>
+                    Zum Glück liegt zwischen der „Alten“ und der „Neuen Schule“ nur ein Katzensprung.
+                </p>
             </div>
         </div>
     </section>
@@ -218,6 +218,9 @@ const UnserTeamHTML = `
         margin: 0px;
         box-sizing: border-box;
     }
+    .spacer {
+        display: none;
+    }
     section {
         scroll-margin-top: 400px;
     }
@@ -285,8 +288,9 @@ const UnserTeamHTML = `
         box-shadow: 2px 2px 10px var(--basic-border-color);
         border: 1px solid gray;
         border-radius: 50px;
-        margin-bottom: 100px;
         width: 50%;
+        margin-bottom: 100px;
+        backdrop-filter: blur(30px);
         background-color: var(--box-background-color);
     }
 
@@ -545,8 +549,27 @@ const UnserTeamHTML = `
             width: 80px;
             height: 80px;
         }
+        .spacer {
+            display: flex;
+            flex-direction: column;
+            height: 2px;
+            margin-bottom: 25px;
+            margin-top: 25px;
+            background-color: gray;
+            align-self: center;
+            justify-self: center;
+            width: 85%;
+        }
         .wrapper {
-            width: 95%;
+            width: 100%;
+            border: none;
+            box-shadow: none;
+            border-radius: 0px;
+            margin-bottom: 0px;
+            padding-bottom: 100px;
+            padding-top: 100px;
+            background-color: none;
+            mask-image: linear-gradient(0deg,rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 2%, rgb(0, 0, 0) 98%, rgba(0, 0, 0, 0) 100%);
         }
         h1 {
             font-size: 2.5rem;

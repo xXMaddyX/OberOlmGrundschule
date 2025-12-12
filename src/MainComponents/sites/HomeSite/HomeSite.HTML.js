@@ -1,16 +1,12 @@
 const HomeHTML = `
 <div id="main-container">
-    <div id="hero-wrapper">
-        <div class="hero-items" id="hero-text-box">
-            <h1>Herzlich willkommen!</h1>
-            <p>Wir sind eine zwei- bis dreizügige Grundschule mit musisch-ästhetischem Schwerpunkt in Rheinhessen vor den Toren von Mainz. Die Schule gehört zur Verbandsgemeinde Nieder-Olm im rheinland-pfälzischen Landkreis Mainz-Bingen. Unsere Schule wird von den etwa 180 Kindern besucht, welche fast ausschließlich unserer Ortsgemeinde angehören!</p>
-        </div>
-        <div class="hero-items" id="hero-image-box">
-            <img id="owl-img" src="owl-hero.webp" alt="" loading="lazy">
-        </div>
+    <div class="wrapper" id="hero-wrapper">
+        <h1>Herzlich willkommen!</h1>
+        <p>Wir sind eine zwei- bis dreizügige Grundschule mit musisch-ästhetischem Schwerpunkt in Rheinhessen vor den Toren von Mainz. Die Schule gehört zur Verbandsgemeinde Nieder-Olm im rheinland-pfälzischen Landkreis Mainz-Bingen. Unsere Schule wird von den etwa 180 Kindern besucht, welche fast ausschließlich unserer Ortsgemeinde angehören!</p>
     </div>
+    <div class="spacer"></div>
     <div id="contact">
-        <div id="contact-wrapper">
+        <div class="wrapper" id="contact-wrapper">
             <h1>Kontakt</h1>
             <p>Grundschule Ober-Olm</p>
             <p>Schulstraße 4, 55270 Ober-Olm, Rheinland-Pfalz</p>
@@ -18,8 +14,8 @@ const HomeHTML = `
             <p>Telefax: 06136-997849</p>
             <p>e-Mail: mail@gs-ober-olm.de</p>
         </div>
-
-        <div id="sponsor-wrapper">
+        <div class="spacer"></div>
+        <div class="wrapper" id="sponsor-wrapper">
             <h1>Kooperationspartner</h1>
             <div id="sponsor-grid">
                 <img src="SponsorImages/digitalpakt.webp" alt="" loading="lazy">
@@ -41,66 +37,21 @@ const HomeHTML = `
         /*text-shadow: var(--text-shadow-white);*/
     }
 
-    #owl-img {
-        width: 100%;
-        border-radius: 20px;
-    }
-
     #main-container {
         display: block;
     }
 
-    #hero-wrapper {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        justify-self: center;
-        font-size: 1.5rem;
-        gap: 40px;
-        width: 80%;
-        padding: 20px;
-        padding-bottom: 100px;
-        perspective: 800px;
-    }
-
-    .hero-items {
-        padding: 20px;
-        box-shadow: 2px 2px 10px var(--basic-border-color);
-        border: 1px solid gray;
-        border-radius: 20px;
-        max-width: 50%;
-        background-color: var(--box-background-color);
-    }
-
-    #hero-image-box {
-        transform: rotateY(-20deg);
-        transform-style: preserve-3d;
-    }
-    
-    #hero-text-box {
+    .spacer {
         display: flex;
         flex-direction: column;
-        transform: rotateY(20deg);
-        transform-style: preserve-3d;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        gap: 50px;
-        & p { 
-            max-width: 80%; 
-        }
-        & img {
-            width: 100%;
-            object-fit: contain;
-        }
+        width: 0px;
+        height: 2px;
+        background-color: gray;
+        align-self: center;
+        justify-self: center;
     }
 
-    #contact {
-        display: block;
-    }
-
-    #contact-wrapper {
+    .wrapper {
         display: flex;
         flex-direction: column;
         justify-self: center;
@@ -112,27 +63,51 @@ const HomeHTML = `
         border: 2px solid black;
         box-shadow: 2px 2px 5px gray;
         background-color: var(--box-background-color);
+        backdrop-filter: blur(30px);
         border-radius: 20px;
         transition: all var(--basic-transition-time);
+        
+    }
+
+    #hero-wrapper {
+        display: flex;
+        justify-self: center;
+        align-items: center;
+        text-align: start;
+        & h1 {
+            font-size: var(--h1-font-size);
+            margin-bottom: 25px;
+        }
+        & p {
+            font-size: var(--main-p-size);
+        }
+    }
+
+    #contact-wrapper {
+        display: flex;
+        flex-direction: column;
+        & h1 {
+            font-size: var(--h1-font-size);
+        }
+        & p {
+            font-size: var(--main-p-size);
+            text-align: start;
+        }
     }
 
     #sponsor-wrapper {
         display: flex;
         flex-direction: column;
-        justify-self: center;
-        text-align: center;
         justify-content: center;
         align-items: center;
-        margin-top: 100px;
-        padding: 20px;
-        width: 50%;
-        gap: 20px;
-        margin-bottom: 50px;
-        border: 2px solid var(--basic-border-color);
-        box-shadow: 2px 2px 5px gray;
-        background-color: var(--box-background-color);
-        border-radius: 20px;
-        transition: all var(--basic-transition-time);
+        & h1 {
+            font-size: var(--h1-font-size);
+            margin-bottom: 25px;
+        }
+    }
+
+    #contact {
+        display: block;
     }
 
     #sponsor-grid {
@@ -147,35 +122,13 @@ const HomeHTML = `
     }
 
     @media (width < 1650px) {
-        #hero-wrapper {
-            font-size: 1.2rem;
-        }
-        #contact-wrapper {
-            width: 60%;
-        }
-        #sponsor-wrapper {
-            width: 60%;
+        .wrapper {
+            width: 80%;
         }
     }
 
     @media (width < 1150px) {
-        #hero-wrapper {
-            flex-direction: column;
-            width: 100%;
-        }
-        .hero-items {
-            max-width: 90%;
-        }
-            #hero-image-box {
-            transform: rotateY(0deg);
-        }
-        #hero-text-box {
-            transform: rotateY(0deg);
-        }
-        #contact-wrapper {
-            width: 80%;
-        }
-        #sponsor-wrapper {
+        .wrapper {
             width: 80%;
         }
         #sponsor-grid {
@@ -184,26 +137,34 @@ const HomeHTML = `
     }
 
     @media (width < 800px) {
+        .wrapper {
+            border: 0px;
+            box-shadow: none;
+            width: 100%;
+            border-radius: 0px;
+            mask-image: linear-gradient(0deg,rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 5%, rgb(0, 0, 0) 95%, rgba(0, 0, 0, 0) 100%);
+        }
+        
+        .spacer {
+            width: 85%;
+        }
         #hero-wrapper {
-            flex-direction: column;
-        }
-        .hero-items {
-            max-width: 100%;
-        }
-        #hero-image-box {
-            transform: rotateY(0deg);
-            transform-style: preserve-3d;
-        }
-        #hero-text-box {
-            transform: rotateY(0deg);
+            & h1 {
+                font-size: var(--h1-font-mobile-size);
+            }
         }
         #contact-wrapper {
-            margin-top: 0px;
-            margin-bottom: 20px;
-            width: 95%;
+            & h1 {
+                font-size: var(--h1-font-mobile-size);
+            }
         }
         #sponsor-wrapper {
-            width: 95%;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            & h1 {
+                font-size: var(--h1-font-mobile-size);
+                margin-bottom: 25px;
+            }
         }
         #sponsor-grid {
             grid-template-columns: 1fr;

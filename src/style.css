@@ -3,7 +3,14 @@
     --main-font: "Arial Narrow";
     --home-titel-text-color: orange;
     --basic-text-color: rgb(0, 0, 0);
-    --text-shadow-black: 1px 1px 2px rgb(0, 0, 0), -1px -1px 2px rgb(0, 0, 0), 1px -1px 2px rgb(0, 0, 0), -1px 1px 2px rgb(0, 0, 0);
+    --text-shadow-black: 2px 0 3px rgb(0, 0, 0), 
+    -2px 0 3px rgb(3, 3, 3), 
+    0 2px 3px rgb(0, 0, 0), 
+    0 -2px 3px rgb(0, 0, 0), 
+    2px 2px 3px rgb(0, 0, 0), 
+    -2px -2px 3px rgb(0, 0, 0),
+    2px -2px 3px rgb(0, 0, 0),
+    -2px 2px 3px rgb(0, 0, 0);
     --text-shadow-white: 
       2px 0 3px rgb(255, 255, 255), 
     -2px 0 3px rgb(255, 255, 255), 
@@ -14,7 +21,7 @@
     2px -2px 3px rgb(255, 255, 255),
     -2px 2px 3px rgb(255, 255, 255);
 
-    --box-background-color: rgba(255, 255, 255, 0.4);
+    --box-background-color: linear-gradient(90deg,rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 15%, rgba(255, 255, 255, 0.4) 85%, rgba(255, 255, 255, 0) 100%);
     --basic-transition-time: 0.5s;
     --basic-border-color: black;
 
@@ -42,10 +49,6 @@
   font-display: swap;
 }
 
-#owl-img {
-    filter: drop-shadow(2px 2px 3px black);
-}
-
 #header-container {
     display: block;
     width: 100%;
@@ -68,8 +71,11 @@
     justify-self: center;
     align-self: center;
     margin-bottom: 20px;
-    color: orange;
-    text-shadow: var(--text-shadow-black);
+    color: rgba(255, 255, 255, 0.8);
+    & h1 {
+      font-size: 4.5rem;
+    }
+    /*text-shadow: var(--text-shadow-black);*/
 }
 
 #heading-container h1 {
@@ -287,7 +293,7 @@ footer .grid-bg {
     left: 90%;
   }
   #header-wrapper {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
   #nav-container {
     background-image: none;
@@ -297,6 +303,7 @@ footer .grid-bg {
     position: fixed;
     display: flex;
     left: 90%;
+    top: 25px;
     box-shadow: 0px 0px 0px inset rgb(0, 0, 0);
     align-self: flex-end;
     justify-self: flex-end;
@@ -356,7 +363,7 @@ footer .grid-bg {
   }
 
   #header-wrapper {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
   #nav-container {
     background-image: none;

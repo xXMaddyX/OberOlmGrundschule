@@ -27,7 +27,7 @@ const SchuleDerZukunftHTML = `
             </p></li>
             <li><p>
                 Wir beurteilen Leistungen anders: Im Rahmen von Schule der Zukunft gestalten wir den Lernkulturwandel aktiv mit: 
-                Wir geben kaum noch Noten, bewerten im Sinne des Groth Mindsets und die Kinder arbeiten zunehmend selbstbestimmt und selbstreguliert.
+                Wir geben kaum noch Noten, bewerten im Sinne des Growth Mindsets und die Kinder arbeiten zunehmend selbstbestimmt und selbstreguliert.
             </p></li>
         </ul>
     </div>
@@ -41,6 +41,9 @@ const SchuleDerZukunftHTML = `
         margin: 0px;
         box-sizing: border-box;
         /*text-shadow: var(--text-shadow-white);*/
+    }
+    .spacer {
+        display: none;
     }
     #section-nav {
         display: flex;
@@ -97,8 +100,8 @@ const SchuleDerZukunftHTML = `
         box-shadow: 2px 2px 10px var(--basic-border-color);
         border: 1px solid gray;
         border-radius: 50px;
-        margin-bottom: 100px;
         width: 50%;
+        backdrop-filter: blur(30px);
         background-color: var(--box-background-color);
     }
 
@@ -141,8 +144,26 @@ const SchuleDerZukunftHTML = `
             width: 80px;
             height: 80px;
         }
+        .spacer {
+            display: flex;
+            flex-direction: column;
+            height: 2px;
+            margin-bottom: 25px;
+            margin-top: 25px;
+            background-color: gray;
+            align-self: center;
+            justify-self: center;
+            width: 85%;
+        }
         .wrapper {
-            width: 95%;
+            width: 100%;
+            border: none;
+            box-shadow: none;
+            border-radius: 0px;
+            padding-bottom: 100px;
+            padding-top: 100px;
+            background-color: none;
+            mask-image: linear-gradient(0deg,rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 2%, rgb(0, 0, 0) 98%, rgba(0, 0, 0, 0) 100%);
         }
         .schule-der-zukunft {
             & h1 {
