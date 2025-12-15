@@ -154,6 +154,7 @@ const KinderHTML = `
         box-shadow: 2px 2px 10px var(--basic-border-color);
         border: 1px solid gray;
         border-radius: 50px;
+        margin-bottom: 100px;
         width: 50%;
         backdrop-filter: blur(30px);
         background-color: var(--box-background-color);
