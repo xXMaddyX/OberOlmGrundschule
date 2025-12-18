@@ -24,7 +24,5 @@ export default class SectionNavComponent extends HTMLElement{
         let button = this.shadow.querySelector("#nav-element-button");
         button.setAttribute("nav-target", buttonTarget);
         button.textContent = buttonNameAttr;
-
-        
     }
 }

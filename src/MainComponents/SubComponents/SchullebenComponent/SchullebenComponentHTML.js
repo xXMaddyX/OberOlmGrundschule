@@ -96,31 +96,15 @@ const SchullebenComponentHTML = `
                 </div>
                 <div class="projektwochen-grid-elem">
                     <img class="download-img" src="images/download.webp" alt="">
-                    <a href="https://www.gs-ober-olm.de/files/1sj.pdf" target="_blank">Projektwoche 2013</a>
-                </div>
-                <div class="projektwochen-grid-elem projektwochen-grid-elem-cont">
-                    <img class="download-img" src="images/download.webp" alt="">
-                    <a href="https://www.gs-ober-olm.de/files/2sj.pdf" target="_blank">Projektwoche 2015</a>
+                    <a href="https://www.gs-ober-olm.de/briefe/projektwochenzeitung.pdf" target="_blank">Projektwoche 2021</a>
                 </div>
                 <div class="projektwochen-grid-elem">
                     <img class="download-img" src="images/download.webp" alt="">
-                    <a href="https://www.gs-ober-olm.de/files/3sj.pdf" target="_blank">Projektwoche 2017</a>
-                </div>
-                <div class="projektwochen-grid-elem projektwochen-grid-elem-cont">
-                    <img class="download-img" src="images/download.webp" alt="">
-                    <a href="https://www.gs-ober-olm.de/files/4sj.pdf" target="_blank">Projektwoche 2019</a>
+                    <a href="https://www.gs-ober-olm.de/briefe/projektwochenzeitung23.pdf" target="_blank">Projektwoche 2023</a>
                 </div>
                 <div class="projektwochen-grid-elem">
                     <img class="download-img" src="images/download.webp" alt="">
-                    <a href="https://www.gs-ober-olm.de/files/SBA.pdf" target="_blank">Projektwoche 2021</a>
-                </div>
-                <div class="projektwochen-grid-elem">
-                    <img class="download-img" src="images/download.webp" alt="">
-                    <a href="https://www.gs-ober-olm.de/files/SBA.pdf" target="_blank">Projektwoche 2023</a>
-                </div>
-                <div class="projektwochen-grid-elem">
-                    <img class="download-img" src="images/download.webp" alt="">
-                    <a href="https://www.gs-ober-olm.de/files/SBA.pdf" target="_blank">Projektwoche 2025</a>
+                    <a href="https://www.gs-ober-olm.de/files/Projektzeitung-2025.pdf" target="_blank">Projektwoche 2025</a>
                 </div>
             </div>
         </div>

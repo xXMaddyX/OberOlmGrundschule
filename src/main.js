@@ -1,7 +1,7 @@
 import './style.css'
-import "./Assets/AssetLoader.js"
+import "./Assetsvite/AssetLoader.js"
 import GlobalData from './Singeltones/GlobalData.js';
-import { OwlImage } from './Assets/AssetLoader.js';
+import { OwlImage } from './Assetsvite/AssetLoader.js';
 import HomeSite from './MainComponents/sites/HomeSite/HomeSite.js';
 import Leaves from './MainComponents/leaves/leaves.js';
 import KulturschuleElement from './MainComponents/SubComponents/KulturschuleComponent/KulturschuleComponent.js';
@@ -14,12 +14,14 @@ import SchuleDerZukunftComponent from './MainComponents/SubComponents/SchuleDerZ
 import ElternComponent from './MainComponents/SubComponents/ElternComponent/ElternComponent.js';
 import KinderComponent from './MainComponents/SubComponents/KinderComponent/KinderComponent.js';
 import UnserTeamComponent from './MainComponents/SubComponents/UnserTeam/UnserTeam.js';
+import ImpressumComponent from './MainComponents/sites/impressum_datenschutz/Impressum_Datenschutz.js';
 
 
 
 //customElements.define(GlobalData.Instance.ComponentKeys.HeaderComponent, HeaderComponent);
 customElements.define(GlobalData.Instance.ComponentKeys.Leaves, Leaves);
 customElements.define("home-site", HomeSite);
+customElements.define("datenschutz-site", ImpressumComponent);
 customElements.define("kulturschule-site", KulturschuleElement);
 customElements.define("section-nav-component", SectionNavComponent);
 customElements.define("so-lernen-wir-site", SoLernenWirComponent);
@@ -42,6 +44,7 @@ const routes = {
     "#schulederzukunft": "schule-der-zukunft-site",
     "#eltern": "eltern-site",
     "#kinder": "kinder-site",
+    "#datenschutz": "datenschutz-site"
 }
 
 const AppHeader = document.querySelector("#header-section");
@@ -50,10 +53,13 @@ let isActive = false;
 let ImageContainer = null;
 let NavItems = null;
 let NavListElement = null;
+/**@type {HTMLLinkElement} */
+let ImpressumButton = null;
 
 const initElementRefs = () => {
         ImageContainer = document.querySelector("#image-container");
         NavItems = document.querySelectorAll(".nav-items");
+        ImpressumButton = document.querySelector("#footer-link");
 };
 
 const addListener = () => {
@@ -66,6 +72,10 @@ const addListener = () => {
       };
     });
   });
+
+  ImpressumButton.addEventListener("click", () => {
+    routing("#datenschutz")
+  })
 };
 
 const addImageToHeader = () => {
@@ -102,20 +112,30 @@ const initNavBar = () => {
   initElementRefs();
   addImageToHeader();
   addListener();
+  document.addEventListener("click", (e) => {
+    /**@type {HTMLElement} */
+    let target = e.target.parentElement
+    //Test FIX ich habe blur ersetzt!!!
+    if (target.id == "nav-list" || target.classList.contains("nav-items") || e.target.id == "nav-list") {
+      NavListElement.classList.remove("isActive");
+      ToggleButton.classList.remove("active");
+      isActive = false;
+    }
+    if (isActive && !NavListElement.contains(e.target) && !ToggleButton.contains(e.target)) {
+      NavListElement.classList.remove("isActive");
+      ToggleButton.classList.remove("active");
+      isActive = false;
+    }
 
+  });
   /**@type {HTMLButtonElement} */
-        const ToggleButton = document.querySelector(".mobile-menu-toggle");
-        ToggleButton.addEventListener("blur", () => {
-            ToggleButton.classList.remove("active");
-            NavListElement.classList.remove("isActive");
-            isActive = false;
-        })
-        ToggleButton.addEventListener("click", () => {
-            isActive = !isActive;
-            toggleMobileMenue();
-        });
-        /**@type {HTMLUListElement} */
-        NavListElement = document.querySelector("#nav-list");
+  const ToggleButton = document.querySelector(".mobile-menu-toggle");
+    ToggleButton.addEventListener("click", () => {
+      isActive = !isActive;
+      toggleMobileMenue();
+    });
+    /**@type {HTMLUListElement} */
+    NavListElement = document.querySelector("#nav-list");
 }
 
 const initApp = () => {
