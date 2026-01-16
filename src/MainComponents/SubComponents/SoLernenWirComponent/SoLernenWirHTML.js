@@ -13,9 +13,6 @@ const SoLernenWirHTML = `
                 button-name="Fördern und Fordern" nav-target="fordern"
             ></section-nav-component>
             <section-nav-component class="section-nav-element"
-                button-name="Kunst im Haus" nav-target="kunst"
-            ></section-nav-component>
-            <section-nav-component class="section-nav-element"
                 button-name="Klassenstufenförderung" nav-target="klassenstufen"
             ></section-nav-component>
             <section-nav-component class="section-nav-element"
@@ -209,11 +206,6 @@ const SoLernenWirHTML = `
         </div>
     </section>
     <div class="spacer"></div>
-    <section name="kunst">
-        <div id="kunst-wrapper">
-
-        </div>
-    </section>
     <section name="klassenstufen">
         <div class="klassenstufen wrapper">
             <div id="klassenstufen-wrapper-top">

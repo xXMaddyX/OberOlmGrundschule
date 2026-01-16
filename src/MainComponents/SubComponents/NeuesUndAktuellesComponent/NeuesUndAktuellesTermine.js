@@ -31,11 +31,6 @@ const Termine = [
     [
         //AB 19.JAN.2026 bis 23.JAN.25----------->
         {
-            heading: "Theaterraum Mainz bei uns",
-            date: "Mo. 19. Jan. 2026 - Di. 20.",
-            discription: ""
-        },
-        {
             heading: "Singpause Winter",
             date: "Di. 20. Jan. 2026",
             discription: ""
@@ -122,6 +117,11 @@ const Termine = [
         {
             heading: "Schulfrei",
             date: "Mo. 16. Feb. 2026 - Mi. 18.",
+            discription: ""
+        },
+        {
+            heading: "Theaterraum Mainz bei uns",
+            date: "Mo. 19. Feb. 2026 - Di. 20. Feb.",
             discription: ""
         },
         {

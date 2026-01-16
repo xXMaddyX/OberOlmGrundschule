@@ -24,9 +24,6 @@ const ElternHTML = `
             <section-nav-component class="section-nav-element"
                 button-name="Entschuldingungs-Formular" nav-target="entschuldingung"
             ></section-nav-component>
-            <section-nav-component class="section-nav-element"
-                button-name="Ehrenamtl. Hausaufgaben-betreuung" nav-target="ehrenamt"
-            ></section-nav-component>
         </div>
     </nav>
     <section name="eltern-abc">
