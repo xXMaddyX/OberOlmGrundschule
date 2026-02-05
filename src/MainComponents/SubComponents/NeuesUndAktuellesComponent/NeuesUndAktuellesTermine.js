@@ -1,7 +1,10 @@
 
 const Termine = [
     [
-        //AB 17.DEZ 2025-------------------------->
+        //--------------------------------------->>>>JANUARY<<<<-------------------------------------------->
+        {
+            month: "Jan, 2026"
+        },
         {
             heading: "Theaterprojekt 2ab",
             date: "Mi. 17. Dez.",
@@ -27,9 +30,6 @@ const Termine = [
             date: "Mo. 19. Jan. 2026",
             discription: ""
         },
-    ],
-    [
-        //AB 19.JAN.2026 bis 23.JAN.25----------->
         {
             heading: "Singpause Winter",
             date: "Di. 20. Jan. 2026",
@@ -50,9 +50,6 @@ const Termine = [
             date: "Fr. 23. Jan. 2026",
             discription: ""
         },
-    ],
-    [
-        //AB 27.JAN bis 02.FEB.2026-------------------------->
         {
             heading: "Vorschulprojekt",
             date: "Di. 27. Jan. 2026",
@@ -68,6 +65,12 @@ const Termine = [
             date: "Fr. 30. Jan. 2026",
             discription: ""
         },
+    ],
+    [
+        //--------------------------------------->>>>FEBRUARY<<<<--------------------------------------------->
+        {
+            month: "Feb, 2026"
+        },
         {
             heading: "Dienstbesprechung",
             date: "Mo. 2. Feb. 2026",
@@ -78,9 +81,6 @@ const Termine = [
             date: "Mo. 2. Feb. 2026",
             discription: ""
         },
-    ],
-    [
-        //AB 05.FEB.2025 bis 12.FEB.2025
         {
             heading: "AG-Start",
             date: "Do. 5. Feb. 2026",
@@ -106,9 +106,6 @@ const Termine = [
             date: "Do. 12. Feb. 2026",
             discription: ""
         },
-    ],
-    [
-        //AB 14.FEB.2026 bis 02.Mär.2026
         {
             heading: "Schultreff Fastnachtsparty",
             date: "Fr. 13. Feb. 2026",
@@ -125,6 +122,16 @@ const Termine = [
             discription: ""
         },
         {
+            heading: "Projekttag, 2b",
+            date: "Fr. 20. Feb. 2026",
+            discription: ""
+        },
+        {
+            heading: "Schülerparlament",
+            date: "Mo. 23. Feb. 2026",
+            discription: ""
+        },
+        {
             heading: "Vorschulprojekt",
             date: "Di. 24. Feb. 2026",
             discription: ""
@@ -134,14 +141,22 @@ const Termine = [
             date: "Fr. 27. Feb. 2026",
             discription: ""
         },
+    ],
+    [
+        //------------------------------------------------>>>>MARCH<<<<---------------------------------------->
+        {
+            month: "Mär, 2026"
+        },
         {
             heading: "Dienstbesprechung",
             date: "Mo. 2. März 2026",
             discription: ""
         },
-    ],
-    [
-        //
+        {
+            heading: "Essen mit der Hausaufgabenbetreuung",
+            date: "Do. 5. März 2026",
+            discription: ""
+        },
         {
             heading: "Theaterstarter 2b",
             date: "Fr. 6. März 2026",
@@ -167,11 +182,14 @@ const Termine = [
             date: "Do. 19. März 2026",
             discription: ""
         },
-    ],
-    [
         {
             heading: "Gesamtkonferenz",
             date: "Mo. 23. März 2026",
+            discription: ""
+        },
+        {
+            heading: "Elternabend 3a/b",
+            date: "Di. 24. März 2026",
             discription: ""
         },
         {
@@ -189,13 +207,17 @@ const Termine = [
             date: "Fr. 27. März 2026 - Fr. 10. Apr.",
             discription: ""
         },
+    ],
+    //---------------------------------------------------->>>>APRIL<<<<----------------------------------------->
+    [
+        {
+            month: "Apr, 2026"
+        },
         {
             heading: "Abschluss-Fotos 4. Klassen",
             date: "Di. 14. Apr. 2026",
             discription: ""
         },
-    ],
-    [
         {
             heading: "Open Stage Classic",
             date: "Fr. 17. Apr. 2026",
@@ -221,16 +243,25 @@ const Termine = [
             date: "Mi. 29. Apr. 2026 - Do. 30.",
             discription: ""
         },
-    ],
-    [
         {
             heading: "Vera 3 Mathe",
             date: "Do. 30. Apr. 2026",
             discription: ""
         },
+    ],
+    //-------------------------------------------------->>>>MAY<<<<-------------------------------------------->
+    [
+        {
+            month: "Mai, 2026"
+        },
         {
             heading: "Schulfrei",
             date: "Fr. 1. Mai 2026",
+            discription: ""
+        },
+        {
+            heading: "Abschlussprojekt 4b",
+            date: "Mo. 4. Mai 2026 - Fr. 8. Mai 2026",
             discription: ""
         },
         {
@@ -248,12 +279,25 @@ const Termine = [
             date: "Mo. 18. Mai 2026",
             discription: ""
         },
-    ],
-    [
+        {
+            heading: "Abschlussprojekt 4a",
+            date: "Mo. 18. Mai 2026 - Fr. 22. Mai 2026",
+            discription: ""
+        },
+        {
+            heading: "Kreis- Fußballturnier Jungen",
+            date: "Di. 19. Mai 2026",
+            discription: ""
+        },
         {
             heading: "Ausgleichstag Vera Schulfrei",
             date: "Di. 26. Mai 2026",
             discription: ""
+        },
+    ],
+    [
+        {
+            month: "Jun, 2026"
         },
         {
             heading: "Open Stage",
@@ -275,8 +319,6 @@ const Termine = [
             date: "Fr. 12. Juni 2026",
             discription: ""
         },
-    ],
-    [
         {
             heading: "Singpause Sommerlieder",
             date: "Fr. 19. Juni 2026",
@@ -292,7 +334,7 @@ const Termine = [
             date: "Fr. 19. Feb. 2027 - Sa. 20.",
             discription: ""
         },
-    ]
+    ],
 ]
 
 export default Termine;

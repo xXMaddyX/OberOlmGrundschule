@@ -5,6 +5,7 @@ import Termine from "./NeuesUndAktuellesTermine.js";
 export default class NeuesUndAktuellesComponent extends HTMLElement{
     constructor() {
         super();
+        this.CurrentMonth = "";
         this.shadow = this.attachShadow({mode: "open"});
     };
     async connectedCallback() {
@@ -21,12 +22,16 @@ export default class NeuesUndAktuellesComponent extends HTMLElement{
     renderTermine() {
         this.terminDisplayer.innerHTML = "";
         Termine[this.currentIndex].forEach(element => {
-            this.createTerminElements(element)
+            if (element.month) {
+                this.CurrentMonth = element.month;
+            }
+            if (!element.month) {
+                this.createTerminElements(element)
+            }
         });
     }
 
     createTerminElements(dataArr) {
-        console.log(dataArr)
         /**@type {HTMLElement} */
         const container = document.createElement("div");
         container.classList.add("calendar-item");
@@ -50,6 +55,7 @@ export default class NeuesUndAktuellesComponent extends HTMLElement{
 
     initCarlenderNav() {
          this.NumberDisplay = this.shadow.querySelector("#termin-page-display");
+         this.NumberDisplay.innerText = Termine[0][0].month;
          this.terminDisplayer = this.shadow.querySelector("#termin-displayer");
 
         this.leftTerminBtn = this.shadow.querySelector("#termin-btn-left");
@@ -59,8 +65,8 @@ export default class NeuesUndAktuellesComponent extends HTMLElement{
             } else {
                 this.currentIndex -= 1
             }
-            this.NumberDisplay.innerText = this.currentIndex
             this.renderTermine();
+            this.NumberDisplay.innerText = this.CurrentMonth;
         });
 
         this.rightTerminBtn = this.shadow.querySelector("#termin-btn-right");
@@ -70,8 +76,8 @@ export default class NeuesUndAktuellesComponent extends HTMLElement{
             } else {
                 this.currentIndex += 1
             }
-            this.NumberDisplay.innerText = this.currentIndex
             this.renderTermine();
+            this.NumberDisplay.innerText = this.CurrentMonth;
         })
 
     }
