@@ -9,10 +9,11 @@ export default class NeuesUndAktuellesComponent extends HTMLElement{
         this.shadow = this.attachShadow({mode: "open"});
     };
     async connectedCallback() {
-        //const rawHTML = await fetch("src/MainComponents/SubComponents/NeuesUndAktuellesComponent/NeuesUndAktuelles.html");
-        //const HTML = await rawHTML.text();
         this.shadow.innerHTML = NeusUndAktuellesHTML;
-        this.currentIndex = 0;
+
+        const currentMonth = new Date().getMonth() + 1;
+        const idx = Termine.findIndex(m => parseInt(m.monthNative) >= currentMonth);
+        this.currentIndex = idx !== -1 ? idx : 0;
 
         MakeSubSiteNav.Instance.createSiteNavigation(this);
         this.initCarlenderNav();
@@ -21,20 +22,29 @@ export default class NeuesUndAktuellesComponent extends HTMLElement{
 
     renderTermine() {
         this.terminDisplayer.innerHTML = "";
-        Termine[this.currentIndex].forEach(element => {
-            if (element.month) {
-                this.CurrentMonth = element.month;
-            }
-            if (!element.month) {
-                this.createTerminElements(element)
-            }
+        const monthData = Termine[this.currentIndex];
+        this.NumberDisplay.innerText = monthData.month;
+        monthData.days.forEach(day => {
+            this.createTerminElements(day);
         });
     }
 
     createTerminElements(dataArr) {
+        const currentDate = new Date().toLocaleDateString();
         /**@type {HTMLElement} */
         const container = document.createElement("div");
         container.classList.add("calendar-item");
+
+        if (dataArr.dateNative == currentDate) {
+            container.style.backgroundColor = "orange"
+        }
+
+        let [day, month, year] = currentDate.split(".")
+        let [dayData, monthData, yearData] = dataArr.dateNative.split(".")
+        
+        if (month == monthData && dayData > day + 3) {
+            container.style.backgroundColor = "yellow"
+        }
 
         const heading = document.createElement("h2");
         heading.innerText = dataArr.heading
@@ -55,30 +65,20 @@ export default class NeuesUndAktuellesComponent extends HTMLElement{
 
     initCarlenderNav() {
          this.NumberDisplay = this.shadow.querySelector("#termin-page-display");
-         this.NumberDisplay.innerText = Termine[0][0].month;
+         this.NumberDisplay.innerText = 0;
          this.terminDisplayer = this.shadow.querySelector("#termin-displayer");
 
         this.leftTerminBtn = this.shadow.querySelector("#termin-btn-left");
         this.leftTerminBtn.addEventListener("click", () => {
-            if (this.currentIndex == 0) {
-                this.currentIndex = 0;
-            } else {
-                this.currentIndex -= 1
-            }
+            if (this.currentIndex > 0) this.currentIndex -= 1;
             this.renderTermine();
-            this.NumberDisplay.innerText = this.CurrentMonth;
         });
 
         this.rightTerminBtn = this.shadow.querySelector("#termin-btn-right");
         this.rightTerminBtn.addEventListener("click", () => {
-            if (this.currentIndex >= Termine.length -1) {
-                this.currentIndex = Termine.length -1;
-            } else {
-                this.currentIndex += 1
-            }
+            if (this.currentIndex < Termine.length - 1) this.currentIndex += 1;
             this.renderTermine();
-            this.NumberDisplay.innerText = this.CurrentMonth;
-        })
+        });
 
     }
 }
