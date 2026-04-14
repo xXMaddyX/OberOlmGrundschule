@@ -129,6 +129,12 @@ const Termine = [
                 discription: ""
             },
             {
+                heading: "Schwimmfest in Nieder-Olm",
+                date: "Mi. 15. Apr. 2026",
+                dateNative: "15.05.2026",
+                discription: ""
+            },
+            {
                 heading: "Elternabend 2a",
                 date: "Do. 16. Apr. 2026",
                 dateNative: "16.4.2026",
@@ -159,6 +165,12 @@ const Termine = [
                 discription: ""
             },
             {
+                heading: "Sportfest",
+                date: "Mi. 24. Apr. 2026",
+                dateNative: "24.4.2026",
+                discription: ""
+            },
+            {
                 heading: "Gesamtkonferenz",
                 date: "Mo. 27. Apr. 2026",
                 dateNative: "27.4.2026",
@@ -178,6 +190,12 @@ const Termine = [
             },
             {
                 heading: "Aktionstag 2a",
+                date: "Do. 30. Apr. 2026",
+                dateNative: "30.4.2026",
+                discription: ""
+            },
+            {
+                heading: "Sportfest Ersatztermin",
                 date: "Do. 30. Apr. 2026",
                 dateNative: "30.4.2026",
                 discription: ""
@@ -209,6 +227,12 @@ const Termine = [
             },
             {
                 heading: "Mädchen-Fußballturnier Kreis Mainz-Bingen",
+                date: "Di. 12. Mai 2026",
+                dateNative: "12.5.2026",
+                discription: ""
+            },
+            {
+                heading: "Mädchen - Fußballturnier Ober-Olm",
                 date: "Di. 12. Mai 2026",
                 dateNative: "12.5.2026",
                 discription: ""
@@ -275,9 +299,27 @@ const Termine = [
                 discription: ""
             },
             {
+                heading: "Eselbesuch 1a",
+                date: "Fr. 16. Juni 2026",
+                dateNative: "16.6.2026",
+                discription: ""
+            },
+            {
                 heading: "Singpause Sommerlieder",
                 date: "Fr. 19. Juni 2026",
                 dateNative: "19.6.2026",
+                discription: ""
+            },
+            {
+                heading: "Jungen-Fußballturnier, Klein-Winternheim",
+                date: "Fr. 19. Juni 2026",
+                dateNative: "19.6.2026",
+                discription: ""
+            },
+            {
+                heading: "TheaterStarter 1ab",
+                date: "Fr. 25. Juni 2026",
+                dateNative: "25.6.2026",
                 discription: ""
             },
             {

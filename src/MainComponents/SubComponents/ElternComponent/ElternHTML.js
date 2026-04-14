@@ -529,7 +529,7 @@ const ElternHTML = `
             </div>
             <div class="foerder-verein-element">
                 <h2>Kontakt:</h2>
-                <p>Sabine Vogt (1. Vorsitzende),<br>&#9742; 06136-9264727<br>&#9993; sabine.vogt.oo@gmx.de</p>
+                <p>Stefan Hoppe,<br>&#9742; 06136-9264727<br>&#9993; förderverein.gsoo@outlook.de</p>
             </div>
             <div class="foerder-verein-element foerder-verein-element-last">
                 <h2>Weitere Infos:</h2>

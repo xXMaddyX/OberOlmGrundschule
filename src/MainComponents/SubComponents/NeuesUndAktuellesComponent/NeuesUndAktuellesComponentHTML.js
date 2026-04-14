@@ -17,6 +17,23 @@ const NeusUndAktuellesHTML = `
             ></section-nav-component>
         </div>
     </nav>
+    <section name="news">
+        <div class="news wrapper">
+            <h1>Aktuell</h1>
+            <div id="news-text-wrapper">
+                <p>Wir wollen unsere Schulflure zu Lernorten umgestalten.</p>
+                <p>Im Rahmen des selbstorganisierten Lernens brauchen wir Plätze, an denen Kinder an ihren Aufgaben arbeiten können.</p>
+                <p>Allein die Klassenräume reichen da nicht mehr aus.</p>
+                <p>Mit den generierten Spenden möchten wir in den kommenden drei Jahren kollaborative Arbeitsplätze, Rückzugsorte und Lernnischen schaffen, die modernen Unterricht erst möglich machen.</p>
+                <p>Wir sind Schule der Zukunft und werden beim Lernkulturwandel wissenschaftlich begleitet.</p>
+                <p>Helfen Sie uns dabei, die Schule der Zukunft aktiv mitzugestalten!</p>
+            </div>
+            <div id="news-button-wrapper">
+                <h2>Link: </h2><a href="https://www.heimathelden-suchen-gluecksbringer.de/project/schulflure-werden-zu-lernorten" target="_blank">Hier könnt Ihr uns unterstützen.</a>
+            </div>
+        </div>
+    </section>
+    <div class="spacer"></div>
     <section name="termin">
         <div class="termine wrapper">
             <h1>Termine</h1>
@@ -123,15 +140,15 @@ const NeusUndAktuellesHTML = `
                 </div>
                 <div class="elternbrief-grid-elem">
                     <img class="download-img" src="images/download.webp" alt="">
-                    <a href="https://www.piepssoft.de/ober-olmer-grundschule/PDFs/Weihnachtsbrief_2025.pdf" target="_blank">Elternbrief Weihnachtsbrief</a>
+                    <a href="https://www.gs-ober-olm.de/PDFs/Elternbrief_March_2026.pdf" target="_blank">Elternbrief März 2026</a>
                 </div>
                 <div class="elternbrief-grid-elem">
                     <img class="download-img" src="images/download.webp" alt="">
-                    <a href="https://www.piepssoft.de/ober-olmer-grundschule/PDFs/E-brief_November_25.pdf" target="_blank">Elternbrief November</a>
+                    <a href="https://www.gs-ober-olm.de/PDFs/Weihnachtsbrief_2025.pdf" target="_blank">Elternbrief Weihnachtsbrief</a>
                 </div>
                 <div class="elternbrief-grid-elem">
                     <img class="download-img" src="images/download.webp" alt="">
-                    <a href="https://www.gs-ober-olm.de/briefe/nov25.pdf" target="_blank">Elternbrief November</a>
+                    <a href="https://www.gs-ober-olm.de/PDFs/E-brief_November_25.pdf" target="_blank">Elternbrief November</a>
                 </div>
                 <div class="elternbrief-grid-elem elternbrief-grid-elem-cont">
                     <img class="download-img" src="images/download.webp" alt="">
@@ -140,6 +157,10 @@ const NeusUndAktuellesHTML = `
                 <div class="elternbrief-grid-elem">
                     <img class="download-img" src="images/download.webp" alt="">
                     <a href="https://www.gs-ober-olm.de/briefe/1sj25.pdf" target="_blank">Elternbrief Anfang neues Schuljahr</a>
+                </div>
+                <div class="elternbrief-grid-elem elternbrief-grid-elem-cont">
+                    <img class="download-img" src="images/download.webp" alt="">
+                    <a href="https://www.gs-ober-olm.de/briefe/ende25.pdf" target="_blank">Elternbrief Ende Schuljahr 24/25</a>
                 </div>
                 <div class="elternbrief-grid-elem elternbrief-grid-elem-cont">
                     <img class="download-img" src="images/download.webp" alt="">
@@ -273,6 +294,24 @@ const NeusUndAktuellesHTML = `
     }
     p {
         font-size: 1.3rem;
+    }
+
+    #news-text-wrapper {
+        display: flex;
+        flex-direction: column;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        text-align: left;
+    }
+
+    #news-button-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 25px;
+        background-color: #52fa79;
     }
 
     .termin-nav-leiste {
@@ -478,6 +517,7 @@ const NeusUndAktuellesHTML = `
             border-radius: 5px;
         }
     }
+    
 </style>
 `;
 export default NeusUndAktuellesHTML;

@@ -35,12 +35,12 @@ export default class NeuesUndAktuellesComponent extends HTMLElement{
         const container = document.createElement("div");
         container.classList.add("calendar-item");
 
-        if (Number(dataArr.dateNative) == Number(currentDate)) {
-            container.style.backgroundColor = "orange"
-        }
-
         let [day, month, year] = currentDate.split(".")
         let [dayData, monthData, yearData] = dataArr.dateNative.split(".")
+
+        if (day == dayData && month == monthData && year == yearData) {
+            container.style.backgroundColor = "orange"
+        }
         
         if (
             Number(month) == Number(monthData) && 
