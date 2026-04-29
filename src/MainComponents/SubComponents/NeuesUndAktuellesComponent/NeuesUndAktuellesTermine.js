@@ -37,84 +37,6 @@ const Termine = [
                 dateNative: "2.3.2026",
                 discription: ""
             },
-            {
-                heading: "Essen mit der Hausaufgabenbetreuung",
-                date: "Do. 5. März 2026",
-                dateNative: "5.3.2026",
-                discription: ""
-            },
-            {
-                heading: "Theaterstarter 2b",
-                date: "Fr. 6. März 2026",
-                dateNative: "6.3.2026",
-                discription: ""
-            },
-            {
-                heading: "Kinderwingert 3ab ",
-                date: "Do. 12. März 2026",
-                dateNative: "12.3.2026",
-                discription: ""
-            },
-            {
-                heading: "Open Stage",
-                date: "Fr. 13. März 2026",
-                dateNative: "13.3.2026",
-                discription: ""
-            },
-            {
-                heading: "Forum Deutscher Schulpreis",
-                date: "Mo. 16. März 2026 - Di. 17.",
-                dateNative: "16.3.2026",
-                discription: ""
-            },
-            {
-                heading: "Elternabend 1ab",
-                date: "Mo. 16. März 2026",
-                dateNative: "16.3.2026",
-                discription: ""
-            },
-            {
-                heading: "Känguru-Mathe-Wettbewerb",
-                date: "Do. 19. März 2026",
-                dateNative: "19.3.2026",
-                discription: ""
-            },
-            {
-                heading: "Singpause Frühlingslieder",
-                date: "Do. 19. März 2026",
-                dateNative: "19.3.2026",
-                discription: ""
-            },
-            {
-                heading: "Dienstbesprechung",
-                date: "Mo. 23. März 2026",
-                dateNative: "23.3.2026",
-                discription: ""
-            },
-            {
-                heading: "Elternabend 3ab",
-                date: "Di. 24. März 2026",
-                dateNative: "24.3.2026",
-                discription: ""
-            },
-            {
-                heading: "Schultreff",
-                date: "Mi. 25. März 2026",
-                dateNative: "25.3.2026",
-                discription: ""
-            },
-            {
-                heading: "Studientag",
-                date: "Do. 26. März 2026",
-                dateNative: "26.3.2026",
-                discription: ""
-            },
-            {
-                heading: "Osterferien",
-                date: "Fr. 27. März 2026 - Fr. 10. Apr.",
-                dateNative: "27.3.2026",
-                discription: ""
-            },
         ]
     },
     //---------------------------------------------------->>>>APRIL<<<<----------------------------------------->
@@ -159,15 +81,15 @@ const Termine = [
                 discription: ""
             },
             {
-                heading: "Waldjugendspiele 3ab",
-                date: "Di. 23. Apr. 2026",
-                dateNative: "23.4.2026",
-                discription: ""
-            },
-            {
                 heading: "Sportfest",
                 date: "Mi. 24. Apr. 2026",
                 dateNative: "24.4.2026",
+                discription: ""
+            },
+            {
+                heading: "Waldjugendspiele 3ab",
+                date: "Di. 27. Apr. 2026",
+                dateNative: "27.4.2026",
                 discription: ""
             },
             {
@@ -184,8 +106,8 @@ const Termine = [
             },
             {
                 heading: "Singpause Quatschlieder",
-                date: "Mi. 29. Apr. 2026 - Do. 30.",
-                dateNative: "29.4.2026",
+                date: "Do. 30. Apr. 2026",
+                dateNative: "30.4.2026",
                 discription: ""
             },
             {
@@ -220,20 +142,20 @@ const Termine = [
                 discription: ""
             },
             {
-                heading: "Abschlussprojekt 4b",
+                heading: "Abschlussprojekt Klasse 4b",
                 date: "Mo. 4. Mai 2026 - Fr. 8. Mai 2026",
                 dateNative: "4.5.2026",
                 discription: ""
             },
             {
-                heading: "Mädchen-Fußballturnier Kreis Mainz-Bingen",
+                heading: "Mädchen - Fußballturnier Ober-Olm",
                 date: "Di. 12. Mai 2026",
                 dateNative: "12.5.2026",
                 discription: ""
             },
             {
-                heading: "Mädchen - Fußballturnier Ober-Olm",
-                date: "Di. 12. Mai 2026",
+                heading: "kulturforscher!-Treffen Südtirol",
+                date: "Di. 12. Mai 2026 - Sa. 16. Mai 2026",
                 dateNative: "12.5.2026",
                 discription: ""
             },
@@ -259,6 +181,18 @@ const Termine = [
                 heading: "Kreis- Fußballturnier Jungen",
                 date: "Di. 19. Mai 2026",
                 dateNative: "19.5.2026",
+                discription: ""
+            },
+            {
+                heading: "Schülerparlament",
+                date: "Di. 19. Mai 2026",
+                dateNative: "19.5.2026",
+                discription: ""
+            },
+            {
+                heading: "Schulführung Olmis",
+                date: "Mi. 20. Mai 2026",
+                dateNative: "20.5.2026",
                 discription: ""
             },
             {
@@ -293,15 +227,51 @@ const Termine = [
                 discription: ""
             },
             {
+                heading: "Zahnärztin in Klasse 2, 3, 4",
+                date: "Do. 11. Juni 2026",
+                dateNative: "11.06.2026",
+                discription: ""
+            },
+            {
+                heading: "Kaffee mit den Hausaufgabenbetreuer*innen",
+                date: "Do. 11. Juni 2026",
+                dateNative: "11.6.2026",
+                discription: ""
+            },
+            {
                 heading: "Schultreff mit Ehrungen",
                 date: "Fr. 12. Juni 2026",
                 dateNative: "12.6.2026",
                 discription: ""
             },
             {
+                heading: "Klassenfest 4b",
+                date: "Fr. 12. Juni 2026",
+                dateNative: "12.6.2026",
+                discription: ""
+            },
+            {
+                heading: "Klassenfest 2a",
+                date: "Fr. 12. Juni 2026",
+                dateNative: "12.6.2026",
+                discription: ""
+            },
+            {
+                heading: "letztes Schülerparlament, Eisessen",
+                date: "Di. 16. Juni 2026",
+                dateNative: "16.6.2026",
+                discription: ""
+            },
+            {
                 heading: "Eselbesuch 1a",
                 date: "Fr. 16. Juni 2026",
                 dateNative: "16.6.2026",
+                discription: ""
+            },
+            {
+                heading: "Elternabend kommende erste Klassen",
+                date: "Do. 18. Juni 2026, 19:00 Uhr",
+                dateNative: "18.06.2026",
                 discription: ""
             },
             {
@@ -323,15 +293,27 @@ const Termine = [
                 discription: ""
             },
             {
-                heading: "Sommerferien",
-                date: "Mo. 29. Juni 2026 - Fr. 7. Aug.",
-                dateNative: "29.6.2026",
+                heading: "Andacht zur Grundschulzeit 4. Klassen, 1. Stunde",
+                date: "Fr. 25. Juni 2026",
+                dateNative: "25.6.2026",
                 discription: ""
             },
             {
-                heading: "Theaterraum Mainz in der Schule",
-                date: "Fr. 19. Feb. 2027 - Sa. 20.",
-                dateNative: "19.2.2027",
+                heading: "Abschlussfeier Klasse 4",
+                date: "Fr. 26. Juni 2026, 10:15 Uhr",
+                dateNative: "26.6.2026",
+                discription: ""
+            },
+            {
+                heading: "Schulschluss Klasse 1 & 2",
+                date: "Fr. 26. Juni 2026, 10:00 Uhr",
+                dateNative: "26.6.2026",
+                discription: ""
+            },
+            {
+                heading: "Sommerferien",
+                date: "Mo. 29. Juni 2026 - Fr. 7. Aug.",
+                dateNative: "29.6.2026",
                 discription: ""
             },
         ]
